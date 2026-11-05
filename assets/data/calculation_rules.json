@@ -1,0 +1,466 @@
+{
+  "custom_job_costs": {
+    "shelf_hanging": {
+      "material_per_item": 58.5,
+      "pro_hours_per_item": 1.0,
+      "diy_hours_per_item": 1.5
+    },
+    "coving": {
+      "length_material_rate": 28.0,
+      "fixed_material": 35.0,
+      "pro_hours_per_m": 0.75,
+      "diy_hours_per_m": 1.5
+    },
+    "staircase": {
+      "covering_per_step_c": 35.0,
+      "covering_per_step_p": 25.0,
+      "glue_set_5steps_c": 8.0,
+      "glue_set_5steps_p": 5.0,
+      "standard_per_step_c": 41.60,
+      "standard_per_step_p": 28.50,
+      "kit_optional_c": 6.0,
+      "kit_optional_p": 4.0,
+      "corner_profile_optional_c": 6.0,
+      "corner_profile_optional_p": 4.0
+    },
+    "laminate_flooring": {
+      "laminate_per_m2_c": 22.0,
+      "laminate_per_m2_p": 18.0,
+      "underlay_per_m2_c": 4.0,
+      "underlay_per_m2_p": 3.0,
+      "transition_profile_optional_c": 12.0,
+      "transition_profile_optional_p": 8.0,
+      "standard_per_m2_c": 31.0,
+      "standard_per_m2_p": 24.0
+    },
+    "drywall_stud_wall": {
+      "plasterboard_per_item_c": 12.0,
+      "plasterboard_per_item_p": 7.50,
+      "c_stud_per_m_c": 4.0,
+      "c_stud_per_m_p": 2.50,
+      "u_track_per_m_c": 4.0,
+      "u_track_per_m_p": 2.50,
+      "impact_plug_per_item_c": 0.30,
+      "impact_plug_per_item_p": 0.20,
+      "screws_per_box_c": 8.0,
+      "screws_per_box_p": 5.0,
+      "mesh_tape_per_roll_c": 6.0,
+      "mesh_tape_per_roll_p": 4.0,
+      "joint_compound_per_bag_c": 15.0,
+      "joint_compound_per_bag_p": 10.0,
+      "sandpaper_per_item_c": 5.0,
+      "sandpaper_per_item_p": 3.50,
+      "standard_per_m2_c": 30.0,
+      "standard_per_m2_p": 19.50
+    },
+    "door_spec": {
+      "door_flush_interior_c": 130.0,
+      "door_flush_interior_p": 90.0,
+      "hinge_set_3pcs_c": 24.0,
+      "hinge_set_3pcs_p": 15.0,
+      "lock_c": 15.0,
+      "lock_p": 10.0,
+      "handle_c": 12.0,
+      "handle_p": 8.0,
+      "sealant_c": 7.0,
+      "sealant_p": 4.50,
+      "standard_per_door_c": 193.0,
+      "standard_per_door_p": 130.50
+    },
+    "window_frame": {
+      "base_per_item": 65.0,
+      "hardware_every_2": 16.0,
+      "hardware_every_3": 11.5,
+      "hardware_every_4": 14.5
+    },
+    "cabinet": {
+      "material_per_m3": 80.0,
+      "base_hours": 4,
+      "extra_hours_per_item": 2
+    },
+    "tv_or_bathroom_furniture": {
+      "material_per_item": 60.0,
+      "pro_hours_per_item": 1.0,
+      "diy_hours_per_item": 2.0
+    },
+    "skirting_board": {
+      "plakplint_per_m_c": 10.0,
+      "plakplint_per_m_p": 7.0,
+      "degreaser_optional_c": 7.0,
+      "degreaser_optional_p": 5.0,
+      "standard_per_m_c": 15.0,
+      "standard_per_m_p": 9.50,
+      "pro_hours_per_m": 0.10,
+      "diy_hours_per_m": 0.30
+    },
+    "kitchen_unit": {
+      "material_per_m": 180.0,
+      "pro_hours": 4.0,
+      "diy_hours": 8.0
+    },
+    "dormer_window": {
+      "base_per_item": 2500.0,
+      "area_rate": 120.0,
+      "pro_hours": 16.0,
+      "diy_hours": 32.0
+    },
+    "electrical_outlet": {
+      "unit": "per_item",
+      "doc1_note": "Flush-mounted, indoors. Earthed or unearthed; earthing is mandatory in wet areas.",
+      "doc5_note": "Excludes preparation, making the installation de-energized, measurements, chasing or drilling, repair work, and testing.",
+      "material_per_item_c": 28.0,
+      "material_per_item_p": 17.50,
+      "pro_hours_per_item": 0.75,
+      "diy_hours_per_item": 1.9,
+      "doc5_savings": 34.25,
+      "doc2_note": "Standard calculation includes flush-mounted box, cover plate, terminal blocks, connectors, and plugs"
+    },
+    "lighting": {
+      "unit": "per_item",
+      "doc1_note": "Indoors. Wet areas require a moisture-resistant fixture (IP44+).",
+      "doc5_note": "Excludes preparation, making the installation de-energized, measurements, chasing or drilling, repair work, and testing.",
+      "material_per_item_c": 41.0,
+      "material_per_item_p": 28.65,
+      "pro_hours_per_item": 0.50,
+      "diy_hours_per_item": 1.25,
+      "doc5_savings": 4.50,
+      "doc2_note": "Standard calculation for dry rooms. Wet rooms use separate product choice (IP44+: €100 C / €74 P)"
+    },
+    "electrical_switch": {
+      "material_per_item": 14.5,
+      "pro_hours_per_item": 0.5,
+      "diy_hours_per_item": 1.25
+    },
+    "smoke_detector": {
+      "unit": "per_item",
+      "doc5_note": "Excludes preparation, making the installation de-energized, measurements, chasing or drilling, repair work, and testing.",
+      "material_per_item_c": 25.5,
+      "material_per_item_p": 18.35,
+      "pro_hours_per_item": 0.25,
+      "diy_hours_per_item": 0.60,
+      "doc5_savings": 6.60,
+      "doc2_note": "Includes smoke detector and plugs. Screws usually supplied with detector"
+    },
+    "power_cable": {
+      "unit": "per_m",
+      "doc5_note": "Excludes preparation, making the installation de-energized, measurements, chasing or drilling, repair work, and testing.",
+      "material_per_m_c": 3.5,
+      "material_per_m_p": 2.5,
+      "pro_hours_per_m": 0.10,
+      "diy_hours_per_m": 0.25,
+      "doc5_savings_per_m": 4.50,
+      "doc2_note": "Calculation basis for simple cable runs. Couplings, bends, penetrations, and fixing added separately based on chosen route"
+    },
+    "cable_trunking": {
+      "unit": "per_m",
+      "doc5_note": "Excludes preparation, making the installation de-energized, measurements, chasing or drilling, repair work, and testing.",
+      "material_per_m_c": 4.0,
+      "material_per_m_p": 2.75,
+      "pro_hours_per_m": 0.07,
+      "diy_hours_per_m": 0.17,
+      "doc5_savings_per_m": 2.60,
+      "doc2_note": "Includes cable trunking, brackets, and plugs. Self-adhesive on smooth surface may not need brackets/plugs"
+    },
+    "generic_electrical": {
+      "material_per_item": 38.5,
+      "pro_hours_per_item": 0.5,
+      "diy_hours_per_item": 1.25
+    },
+    "faucet": {
+      "material_per_item_c": 115.0,
+      "material_per_item_p": 78.0,
+      "pro_hours_per_item": 1.0,
+      "diy_hours_per_item": 2.5,
+      "doc5_savings": 20.0,
+      "doc5_note": "Kitchen faucet replacement. Excludes accessibility issues, stuck connections, or leaks."
+    },
+    "toilet": {
+      "material_per_item_c": 347.0,
+      "material_per_item_p": 254.0,
+      "pro_hours_per_item": 2.5,
+      "diy_hours_per_item": 5.0,
+      "doc5_savings": 51.0,
+      "doc5_note": "Standard floor-standing toilet installation. Excludes accessibility issues, modifications, or unexpected problems."
+    },
+    "central_heating_refill": {
+      "material_per_item_c": 18.0,
+      "material_per_item_p": 12.0,
+      "pro_hours_per_item": 0.25,
+      "diy_hours_per_item": 0.5,
+      "doc5_savings": 9.75,
+      "doc5_note": "Central heating refill. Excludes recurring pressure loss or boiler repairs."
+    },
+    "unclog": {
+      "material_per_item_c": 15.0,
+      "material_per_item_p": 10.0,
+      "pro_hours_per_item": 0.75,
+      "diy_hours_per_item": 1.5,
+      "doc5_savings": 38.25,
+      "doc5_note": "Basic drain unblocking. Excludes complex blockages or pipe damage."
+    },
+    "pipe_installation": {
+      "material_per_m_c": 8.50,
+      "material_per_m_p": 5.50,
+      "pro_hours_per_m": 0.15,
+      "diy_hours_per_m": 0.30,
+      "doc5_savings_per_m": 6.25,
+      "doc5_note": "Simple straight copper pipe run only. Fittings, bends, penetrations, fastening, testing, and accessibility can add time. Excludes gas pipes."
+    },
+    "fence": {
+      "unit": "per_m",
+      "material_per_m_c": 47.0,
+      "material_per_m_p": 34.0,
+      "pro_hours_per_m": 0.50,
+      "diy_hours_per_m": 1.00,
+      "doc5_savings_per_m": 7.0,
+      "doc5_note": "Per running metre. Includes setting out, holes, posts, concrete, panels, and finishing. Time may increase for long runs, difficult ground, or many corners."
+    },
+    "pruning": {
+      "unit": "per_10m2_planting",
+      "material_per_10m2_c": 4.0,
+      "material_per_10m2_p": 2.50,
+      "pro_hours_per_10m2": 1.0,
+      "diy_hours_per_10m2": 2.5,
+      "doc5_savings_per_10m2": 40.0,
+      "doc5_note": "Time per 10 m² of planting area (hydrangea). Correct pruning time and method differ by species. No consumable materials needed."
+    },
+    "paving": {
+      "unit": "m2",
+      "material_per_m2_c": 48.0,
+      "material_per_m2_p": 33.0,
+      "pro_hours_per_m2": 0.30,
+      "diy_hours_per_m2": 0.75,
+      "doc5_savings_per_m2": -1.0,
+      "doc5_note": "Sierbestratingstegels 60×60 cm. Excludes preparation, material waiting time, and drying time. Note: DIY may cost slightly more due to material pricing."
+    },
+    "wooden_canopy": {
+      "unit": "m2",
+      "material_per_m2_c": 123.0,
+      "material_per_m2_p": 116.0,
+      "pro_hours_per_m2": 0.80,
+      "diy_hours_per_m2": 2.00,
+      "doc5_savings_per_m2": 25.0,
+      "doc5_note": "Houten overkapping. Excludes preparation, material waiting time, and drying/curing time. Extra materials, finishing or unforeseen circumstances can add costs."
+    },
+    "lawn_laying": {
+      "unit": "m2",
+      "material_per_m2_c": 41.60,
+      "material_per_m2_p": 28.50,
+      "pro_hours_per_m2": 0.10,
+      "diy_hours_per_m2": 0.25,
+      "doc5_savings_per_m2": -7.0,
+      "doc5_note": "Kunstgras (artificial grass). 0.10 h/m² applies only to installation on an already prepared base. Preparation, levelling, foundation work, and cutting are additional. Note: DIY costs more due to material pricing."
+    },
+    "door_installation": {
+      "pro_hours_per_item": 2.5,
+      "diy_hours_per_item": 7.0
+    },
+    "stair_tread": {
+      "pro_hours_per_tread": 0.75,
+      "diy_hours_per_tread": 2.00
+    },
+    "frame_painting": {
+      "unit": "per_item",
+      "material_per_item_c": 18.5,
+      "material_per_item_p": 12.5,
+      "pro_hours_per_item": 1.5,
+      "diy_hours_per_item": 3.5,
+      "doc5_savings": 61.5,
+      "doc2_note": "Standard calculation includes paint, primer, and consumables",
+      "doc5_note": "Pro: 1.5 × €45 = €67.50 labor + €12.50 material = €80.00 per piece. DIY: €0 labor + €18.50 material = €18.50 per piece. Savings: €61.50 per piece"
+    },
+    "radiator_painting": {
+      "unit": "per_item",
+      "material_per_item_c": 12.5,
+      "material_per_item_p": 8.5,
+      "pro_hours_per_item": 0.75,
+      "diy_hours_per_item": 2.0,
+      "doc5_savings": 29.75,
+      "doc2_note": "Standard calculation includes radiator paint, primer, and consumables",
+      "doc5_note": "Pro: 0.75 × €45 = €33.75 labor + €8.50 material = €42.25 per radiator. DIY: €0 labor + €12.50 material = €12.50 per radiator. Savings: €29.75 per radiator"
+    },
+    "floor_tiles": {
+      "unit": "m2",
+      "doc1_note": "Ceramic floor tiles, 60 × 60 cm. Tile adhesive guideline: 4 kg/m².",
+      "doc5_status": "Indicative. Excludes preparation, material waiting time, drying and curing time, and project-specific circumstances.",
+      "pro_hours_per_m2": 0.50,
+      "diy_hours_per_m2": 1.20,
+      "doc5_savings_per_m2": 12.50,
+      "material_per_m2_c": 39.90,
+      "material_per_m2_p": 26.80
+    },
+    "wall_tiles": {
+      "unit": "m2",
+      "doc1_note": "Ceramic wall tiles, 30 × 60 cm; mosaic tiles on sheets. Tile adhesive guideline: 3 kg/m².",
+      "doc5_status": "Indicative. Excludes preparation, material waiting time, drying and curing time, and project-specific circumstances.",
+      "pro_hours_per_m2": 0.40,
+      "diy_hours_per_m2": 1.00,
+      "doc5_savings_per_m2": 2.50,
+      "material_per_m2_c": 57.50,
+      "material_per_m2_p": 39.00
+    },
+    "tile_repair": {
+      "unit": "per_item",
+      "doc1_note": "One tile. Tile adhesive guideline: 1 kg per tile.",
+      "doc5_status": "Indicative. Excludes preparation, material waiting time, drying and curing time, and project-specific circumstances.",
+      "pro_hours_per_item": 0.50,
+      "diy_hours_per_item": 1.25,
+      "doc5_savings": 17.95,
+      "material_per_item_c": 14.50,
+      "material_per_item_p": 9.95
+    },
+    "grouting": {
+      "unit": "m2",
+      "doc1_note": "Indoors; cement-based grout.",
+      "doc5_status": "Indicative. Excludes preparation, material waiting time, drying and curing time, and project-specific circumstances.",
+      "pro_hours_per_m2": 0.10,
+      "diy_hours_per_m2": 0.25,
+      "doc5_savings_per_m2": 4.10,
+      "material_per_m2_c": 5.20,
+      "material_per_m2_p": 3.30
+    },
+    "caulking": {
+      "unit": "per_m",
+      "doc1_note": "Silicone sealant, indoors.",
+      "doc5_status": "Indicative. Excludes preparation, material waiting time, drying and curing time, and project-specific circumstances.",
+      "pro_hours_per_m": 0.05,
+      "diy_hours_per_m": 0.125,
+      "doc5_savings_per_m": 2.00,
+      "material_per_m_c": 4.70,
+      "material_per_m_p": 2.95
+    },
+    "floor_laying": {
+      "pro_hours_per_m2": 0.15,
+      "diy_hours_per_m2": 0.45
+    },
+    "wall_installation": {
+      "pro_hours_per_m2": 0.33,
+      "diy_hours_per_m2": 1.00
+    },
+    "paint_walls": {
+      "unit": "m2",
+      "material_per_m2_c": 4.5,
+      "material_per_m2_p": 3.0,
+      "pro_hours_per_m2": 0.10,
+      "diy_hours_per_m2": 0.25,
+      "doc5_savings_per_m2": 3.0,
+      "note": "Excluding preparation, material waiting time, and drying time.",
+      "doc2_note": "Standard calculation includes latex, primer, and consumables",
+      "doc5_note": "Pro: 0.10 × €45 = €4.50 labor + €3.00 material = €7.50 per m². DIY: €0 labor + €4.50 material = €4.50 per m². Savings: €3.00 per m²"
+    },
+    "paint_ceilings": {
+      "unit": "m2",
+      "material_per_m2_c": 4.5,
+      "material_per_m2_p": 3.0,
+      "pro_hours_per_m2": 0.10,
+      "diy_hours_per_m2": 0.25,
+      "doc5_savings_per_m2": 3.0,
+      "note": "Excluding preparation, material waiting time, and drying time.",
+      "doc2_note": "Standard calculation includes latex, primer, and consumables",
+      "doc5_note": "Pro: 0.10 × €45 = €4.50 labor + €3.00 material = €7.50 per m². DIY: €0 labor + €4.50 material = €4.50 per m². Savings: €3.00 per m²"
+    },
+    "wallpapering": {
+      "unit": "m2",
+      "material_per_m2_c": 7.0,
+      "material_per_m2_p": 5.0,
+      "pro_hours_per_m2": 0.25,
+      "diy_hours_per_m2": 0.60,
+      "patterned_surcharge_pct": 0.25,
+      "doc5_savings_per_m2": 9.25,
+      "note": "For patterned wallpaper allow approximately 20–30% additional time for matching the pattern. Excluding preparation, material waiting time, and drying time.",
+      "doc2_note": "Standard calculation includes wallpaper, adhesive, primer, and consumables. Pattern surcharge ~10% extra material",
+      "doc5_note": "Pro: 0.25 × €45 = €11.25 labor + €5.00 material = €16.25 per m². DIY: €0 labor + €7.00 material = €7.00 per m². Savings: €9.25 per m². Pattern wallpaper: allow 20-30% extra time"
+    }
+  },
+  "diy_labor_cost_rate": 35.0,
+  "hourly_rate_tiler": 45.0,
+  "hourly_rate_painter": 45.0,
+  "hourly_rate_gardener": 40.0,
+  "hourly_rate_electrician": 55.0,
+  "hourly_rate_plumber": 55.0,
+  "plumber_app_logic": {
+    "manufacturer_first": "For taps, toilets, central-heating boilers, adhesives, fittings, and pipe systems, the product-specific manual takes precedence.",
+    "situation_check": "Ask in advance about type, dimensions, material, accessibility, and the existing installation. For taps, ask whether it is wall-mounted or countertop-mounted.",
+    "stop_points": "For gas, flue-gas exhaust, unknown leaks, recurring central-heating pressure loss, serious blockages, or uncertainty about drinking-water safety: stop and refer to a professional.",
+    "drinking_water": "Use only suitable materials and follow Dutch requirements for drinking-water installations.",
+    "testing": "After work, always check for leaks and proper operation before the installation is permanently covered.",
+    "pipe_installation_note": "For water pipe installation, the time per metre is only a calculation basis. Bends, fittings, wall penetrations, fastening, testing, and accessibility can significantly increase the actual working time.",
+    "scope_exclusions": [
+      "gas pipes",
+      "flue-gas exhaust systems",
+      "boiler repairs",
+      "complex installation work"
+    ]
+  },
+  "painter_app_logic": {
+    "manufacturer_first": "For paint, adhesive, sealant, primer, and radiator paint, the product-specific instructions take precedence.",
+    "situation_check": "Ask in advance about the substrate type, number of coats, colour, accessibility, and desired finish. For bathrooms or kitchens, ask whether moisture-resistant latex is required.",
+    "stop_points": "If lead-based paint, asbestos, extreme moisture problems, or uncertainty about the substrate is suspected: stop and refer to a professional.",
+    "safety": "Wear an FFP2/FFP3 dust mask when sanding and gloves when degreasing or working with chemicals.",
+    "testing": "After painting, check that the substrate is even and that there are no runs or other imperfections.",
+    "costs": "Display prices as indicative and connect current product data in the live app.",
+    "hours": "Display installation time as an estimate and clearly exclude drying times.",
+    "time_exclusions": [
+      "preparation",
+      "material waiting time",
+      "drying time",
+      "curing time"
+    ],
+    "patterned_wallpaper_note": "For patterned wallpaper, allow approximately 20–30% additional time for matching the pattern.",
+    "example": "20 m² wall × 0.10 hours = 2 hours; 2 hours × €45 = €90 professional labour."
+  },
+  "gardener_app_logic": {
+    "manufacturer_first": "For machinery, fertilizers, pesticides, wood, concrete, and fastening materials, the product-specific manual takes precedence.",
+    "situation_check": "Ask in advance about the substrate, dimensions, accessibility, desired finish, and any permit requirements.",
+    "stop_points": "If there is uncertainty about load-bearing structures, working at height, heavy equipment, or pesticides: stop and refer the user to a professional.",
+    "safety": "Wear appropriate protection such as gloves, safety glasses, hearing protection, and a dust mask when sawing, drilling, pruning, or working with chemicals.",
+    "testing": "After the work, check that structures are stable and that water drains properly before completing the job.",
+    "costs": "Display prices as indicative and link current product data in the live app.",
+    "hours": "Display installation time as an estimate and clearly state exclusions.",
+    "time_exclusions": [
+      "preparation",
+      "material waiting time",
+      "drying time",
+      "curing time",
+      "project-specific circumstances"
+    ]
+  },
+  "electrician_app_logic": {
+    "manufacturer_first": "For switches, sockets, light fixtures, detectors, and installation materials, the product-specific manual takes precedence.",
+    "situation_check": "Ask in advance about type, dimensions, material, accessibility, and the existing installation. For lighting, ask whether the room is wet or dry. For a socket, ask whether the existing situation is earthed or unearthed.",
+    "existing_wiring": "For sockets and lighting, wiring is usually already present in the wall or ceiling. New wire does not need to be purchased in that case. Use a terminal block or wire connectors for connections.",
+    "fixing": "Screws are usually supplied with flush-mounted boxes, light fixtures, and smoke detectors. Separate screws are only required for cable trunking and conduit/trunking fixing when they are not supplied. Wall plugs are required for fixing to masonry or concrete.",
+    "tools": "Use a hacksaw for cutting conduit (Job 28) and cable trunking (Job 29) to length.",
+    "stop_points": "In cases involving gas, unknown leaks, damaged wiring, uncertainty about earthing, or uncertainty about fuses/circuit breakers: stop and refer the user to a qualified electrician.",
+    "wet_areas": "In bathrooms, kitchens, utility rooms, garages, and outdoors, earthing is mandatory and a 30 mA RCD must be present. Use a light fixture with an appropriate IP rating.",
+    "safety": "Always switch off the electricity, use a two-pole voltage tester, never work on a live installation, and use insulated tools. Use a cable/pipe detector when drilling into walls or ceilings.",
+    "standard": "The current NEN 1010 also applies to extensions and modifications.",
+    "testing": "After the work, check that everything works correctly and that the earthing is in order before putting the installation into service.",
+    "costs": "Display prices as indicative and link current product data in the live app.",
+    "hours": "Display installation time as an estimate and clearly state exclusions.",
+    "time_exclusions": [
+      "preparation",
+      "material waiting time",
+      "making the installation de-energized",
+      "measurements",
+      "chasing or drilling",
+      "repair work",
+      "testing"
+    ]
+  },
+  "tiler_app_logic": {
+    "manufacturer_first": "For tile adhesive, grout, sealant, and primer, the product data sheet takes precedence.",
+    "situation_check": "Ask in advance about tile type, size, substrate, moisture exposure, and desired finish. For wall tiles, ask whether the walls are square or angled. For greasy or contaminated substrates, ask whether degreasing is required.",
+    "stop_points": "If there is uncertainty about the substrate, structural concerns, asbestos, or severe moisture problems: stop and refer the user to a professional.",
+    "safety": "Control silica dust during cutting and grinding using wet processing or source extraction with a construction vacuum cleaner. Wear eye, hearing, and respiratory protection.",
+    "testing": "After the work, check that the tiles are firmly attached, the grout is even, and there are no height differences.",
+    "costs": "Display prices as indicative and link current product data in the live app.",
+    "hours": "Display installation time as an estimate and clearly state exclusions.",
+    "time_exclusions": [
+      "preparation",
+      "material waiting time",
+      "drying and curing time",
+      "project-specific circumstances"
+    ]
+  }
+}

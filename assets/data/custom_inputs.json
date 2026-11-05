@@ -1,0 +1,184 @@
+{
+  "shelf_hanging": {
+    "keys": [
+      "length",
+      "depth",
+      "count",
+      "material"
+    ],
+    "materials": [
+      "Hout",
+      "MDF",
+      "Spaanplaat",
+      "Staal",
+      "Glas"
+    ],
+    "materials_en": [
+      "Wood",
+      "MDF",
+      "Chipboard",
+      "Steel",
+      "Glass"
+    ]
+  },
+  "staircase": {
+    "keys": [
+      "count",
+      "depth",
+      "height",
+      "length"
+    ]
+  },
+  "door_installation": {
+    "keys": [
+      "count"
+    ]
+  },
+  "window_frame": {
+    "keys": [
+      "length",
+      "height",
+      "count",
+      "material"
+    ],
+    "materials": [
+      "Hout",
+      "Kunststof",
+      "Staal",
+      "Aluminium"
+    ],
+    "materials_en": [
+      "Wood",
+      "Plastic / PVC",
+      "Steel",
+      "Aluminium"
+    ]
+  },
+  "cabinet": {
+    "keys": [
+      "length",
+      "height",
+      "depth",
+      "count",
+      "material"
+    ],
+    "materials": [
+      "MDF",
+      "Spaanplaat",
+      "Massief hout",
+      "Multiplex"
+    ],
+    "materials_en": [
+      "MDF",
+      "Chipboard",
+      "Solid wood",
+      "Plywood"
+    ]
+  },
+  "tv_unit": {
+    "keys": [
+      "length",
+      "height",
+      "count"
+    ]
+  },
+  "bathroom_furniture": {
+    "keys": [
+      "length",
+      "height",
+      "count"
+    ]
+  },
+  "skirting_board": {
+    "keys": [
+      "length",
+      "count",
+      "material"
+    ],
+    "materials": [
+      "Hout",
+      "MDF",
+      "Kunststof"
+    ],
+    "materials_en": [
+      "Wood",
+      "MDF",
+      "Plastic / PVC"
+    ]
+  },
+  "kitchen_unit": {
+    "keys": [
+      "length",
+      "count"
+    ]
+  },
+  "coving": {
+    "keys": [
+      "length",
+      "height",
+      "count",
+      "material"
+    ],
+    "materials": [
+      "Gipsplaat / Metal stud",
+      "MDF / Hout",
+      "Multiplex / Hout",
+      "Stucplaat"
+    ],
+    "materials_en": [
+      "Plasterboard / Metal stud",
+      "MDF / Wood",
+      "Plywood / Wood",
+      "Plaster baseboard"
+    ]
+  },
+  "dormer_window": {
+    "keys": [
+      "length",
+      "height",
+      "count"
+    ]
+  },
+  "doorbell": {
+    "keys": [
+      "count",
+      "material"
+    ],
+    "types": [
+      "Draadloze deurbel (batterij)",
+      "Bedrade deurbel met trafo",
+      "Slimme videodeurbel"
+    ],
+    "types_en": [
+      "Wireless doorbell (battery)",
+      "Wired doorbell with transformer",
+      "Smart video doorbell"
+    ]
+  },
+  "electrical_outlet": {
+    "keys": [
+      "count"
+    ]
+  },
+  "electrical_switch": {
+    "keys": [
+      "count"
+    ]
+  },
+  "smoke_detector": {
+    "keys": [
+      "count"
+    ]
+  },
+  "lighting": {
+    "keys": [
+      "count"
+    ]
+  },
+  "generic": {
+    "keys": [
+      "length",
+      "count"
+    ]
+  }
+}

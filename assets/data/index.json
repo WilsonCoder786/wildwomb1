@@ -1,0 +1,14 @@
+{
+  "source": "onboardinng_provider.dart",
+  "generated_from": "Supplied source file only",
+  "files": [
+    "jobs.json",
+    "materials.json",
+    "tools.json",
+    "labor_rates.json",
+    "door_options.json",
+    "staircase_options.json",
+    "custom_inputs.json",
+    "calculation_rules.json"
+  ]
+}

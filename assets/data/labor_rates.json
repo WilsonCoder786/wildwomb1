@@ -1,0 +1,11 @@
+{
+  "carpenter": 45.0,
+  "painter": 45.0,
+  "plumber": 55.0,
+  "electrician": 55.0,
+  "gardener": 40.0,
+  "tiler": 45.0,
+  "default": 45.0,
+  "currency": "EUR",
+  "unit": "per_hour"
+}

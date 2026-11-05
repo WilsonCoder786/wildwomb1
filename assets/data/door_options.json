@@ -1,0 +1,57 @@
+{
+  "location": [
+    "Binnen",
+    "Buiten"
+  ],
+  "outside_type": [
+    "Voordeur",
+    "Achterdeur",
+    "Balkondeur"
+  ],
+  "construction_type": [
+    "Stomp",
+    "Opdek",
+    "Inleg"
+  ],
+  "execution_material": [
+    "Massief",
+    "Volspaan",
+    "Honingraat",
+    "Spaanplaat",
+    "Board",
+    "Paneel",
+    "Met glas",
+    "Met bovenlicht"
+  ],
+  "glass": [
+    false,
+    true
+  ],
+  "glass_mounting": [
+    "Glaslatten",
+    "Direct in deur"
+  ],
+  "treatment": [
+    "Gegrond",
+    "Onbehandeld",
+    "Blank hout"
+  ],
+  "handle_type": [
+    "Krukstel",
+    "Deurknop"
+  ],
+  "frame": [
+    "Nieuw",
+    "Bestaand"
+  ],
+  "base_price": 193.0,
+  "base_price_pro": 130.50,
+  "surcharges": {
+    "outside": 150.0,
+    "solid": 80.0,
+    "glass": 60.0,
+    "transom_glass": 75.0,
+    "manual_glass": 45.0,
+    "new_frame": 120.0
+  }
+}

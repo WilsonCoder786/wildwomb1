@@ -1,0 +1,1246 @@
+{
+  "categories": [
+    {
+      "id": "binnenmuur",
+      "match": [
+        "Binnenmuur",
+        "Interior wall",
+        "binnenmuur",
+        "interior wall",
+        "Muur sauzen",
+        "Wall plastering",
+        "Muur",
+        "Wall",
+        "sauzen",
+        "Paint walls",
+        "paint walls"
+      ],
+      "items": [
+        {
+          "name": "Latex muurverf (wit, binnen)",
+          "nameEn": "White latex wall paint (indoor)",
+          "qty_type": "liters_L",
+          "price_type": "latex_paint_price",
+          "price": "\u20ac 15 (C) / \u20ac 10,50 (P) per liter",
+          "unit_price_c": 15.0,
+          "unit_price_p": 10.5,
+          "icon": "format_paint",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Vochtbestendige latexverf (badkamer/keuken)",
+          "nameEn": "Moisture-resistant latex paint (bathroom/kitchen)",
+          "qty_type": "liters_L",
+          "price": "\u20ac 20 (C) / \u20ac 14 (P) per liter",
+          "unit_price_c": 20.0,
+          "unit_price_p": 14.0,
+          "icon": "format_paint",
+          "note": "Gebruik vochtbestendige latex in badkamers en keukens.",
+          "noteEn": "Use moisture-resistant latex in bathrooms and kitchens.",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Voorstrijk / grondverf",
+          "nameEn": "Primer / base coat",
+          "qty_type": "half_liters_ceil_L",
+          "price_type": "voorstrijk_price",
+          "price": "\u20ac 8 (C) / \u20ac 5.50 (P) per liter",
+          "icon": "layers"
+        },
+        {
+          "name": "Acrylaatkit",
+          "nameEn": "Acrylic sealant",
+          "qty": "1 patroon",
+          "qtyEn": "1 cartridge",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "water_drop"
+        },
+        {
+          "name": "Plamuur / muurvuller",
+          "nameEn": "Wall filler / putty",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "\u20ac 11 (C) / \u20ac 7,50 (P)",
+          "unit_price_c": 11.0,
+          "unit_price_p": 7.5,
+          "icon": "format_paint",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Afplaktape",
+          "nameEn": "Masking tape",
+          "qty": "2 rollen",
+          "qtyEn": "2 rolls",
+          "price": "\u20ac 4.00 (C) / \u20ac 2.50 (P) per rol",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "nameEn": "Protective covering film",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "table_rows"
+        },
+        {
+          "name": "Schuurpapier",
+          "nameEn": "Sandpaper",
+          "qty": "5 vellen",
+          "qtyEn": "5 sheets",
+          "price": "\u20ac 1.00 (C) / \u20ac 0.60 (P) per vel",
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / allesreiniger",
+          "nameEn": "All-purpose cleaner / degreaser",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "plafond",
+      "match": [
+        "Plafond",
+        "Ceiling",
+        "plafond",
+        "ceiling",
+        "Plafond sauzen",
+        "Ceiling plastering",
+        "Paint ceilings",
+        "paint ceilings"
+      ],
+      "items": [
+        {
+          "name": "Latex plafondverf (wit, binnen)",
+          "nameEn": "White latex ceiling paint (indoor)",
+          "qty_type": "liters_L",
+          "price_type": "latex_paint_price",
+          "price": "\u20ac 15 (C) / \u20ac 10,50 (P) per liter",
+          "unit_price_c": 15.0,
+          "unit_price_p": 10.5,
+          "icon": "format_paint",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Vochtbestendige latexverf (badkamer/keuken)",
+          "nameEn": "Moisture-resistant latex paint (bathroom/kitchen)",
+          "qty_type": "liters_L",
+          "price": "\u20ac 20 (C) / \u20ac 14 (P) per liter",
+          "unit_price_c": 20.0,
+          "unit_price_p": 14.0,
+          "icon": "format_paint",
+          "note": "Gebruik vochtbestendige latex in badkamers en keukens.",
+          "noteEn": "Use moisture-resistant latex in bathrooms and kitchens.",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Voorstrijk / grondverf",
+          "nameEn": "Primer",
+          "qty_type": "half_liters_ceil_L",
+          "price_type": "voorstrijk_price",
+          "price": "\u20ac 8 (C) / \u20ac 5.50 (P) per liter",
+          "icon": "layers"
+        },
+        {
+          "name": "Plamuur / muurvuller",
+          "nameEn": "Wall filler / putty",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "\u20ac 11 (C) / \u20ac 7,50 (P)",
+          "unit_price_c": 11.0,
+          "unit_price_p": 7.5,
+          "icon": "format_paint",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Afplaktape",
+          "nameEn": "Masking tape",
+          "qty": "2 rollen",
+          "qtyEn": "2 rolls",
+          "price": "\u20ac 4.00 (C) / \u20ac 2.50 (P) per rol",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "nameEn": "Protective covering film",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "table_rows"
+        }
+      ]
+    },
+    {
+      "id": "kozijn",
+      "match": [
+        "Kozijn",
+        "Window frame",
+        "kozijn",
+        "window frame",
+        "Kozijn/deur schilderen",
+        "Window frame/door painting"
+      ],
+      "items": [
+        {
+          "name": "Verf (lak, binnen)",
+          "nameEn": "Paint (interior)",
+          "qty_type": "liters_L",
+          "price_type": "kozijn_paint_price",
+          "price": "\u20ac 12.00 (C) / \u20ac 8.00 (P) per liter",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf",
+          "nameEn": "Primer",
+          "qty_type": "half_liters_ceil_L",
+          "price_type": "kozijn_primer_price",
+          "price": "\u20ac 10.00 (C) / \u20ac 7.00 (P) per liter",
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "nameEn": "Masking tape",
+          "qty": "2 rollen",
+          "qtyEn": "2 rolls",
+          "price": "\u20ac 4.00 (C) / \u20ac 2.50 (P) per rol",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "nameEn": "Sandpaper",
+          "qty": "5 vellen",
+          "qtyEn": "5 sheets",
+          "price": "\u20ac 1.00 (C) / \u20ac 0.60 (P) per vel",
+          "icon": "texture"
+        },
+        {
+          "name": "Houtvuller",
+          "nameEn": "Wood filler",
+          "qty": "1 tube",
+          "qtyEn": "1 piece",
+          "price": "\u20ac 7.00 (C) / \u20ac 4.50 (P)",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "nameEn": "Protective covering film",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "table_rows"
+        },
+        {
+          "name": "Ontvetter / allesreiniger",
+          "nameEn": "All-purpose cleaner / degreaser",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "deur",
+      "match": [
+        "Deur",
+        "Door",
+        "deur",
+        "door"
+      ],
+      "items": [
+        {
+          "name": "Lakverf",
+          "nameEn": "Lacquer paint",
+          "qty_type": "liters_L",
+          "price_type": "kozijn_paint_price",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf",
+          "nameEn": "Primer",
+          "qty_type": "half_liters_ceil_L",
+          "price_type": "kozijn_primer_price",
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "nameEn": "Masking tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 4.00",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "nameEn": "Sandpaper (5 sheets)",
+          "qty": "5 vellen",
+          "qtyEn": "5 sheets",
+          "price": "€ 5.00",
+          "icon": "texture"
+        },
+        {
+          "name": "Houtvuller",
+          "nameEn": "Wood filler",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "price": "€ 7.00",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "nameEn": "Protective floor runner / dust sheet",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 6.00",
+          "icon": "table_rows"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "nameEn": "Degreaser / sponge / cloth",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "nameEn": "Paint tray",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 4.50",
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "buitenmuur",
+      "match": [
+        "Buitenmuur",
+        "Exterior wall",
+        "buitenmuur",
+        "exterior wall"
+      ],
+      "items": [
+        {
+          "name": "Buitenmuurverf",
+          "qty_type": "liters_L",
+          "cost_factor": 0.42,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (buiten)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.15,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "2 rollen",
+          "cost_factor": 0.04,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "qty": "1 rol",
+          "cost_factor": 0.04,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Plamuur (buiten)",
+          "qty": "1 emmer",
+          "cost_factor": 0.12,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.05,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / buitenreiniger / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "behangen",
+      "match": [
+        "Behangen",
+        "Wallpapering",
+        "behangen",
+        "wallpaper"
+      ],
+      "items": [
+        {
+          "name": "Vliesbehang 53 cm (per rol)",
+          "nameEn": "Non-woven wallpaper 53 cm (per roll)",
+          "qty_type": "wallpaper_rolls",
+          "price_type": "wallpaper_rolls_price",
+          "price": "\u20ac 27,50 (C) / \u20ac 19 (P) per rol",
+          "unit_price_c": 27.5,
+          "unit_price_p": 19.0,
+          "icon": "layers",
+          "note": "Standaard consumentenrol: 53 cm breed. Patroon: +10% extra.",
+          "noteEn": "Standard consumer roll: 53 cm wide. Patterned wallpaper: allow ~10% extra.",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Vliesbehang 70 cm (per rol)",
+          "nameEn": "Non-woven wallpaper 70 cm (per roll)",
+          "qty_type": "wallpaper_rolls",
+          "price": "\u20ac 35 (C) / \u20ac 24,50 (P) per rol",
+          "unit_price_c": 35.0,
+          "unit_price_p": 24.5,
+          "icon": "layers",
+          "note": "Professioneel vliesbehang: 70 cm breed. Patroon: +10% extra.",
+          "noteEn": "Professional non-woven: 70 cm wide. Patterned wallpaper: allow ~10% extra.",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Behangplaksel (voor {packsCount} rollen)",
+          "nameEn": "Wallpaper adhesive (for {packsCount} rolls)",
+          "qty_type": "wallpaper_glue_qty",
+          "qtyEn_type": "wallpaper_glue_qtyEn",
+          "price_type": "wallpaper_glue_price",
+          "price": "\u20ac 12.00 (C) / \u20ac 8.00 (P) per pak",
+          "icon": "opacity"
+        },
+        {
+          "name": "Voorstrijk (behangprimer)",
+          "nameEn": "Primer (wallpaper primer)",
+          "qty_type": "wallpaper_primer_qty",
+          "qtyEn_type": "wallpaper_primer_qty",
+          "price_type": "wallpaper_primer_price",
+          "price": "\u20ac 8.00 (C) / \u20ac 5.50 (P) per liter",
+          "icon": "layers"
+        },
+        {
+          "name": "Plamuur / vulmiddel",
+          "nameEn": "Wall filler / levelling compound",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "\u20ac 11 (C) / \u20ac 7,50 (P)",
+          "unit_price_c": 11.0,
+          "unit_price_p": 7.5,
+          "icon": "format_paint",
+          "doc2_note": "Fixed calculation price from Document 2"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "nameEn": "Protective covering film",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "table_rows"
+        }
+      ]
+    },
+    {
+      "id": "grondverf",
+      "match": [
+        "Grondverf",
+        "Applying primer",
+        "grondverf",
+        "primer",
+        "Primer"
+      ],
+      "items": [
+        {
+          "name": "Grondverf",
+          "qty_type": "liters_L",
+          "cost_factor": 0.55,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.08,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "qty": "1 rol",
+          "cost_factor": 0.10,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Ontvetter / doek",
+          "qty": "1 set",
+          "cost_factor": 0.12,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.15,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "lakwerk",
+      "match": [
+        "Lakwerk",
+        "Lacquering",
+        "lakwerk",
+        "lacquer",
+        "Lacquer"
+      ],
+      "items": [
+        {
+          "name": "Lakverf",
+          "qty_type": "liters_L",
+          "cost_factor": 0.40,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Houtvuller",
+          "qty": "1 tube",
+          "cost_factor": 0.12,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "radiator",
+      "match": [
+        "Radiator",
+        "radiator",
+        "Radiator schilderen",
+        "Radiator painting"
+      ],
+      "items": [
+        {
+          "name": "Radiatorlak",
+          "nameEn": "Radiator paint",
+          "qty_type": "radiator_liters_L",
+          "qtyEn_type": "radiator_liters_L",
+          "price_type": "radiator_paint_price",
+          "price": "\u20ac 18.00 (C) / \u20ac 12.00 (P) per liter",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Metaalgrondverf",
+          "nameEn": "Metal primer",
+          "qty_type": "radiator_primer_liters_L",
+          "qtyEn_type": "radiator_primer_liters_L",
+          "price_type": "radiator_primer_price",
+          "price": "\u20ac 12.00 (C) / \u20ac 8.00 (P) per liter",
+          "icon": "layers"
+        },
+        {
+          "name": "Roestomzettend of roestwerend middel",
+          "nameEn": "Rust converter or rust inhibitor",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "\u20ac 11,50 (C) / \u20ac 7,50 (P)",
+          "unit_price_c": 11.5,
+          "unit_price_p": 7.5,
+          "icon": "science",
+          "note": "Optioneel: gebruik bij roestvorming.",
+          "noteEn": "Optional: use when rust is present.",
+          "doc2_note": "New item from Document 2"
+        },
+        {
+          "name": "Afplaktape",
+          "nameEn": "Masking tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "\u20ac 4.00 (C) / \u20ac 2.50 (P)",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier (korrel 180-220)",
+          "nameEn": "Sandpaper (grit 180-220)",
+          "qty": "2 vellen",
+          "qtyEn": "2 sheets",
+          "price": "\u20ac 1.00 (C) / \u20ac 0.60 (P) per vel",
+          "icon": "texture"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "nameEn": "Protective covering film",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "table_rows"
+        },
+        {
+          "name": "Ontvetter / allesreiniger",
+          "nameEn": "All-purpose cleaner / degreaser",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "price": "\u20ac 6.00 (C) / \u20ac 4.00 (P)",
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "meubels",
+      "match": [
+        "Meubels",
+        "Furniture",
+        "meubels",
+        "furniture"
+      ],
+      "items": [
+        {
+          "name": "Meubelverf of lak",
+          "qty_type": "liters_L",
+          "cost_factor": 0.40,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Houtvuller",
+          "qty": "1 tube",
+          "cost_factor": 0.12,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "schuur",
+      "match": [
+        "Schuur",
+        "Shed",
+        "schuur",
+        "shed"
+      ],
+      "items": [
+        {
+          "name": "Buitenlak of muurverf (buiten)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.40,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (buiten)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.15,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "2 rollen",
+          "cost_factor": 0.04,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "qty": "1 rol",
+          "cost_factor": 0.04,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        },
+        {
+          "name": "Emmer",
+          "qty": "1 stuk",
+          "cost_factor": 0.10,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "hekwerk",
+      "match": [
+        "Hekwerk",
+        "Fence",
+        "hekwerk",
+        "fence"
+      ],
+      "items": [
+        {
+          "name": "Buitenlak of metaalverf",
+          "qty_type": "liters_L",
+          "cost_factor": 0.40,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (buiten/metaal)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.12,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        },
+        {
+          "name": "Emmer / doek",
+          "qty": "1 set",
+          "cost_factor": 0.08,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "dakgoot",
+      "match": [
+        "Dakgoot",
+        "Gutter",
+        "dakgoot",
+        "gutter"
+      ],
+      "items": [
+        {
+          "name": "Dakgootverf (metaal, buiten)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.40,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (metaal)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.12,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        },
+        {
+          "name": "Emmer",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "rolluiken",
+      "match": [
+        "Rolluiken",
+        "Roller shutter",
+        "rolluiken",
+        "roller shutter"
+      ],
+      "items": [
+        {
+          "name": "Lakverf (buiten)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.40,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.12,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        },
+        {
+          "name": "Emmer",
+          "qty": "1 stuk",
+          "cost_factor": 0.08,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "vloer_buiten",
+      "match": [
+        "Vloer buiten",
+        "Outdoor floor",
+        "vloer buiten",
+        "outdoor floor"
+      ],
+      "items": [
+        {
+          "name": "Buitenvloerverf (beton/tegel)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.38,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (buiten)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.15,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.04,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "qty": "1 rol",
+          "cost_factor": 0.04,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.07,
+          "icon": "layers"
+        },
+        {
+          "name": "Emmer",
+          "qty": "1 stuk",
+          "cost_factor": 0.05,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Buitenreiniger",
+          "qty": "1 fles",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "beton",
+      "match": [
+        "Beton",
+        "Concrete",
+        "beton",
+        "concrete"
+      ],
+      "items": [
+        {
+          "name": "Betonverf",
+          "qty_type": "liters_L",
+          "cost_factor": 0.38,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (beton)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.15,
+          "icon": "layers"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.04,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Stucloper / afdekfolie",
+          "qty": "1 rol",
+          "cost_factor": 0.04,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.07,
+          "icon": "layers"
+        },
+        {
+          "name": "Emmer",
+          "qty": "1 stuk",
+          "cost_factor": 0.05,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Ontvetter / reiniger",
+          "qty": "1 fles",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "metaal",
+      "match": [
+        "Metaal",
+        "Metal",
+        "metaal",
+        "metal"
+      ],
+      "items": [
+        {
+          "name": "Metaalverf (lak of emaille)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.42,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (voor metaal)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Ontvetter",
+          "nameEn": "Degreaser / cleaning spray",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "cost_factor": 0.08,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Doek of lap",
+          "qty": "1 set",
+          "cost_factor": 0.08,
+          "icon": "dry_cleaning"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "houtwerk",
+      "match": [
+        "Houtwerk",
+        "Woodwork",
+        "houtwerk",
+        "woodwork"
+      ],
+      "items": [
+        {
+          "name": "Lakverf (voor hout)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.38,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Grondverf (voor hout)",
+          "qty_type": "half_liters_ceil_L",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Houtvuller",
+          "qty": "1 tube",
+          "cost_factor": 0.10,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.07,
+          "icon": "texture"
+        },
+        {
+          "name": "Afplaktape",
+          "qty": "1 rol",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Ontvetter / spons / doek",
+          "qty": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Verfbak",
+          "qty": "1 stuk",
+          "cost_factor": 0.12,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "voorwerk",
+      "match": [
+        "Voorwerk",
+        "Preparation",
+        "voorwerk",
+        "preparation",
+        "plamuren",
+        "puttying"
+      ],
+      "items": [
+        {
+          "name": "Plamuur (houtvuller of muurvuller)",
+          "qty": "1 emmer",
+          "cost_factor": 0.35,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Schuurpapier (korrel 120/180/240)",
+          "qty": "10 vellen",
+          "cost_factor": 0.20,
+          "icon": "texture"
+        },
+        {
+          "name": "Schuurblok",
+          "qty": "1 stuk",
+          "cost_factor": 0.10,
+          "icon": "square"
+        },
+        {
+          "name": "Plamuurmes",
+          "qty": "1 stuk",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "Doek of lap",
+          "qty": "1 set",
+          "cost_factor": 0.08,
+          "icon": "dry_cleaning"
+        },
+        {
+          "name": "Stofmasker",
+          "qty": "1 stuk",
+          "cost_factor": 0.07,
+          "icon": "masks"
+        },
+        {
+          "name": "Primer (optioneel)",
+          "qty": "1 fles",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "houtrot",
+      "match": [
+        "Houtrot",
+        "Wood rot",
+        "houtrot",
+        "wood rot"
+      ],
+      "items": [
+        {
+          "name": "Houtimpregneermiddel / houtverharder",
+          "qty": "1 fles",
+          "cost_factor": 0.20,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Houtrotvuller (epoxy / tweecomponenten)",
+          "qty": "1 set",
+          "cost_factor": 0.25,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Houtvuller",
+          "qty": "1 tube",
+          "cost_factor": 0.12,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Schuurpapier",
+          "qty": "5 vellen",
+          "cost_factor": 0.08,
+          "icon": "texture"
+        },
+        {
+          "name": "Lakverf of beits (afwerking)",
+          "qty_type": "liters_L",
+          "cost_factor": 0.20,
+          "icon": "brush"
+        },
+        {
+          "name": "Doek of lap",
+          "qty": "1 set",
+          "cost_factor": 0.05,
+          "icon": "dry_cleaning"
+        },
+        {
+          "name": "Primer (eventueel)",
+          "qty": "1 fles",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        }
+      ]
+    }
+  ],
+  "default_items": [
+    {
+      "name": "Verf (Liters)",
+      "qty_type": "liters_L",
+      "cost_factor": 1.0,
+      "icon": "format_paint"
+    }
+  ]
+}

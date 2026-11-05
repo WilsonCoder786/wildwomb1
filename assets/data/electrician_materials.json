@@ -1,0 +1,1048 @@
+{
+  "categories": [
+    {
+      "id": "stopcontact",
+      "doc2_note": "Wiring is usually already present. New wire does not need to be purchased in that case. Screws are normally included with the flush-mounted box.",
+      "match": [
+        "Stopcontact plaatsen",
+        "Outlet installation",
+        "Install outlet"
+      ],
+      "items": [
+        {
+          "name": "Inbouwdoos (stopcontact)",
+          "nameEn": "Flush-mounted box",
+          "dynamic_qty": "item_count",
+          "price_consumer": "€12",
+          "price_professional": "€8",
+          "unit_price": 8,
+          "icon": "power"
+        },
+        {
+          "name": "Lasklemmen (Wago)",
+          "nameEn": "Wire connectors",
+          "qty": "per stuk",
+          "qtyEn": "per piece",
+          "price_consumer": "€0,50",
+          "price_professional": "€0,30",
+          "unit_price": 0.30,
+          "icon": "hardware"
+        },
+        {
+          "name": "Lasdoos / centraaldoos (indien nodig)",
+          "nameEn": "Terminal block (if required)",
+          "qty": "per stuk",
+          "qtyEn": "per piece",
+          "price_consumer": "€0,50",
+          "price_professional": "€0,30",
+          "unit_price": 0.30,
+          "optional": true,
+          "icon": "developer_board"
+        },
+        {
+          "name": "Afdekplaat (geaard of ongeaard)",
+          "nameEn": "Cover plate – earthed or unearthed",
+          "dynamic_qty": "item_count",
+          "price_consumer": "€4–8",
+          "price_professional": "€2,50–5",
+          "unit_price": 2.5,
+          "icon": "layers"
+        },
+        {
+          "name": "Pluggen",
+          "nameEn": "Wall plugs",
+          "qty": "doos",
+          "qtyEn": "box",
+          "price_consumer": "€5",
+          "price_professional": "€3,50",
+          "unit_price": 3.50,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "verlichting",
+      "doc2_note": "Wiring is usually already present. New wire does not need to be purchased in that case. Screws are normally included with the fixture.",
+      "match": [
+        "Verlichting installeren",
+        "Verlichting plaatsen",
+        "Lamp ophangen",
+        "Lamp plaatsen",
+        "Hang a lamp",
+        "Install lamp",
+        "Lighting installation"
+      ],
+      "items": [
+        {
+          "name": "Armatuur droge ruimte",
+          "nameEn": "Light fixture – dry room",
+          "dynamic_qty": "item_count",
+          "price_consumer": "€20–150",
+          "price_professional": "€14–110",
+          "unit_price": 62,
+          "icon": "lightbulb"
+        },
+        {
+          "name": "Armatuur natte ruimte (IP44 of hoger)",
+          "nameEn": "Light fixture – wet room (IP44 or higher)",
+          "dynamic_qty": "item_count",
+          "price_consumer": "€25–175",
+          "price_professional": "€18–130",
+          "unit_price": 72,
+          "optional": true,
+          "icon": "lightbulb"
+        },
+        {
+          "name": "Lasdoos / centraaldoos (indien nodig)",
+          "nameEn": "Terminal block (if required)",
+          "qty": "per stuk",
+          "qtyEn": "per piece",
+          "price_consumer": "€0,50",
+          "price_professional": "€0,30",
+          "unit_price": 0.30,
+          "optional": true,
+          "icon": "developer_board"
+        },
+        {
+          "name": "Pluggen",
+          "nameEn": "Wall plugs",
+          "qty": "doos",
+          "qtyEn": "box",
+          "price_consumer": "€5",
+          "price_professional": "€3,50",
+          "unit_price": 3.50,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "groepenkast",
+      "match": [
+        "Groepenkast"
+      ],
+      "items": [
+        {
+          "name": "Automaat / aardlekschakelaar",
+          "nameEn": "Circuit breaker / RCD / RCBO",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.40,
+          "icon": "electrical_services"
+        },
+        {
+          "name": "Installatiedraad",
+          "nameEn": "Installation cable",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.20,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Kamrail",
+          "nameEn": "Busbar / comb rail",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.15,
+          "icon": "developer_board"
+        },
+        {
+          "name": "Lasklemmen",
+          "nameEn": "Wire connectors / terminal blocks",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.15,
+          "icon": "hardware"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.10,
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "buitenverlichting",
+      "match": [
+        "Buitenverlichting plaatsen"
+      ],
+      "items": [
+        {
+          "name": "Buitenlamp (IP44 of hoger)",
+          "nameEn": "Outdoor light fixture (IP44 or higher)",
+          "dynamic_qty": "item_count",
+          "unit_price": 34.95,
+          "icon": "lightbulb"
+        },
+        {
+          "name": "Buitenkabel of grondkabel",
+          "nameEn": "Outdoor cable or underground cable",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 9.95",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Wartels \u0026 lasklemmen",
+          "nameEn": "Cable glands \u0026 wire connectors",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Schroeven \u0026 pluggen",
+          "nameEn": "Screws \u0026 wall plugs",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 3.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Bevestigingsbeugels",
+          "nameEn": "Mounting brackets",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.50",
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "domotica",
+      "match": [
+        "Domotica installeren"
+      ],
+      "items": [
+        {
+          "name": "Domotica-apparaat (hub/sensor/schakelaar)",
+          "nameEn": "Smart home device (hub/sensor/switch)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 49.95",
+          "icon": "devices"
+        },
+        {
+          "name": "Installatiedraad",
+          "nameEn": "Installation cable",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 6.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Lasklemmen \u0026 bevestigingsmateriaal",
+          "nameEn": "Wire connectors \u0026 mounting hardware",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Netwerkkabel (optioneel)",
+          "nameEn": "Network cable (optional)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 5.95",
+          "icon": "settings_ethernet"
+        }
+      ]
+    },
+    {
+      "id": "schakelaar",
+      "match": [
+        "Schakelaar vervangen"
+      ],
+      "items": [
+        {
+          "name": "Schakelaar (type passend bij installatie)",
+          "nameEn": "Light switch (matching installation type)",
+          "dynamic_qty": "item_count",
+          "unit_price": 12.95,
+          "icon": "toggle_on"
+        },
+        {
+          "name": "Schroeven \u0026 lasklemmen",
+          "nameEn": "Screws \u0026 wire connectors",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Installatiedraad (indien nodig)",
+          "nameEn": "Installation cable (if needed)",
+          "qty": "2 meter",
+          "qtyEn": "2 meters",
+          "price": "€ 3.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "vloer_thermostaat",
+      "match": [
+        "Vloerverwarming thermostaat"
+      ],
+      "items": [
+        {
+          "name": "Vloerverwarmingsthermostaat",
+          "nameEn": "Underfloor heating thermostat",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 69.95",
+          "icon": "thermostat"
+        },
+        {
+          "name": "Installatiedraad",
+          "nameEn": "Installation cable",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 6.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Vloersensor \u0026 sensorbuis",
+          "nameEn": "Floor temperature sensor \u0026 conduit tube",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 14.95",
+          "icon": "sensors"
+        },
+        {
+          "name": "Inbouwdoos \u0026 schroeven \u0026 lasklemmen",
+          "nameEn": "Back box, screws \u0026 wire connectors",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "rookmelder",
+      "doc2_note": "Screws are normally included with the smoke detector.",
+      "match": [
+        "Rookmelder plaatsen",
+        "Smoke detector installation",
+        "Rookmelder",
+        "Smoke"
+      ],
+      "items": [
+        {
+          "name": "Rookmelder (10-jaarsbatterij, EN14604)",
+          "nameEn": "Smoke detector (10-year battery, EN14604)",
+          "dynamic_qty": "item_count",
+          "price_consumer": "€25",
+          "price_professional": "€18",
+          "unit_price": 18,
+          "icon": "notifications_active"
+        },
+        {
+          "name": "Pluggen",
+          "nameEn": "Wall plugs",
+          "qty": "doos",
+          "qtyEn": "box",
+          "price_consumer": "€5",
+          "price_professional": "€3,50",
+          "unit_price": 3.50,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "deurbel",
+      "match": [
+        "Deurbel installeren"
+      ],
+      "items": [
+        {
+          "name": "Deurbel (draadloos of bedraad)",
+          "nameEn": "Doorbell (wireless or wired)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 24.50",
+          "icon": "doorbell"
+        },
+        {
+          "name": "Batterijen of beltrafo (indien bedraad)",
+          "nameEn": "Batteries or bell transformer (if wired)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 6.00",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Montageset (schroeven, pluggen, lasklemmen \u0026 tape)",
+          "nameEn": "Mounting kit (screws, plugs, connectors \u0026 tape)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.50",
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "zonnepanelen",
+      "match": [
+        "Zonnepanelen aansluiten"
+      ],
+      "items": [
+        {
+          "name": "Zonnepanelen",
+          "nameEn": "Solar panels",
+          "dynamic_qty": "panel_count",
+          "cost_factor": 0.55,
+          "icon": "solar_power"
+        },
+        {
+          "name": "Omvormer",
+          "nameEn": "Solar inverter",
+          "qty": "1 stuk",
+          "qtyEn": "1 unit",
+          "cost_factor": 0.20,
+          "icon": "electrical_services"
+        },
+        {
+          "name": "DC-kabels \u0026 MC4-verbindingen",
+          "nameEn": "DC cables \u0026 MC4 connectors",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "AC-kabels",
+          "nameEn": "AC cables",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.05,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Bevestigingsmateriaal (dakbeugels, rails)",
+          "nameEn": "Mounting hardware (roof brackets, rails)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "kabel_trekken",
+      "match": [
+        "Kabel trekken"
+      ],
+      "items": [
+        {
+          "name": "Installatiedraad (3×2,5 mm² of 5×2,5 mm²)",
+          "nameEn": "Installation cable (3×2.5 mm² or 5×2.5 mm²)",
+          "dynamic_qty": "packs_times_5_meter",
+          "cost_factor": 0.50,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Trekveer / trekdraad",
+          "nameEn": "Cable fish tape / draw wire",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.15,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Lasklemmen",
+          "nameEn": "Wire connectors / terminal blocks",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "PVC-buis of flexibuis (optioneel)",
+          "nameEn": "PVC conduit or flexible conduit (optional)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.25,
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Beugels / kabelklemmen",
+          "nameEn": "Cable clips / conduit brackets",
+          "dynamic_type": "clips_kabeltrekken",
+          "icon": "horizontal_rule"
+        }
+      ]
+    },
+    {
+      "id": "elektra_tuin",
+      "match": [
+        "Elektra in tuin aanleggen"
+      ],
+      "items": [
+        {
+          "name": "Grondkabel (YMvK-as 3×2,5 mm²)",
+          "nameEn": "Underground cable (YMvK 3×2.5 mm²)",
+          "dynamic_qty": "packs_times_5_meter",
+          "cost_factor": 0.40,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Schakelmateriaal voor buiten",
+          "nameEn": "Outdoor switch gear / weatherproof sockets",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.20,
+          "icon": "power"
+        },
+        {
+          "name": "Lasklemmen, schroeven \u0026 pluggen",
+          "nameEn": "Wire connectors, screws \u0026 wall plugs",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "Buis of kabelgoot",
+          "nameEn": "Conduit or cable trunking",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.20,
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Bevestigingsbeugels (optioneel)",
+          "nameEn": "Mounting brackets / clips (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "wandcontactdoos",
+      "match": [
+        "Wandcontactdoos plaatsen"
+      ],
+      "items": [
+        {
+          "name": "Wandcontactdoos (inbouw/opbouw)",
+          "nameEn": "Mains socket (flush or surface mount)",
+          "dynamic_qty": "item_count",
+          "unit_price": 11.95,
+          "icon": "power"
+        },
+        {
+          "name": "Installatiedraad (3×2,5 mm²)",
+          "nameEn": "Installation cable (3×2.5 mm²)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 7.95",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Inbouw- of opbouwdoos",
+          "nameEn": "Flush or surface back box",
+          "dynamic_qty": "item_count",
+          "unit_price": 3.49,
+          "icon": "developer_board"
+        },
+        {
+          "name": "Schroeven, pluggen \u0026 lasklemmen",
+          "nameEn": "Screws, wall plugs \u0026 wire connectors",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Afdekplaat",
+          "nameEn": "Face plate / cover plate",
+          "dynamic_qty": "item_count",
+          "unit_price": 4.25,
+          "icon": "layers"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "centraaldoos",
+      "match": [
+        "Centraaldoos aansluiten"
+      ],
+      "items": [
+        {
+          "name": "Centraaldoos",
+          "nameEn": "Junction box / ceiling rose",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 4.95",
+          "icon": "developer_board"
+        },
+        {
+          "name": "Installatiedraad (1,5 of 2,5 mm²)",
+          "nameEn": "Installation cable (1.5 or 2.5 mm²)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 6.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Lasklemmen (Wago)",
+          "nameEn": "Wago wire connectors (push-in)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Schroeven \u0026 pluggen",
+          "nameEn": "Screws \u0026 wall plugs",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 3.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Afdekplaat",
+          "nameEn": "Face plate / cover plate",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 4.25",
+          "icon": "layers"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "dimmer",
+      "match": [
+        "Dimmer schakelaar plaatsen"
+      ],
+      "items": [
+        {
+          "name": "Dimmer schakelaar",
+          "nameEn": "Dimmer switch",
+          "dynamic_qty": "item_count",
+          "unit_price": 29.95,
+          "icon": "toggle_on"
+        },
+        {
+          "name": "Lasklemmen",
+          "nameEn": "Wire connectors / terminal blocks",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Schroeven",
+          "nameEn": "Screws",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 3.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Installatiedraad (indien nodig)",
+          "nameEn": "Installation cable (if needed)",
+          "qty": "2 meter",
+          "qtyEn": "2 meters",
+          "price": "€ 3.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "stomme_leiding",
+      "match": [
+        "Stomme leiding plaatsen"
+      ],
+      "items": [
+        {
+          "name": "PVC-buis of flexibele buis",
+          "nameEn": "PVC conduit or flexible conduit",
+          "qty": "4 meter",
+          "qtyEn": "4 meters",
+          "price": "€ 8.95",
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Conduit brackets / clips",
+          "qty": "4 stuks",
+          "qtyEn": "4 pieces",
+          "price": "€ 3.50",
+          "icon": "construction"
+        },
+        {
+          "name": "Schroeven \u0026 pluggen",
+          "nameEn": "Screws \u0026 wall plugs",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 3.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Trekdraad (optioneel)",
+          "nameEn": "Draw wire / fish tape (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.50",
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "aarde",
+      "match": [
+        "Aarde verbeteren"
+      ],
+      "items": [
+        {
+          "name": "Aardpen",
+          "nameEn": "Earth rod / ground rod",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 34.95",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Aardingsstrip \u0026 aardrail",
+          "nameEn": "Earthing strip \u0026 earth bus bar",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 14.50",
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Aardedraad",
+          "nameEn": "Earth wire / ground cable",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 8.95",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Aardingklemmen",
+          "nameEn": "Earthing clamps",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 6.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Montagemateriaal (optioneel)",
+          "nameEn": "Mounting hardware (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.50",
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "kabelgoot",
+      "doc2_note": "Screws for screw-mounted trunking are not always supplied. Separate screws are normally only required for Job 29 and when not supplied.",
+      "match": [
+        "Kabelgoot",
+        "Cable trunking",
+        "Kabelgoot monteren",
+        "Groepenkast vernieuwen"
+      ],
+      "items": [
+        {
+          "name": "Kabelgoot 20×12 of 25×16 mm, zelfklevend",
+          "nameEn": "Cable trunking 20×12 or 25×16 mm, self-adhesive",
+          "dynamic_type": "kabelgoot_meter",
+          "price_consumer": "€2–4 per m",
+          "price_professional": "€1,50–2,50 per m",
+          "unit_price": 2.0,
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Kabelgoot 20×12 of 25×16 mm, schroefbaar",
+          "nameEn": "Cable trunking 20×12 or 25×16 mm, screw-mounted",
+          "dynamic_type": "kabelgoot_meter",
+          "price_consumer": "€3–5 per m",
+          "price_professional": "€2–3 per m",
+          "unit_price": 2.5,
+          "optional": true,
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Beugels (per 50 cm)",
+          "nameEn": "Brackets (per 50 cm)",
+          "dynamic_type": "kabelgoot_beugels",
+          "price_consumer": "€0,60",
+          "price_professional": "€0,40",
+          "unit_price": 0.40,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Pluggen",
+          "nameEn": "Wall plugs",
+          "qty": "doos",
+          "qtyEn": "box",
+          "price_consumer": "€5",
+          "price_professional": "€3,50",
+          "unit_price": 3.50,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "stroomleiding",
+      "doc2_note": "Use 2.5 mm² for power circuits and 1.5 mm² for lighting circuits. Screws for conduit/trunking may need to be purchased separately when not supplied.",
+      "match": [
+        "Stroomleiding",
+        "Stroomleiding leggen",
+        "Power cable",
+        "Power cable installation"
+      ],
+      "items": [
+        {
+          "name": "Installatiedraad 2,5 mm²",
+          "nameEn": "2.5 mm² wire",
+          "dynamic_type": "stroomleiding_draad",
+          "price_consumer": "€1,30 per m",
+          "price_professional": "€0,90 per m",
+          "unit_price": 0.90,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Installatiedraad 1,5 mm²",
+          "nameEn": "1.5 mm² wire",
+          "dynamic_type": "stroomleiding_draad",
+          "price_consumer": "€1,30 per m",
+          "price_professional": "€0,90 per m",
+          "unit_price": 0.90,
+          "optional": true,
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Leegbuis / conduit (per 5 m)",
+          "nameEn": "Conduit (per 5 m)",
+          "qty": "per 5 m",
+          "price_consumer": "€4",
+          "price_professional": "€2,50",
+          "unit_price": 2.50,
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Installatiebuis / flexibele buis (per 50 cm)",
+          "nameEn": "Tube / conduit (per 50 cm)",
+          "qty": "per 50 cm",
+          "price_consumer": "€2",
+          "price_professional": "€1,20",
+          "unit_price": 1.20,
+          "icon": "settings_input_composite"
+        },
+        {
+          "name": "Klemmen / lasklemmen",
+          "nameEn": "Clips",
+          "dynamic_type": "stroomleiding_klemmen",
+          "price_consumer": "€0,50",
+          "price_professional": "€0,30",
+          "unit_price": 0.30,
+          "icon": "hardware"
+        },
+        {
+          "name": "Beugels (per 50 cm)",
+          "nameEn": "Brackets",
+          "dynamic_type": "stroomleiding_beugels",
+          "price_consumer": "€0,60",
+          "price_professional": "€0,40",
+          "unit_price": 0.40,
+          "icon": "construction"
+        },
+        {
+          "name": "Pluggen",
+          "nameEn": "Wall plugs",
+          "qty": "doos",
+          "qtyEn": "box",
+          "price_consumer": "€5",
+          "price_professional": "€3,50",
+          "unit_price": 3.50,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "kortsluiting",
+      "match": [
+        "Kortsluiting zoeken"
+      ],
+      "items": [
+        {
+          "name": "Nieuwe kabels (indien nodig)",
+          "nameEn": "Replacement cables (if needed)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 7.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Lasklemmen",
+          "nameEn": "Wire connectors / terminal blocks",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Electrical insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "price": "€ 2.50",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Vervangend schakelmateriaal (optioneel)",
+          "nameEn": "Replacement switching hardware (optional)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 12.95",
+          "icon": "toggle_on"
+        }
+      ]
+    },
+    {
+      "id": "ledverlichting",
+      "match": [
+        "Ledverlichting plaatsen"
+      ],
+      "items": [
+        {
+          "name": "LED-verlichting (lamp/armatuur/strips)",
+          "nameEn": "LED lighting (bulb/fixture/strips)",
+          "dynamic_qty": "item_count",
+          "unit_price": 24.95,
+          "icon": "lightbulb"
+        },
+        {
+          "name": "Installatiedraad (1,5 mm²)",
+          "nameEn": "Installation cable (1.5 mm²)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "price": "€ 6.50",
+          "icon": "electric_bolt"
+        },
+        {
+          "name": "Schroeven \u0026 pluggen \u0026 lasklemmen",
+          "nameEn": "Screws, wall plugs \u0026 wire connectors",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.95",
+          "icon": "hardware"
+        },
+        {
+          "name": "Transformator of LED-driver (indien nodig)",
+          "nameEn": "Transformer or LED driver (if needed)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 18.50",
+          "icon": "electrical_services"
+        },
+        {
+          "name": "Bevestigingsmateriaal (clips/profielen)",
+          "nameEn": "Mounting hardware (clips/profiles)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.50",
+          "icon": "construction"
+        }
+      ]
+    }
+  ],
+  "default_items": [
+    {
+      "name": "Elektrakabel (2,5 mm²)",
+      "nameEn": "Electrical cable (2.5 mm²)",
+      "qty_type": "packs_times_5_meter",
+      "cost_factor": 0.35,
+      "icon": "electric_bolt"
+    },
+    {
+      "name": "Stopcontacten / schakelaars",
+      "nameEn": "Sockets / switches",
+      "qty_type": "packs_stuks",
+      "cost_factor": 0.30,
+      "icon": "power"
+    },
+    {
+      "name": "Verbindingsdozen",
+      "nameEn": "Junction boxes",
+      "qty_type": "packs_half_ceil_pieces",
+      "cost_factor": 0.15,
+      "icon": "developer_board"
+    },
+    {
+      "name": "Isolatietape \u0026 krimpkous",
+      "nameEn": "Insulation tape \u0026 heat-shrink tubing",
+      "qty": "1 set",
+      "qtyEn": "1 set",
+      "cost_factor": 0.10,
+      "icon": "wrap_text"
+    },
+    {
+      "name": "Bevestigingsmateriaal",
+      "nameEn": "Mounting hardware / fixings",
+      "qty": "1 set",
+      "qtyEn": "1 set",
+      "cost_factor": 0.10,
+      "icon": "hardware"
+    }
+  ]
+}

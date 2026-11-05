@@ -1,0 +1,674 @@
+{
+  "categories": [
+    {
+      "id": "paving",
+      "match": [
+        "Bestrating",
+        "Paving",
+        "Terras",
+        "Patio",
+        "Verharding",
+        "Hard surface"
+      ],
+      "items": [
+        {
+          "name": "Sierbestratingstegels 60×60 cm",
+          "nameEn": "Gravel / paving tiles 60×60 cm",
+          "dynamic_type": "paving_tiles",
+          "price_consumer": "€35",
+          "price_professional": "€24.50",
+          "unit": "m²",
+          "unit_price_c": 35.00,
+          "unit_price_p": 24.50,
+          "icon": "grid_on",
+          "doc2_note": "Standard app calculation material. Document 2: €35 C / €24.50 P per m²."
+        },
+        {
+          "name": "Vulzand (straatzand)",
+          "nameEn": "Filling sand",
+          "dynamic_type": "paving_sand",
+          "price_consumer": "€25",
+          "price_professional": "€18",
+          "unit": "m³",
+          "unit_price": 25.00,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegzand",
+          "nameEn": "Jointing sand",
+          "dynamic_type": "paving_inveeg",
+          "price_consumer": "€30",
+          "price_professional": "€22",
+          "unit": "m³",
+          "unit_price": 30.00,
+          "icon": "grain"
+        },
+        {
+          "name": "Betonrandstenen / opsluitbanden",
+          "nameEn": "Concrete edging / retaining strips",
+          "dynamic_type": "paving_opsluit",
+          "price_consumer": "€6",
+          "price_professional": "€4",
+          "unit": "metre",
+          "unit_price": 6.00,
+          "icon": "border_all"
+        },
+        {
+          "name": "Anti-worteldoek (indien nodig)",
+          "nameEn": "Weed-control fabric (if required)",
+          "dynamic_type": "paving_worteldoek",
+          "price_consumer": "€1.60",
+          "price_professional": "€1.00",
+          "unit": "m²",
+          "unit_price_c": 1.60,
+          "unit_price_p": 1.00,
+          "icon": "layers",
+          "doc2_note": "Optional. Document 2: €1.60 C / €1.00 P per m²."
+        }
+      ]
+    },
+    {
+      "id": "sloot",
+      "match": [
+        "Sloot",
+        "sloot",
+        "Ditch",
+        "ditch"
+      ],
+      "items": [
+        {
+          "name": "Puin- / Tuinafvalzakken (zware kwaliteit)",
+          "nameEn": "Heavy-duty rubble / garden waste bags",
+          "qty": "2 rollen (20 stuks)",
+          "qtyEn": "2 rolls (20 pieces)",
+          "price": "€ 12.50",
+          "icon": "delete_outline"
+        },
+        {
+          "name": "Bodemverbeteraar / Slibverwijderaar (optioneel)",
+          "nameEn": "Soil conditioner / sludge remover (optional)",
+          "qty": "1 can (5 liter)",
+          "qtyEn": "1 can (5 litres)",
+          "price": "€ 24.50",
+          "icon": "water_drop"
+        },
+        {
+          "name": "Oeverbescherming / Kokosmatten (optioneel)",
+          "nameEn": "Bank protection / coir matting (optional)",
+          "dynamic_type": "sloot_oever",
+          "unit_price": 4.50,
+          "icon": "layers"
+        },
+        {
+          "name": "Bodemkalk (voor waterkwaliteit)",
+          "nameEn": "Hydrated lime (for water quality)",
+          "qty": "1 zak (10 kg)",
+          "qtyEn": "1 bag (10 kg)",
+          "price": "€ 11.50",
+          "icon": "grain"
+        }
+      ]
+    },
+    {
+      "id": "lawn",
+      "match": [
+        "Gazon",
+        "Lawn",
+        "Kunstgras",
+        "Artificial grass",
+        "Gras",
+        "Grass"
+      ],
+      "items": [
+        {
+          "name": "Kunstgras",
+          "nameEn": "Artificial grass",
+          "dynamic_type": "lawn_kunstgras",
+          "price_consumer": "€35",
+          "price_professional": "€24.50",
+          "unit": "m²",
+          "unit_price_c": 35.00,
+          "unit_price_p": 24.50,
+          "icon": "grass",
+          "doc2_note": "Standard app calculation material. Document 2: €35 C / €24.50 P per m²."
+        },
+        {
+          "name": "Zand / Ophoogzand",
+          "nameEn": "Soil",
+          "dynamic_type": "lawn_zand",
+          "price_consumer": "€30",
+          "price_professional": "€22",
+          "unit": "m³",
+          "unit_price": 30.00,
+          "icon": "terrain"
+        },
+        {
+          "name": "Anti-worteldoek",
+          "nameEn": "Weed-control fabric",
+          "dynamic_type": "lawn_worteldoek",
+          "price_consumer": "€1.60",
+          "price_professional": "€1.00",
+          "unit": "m²",
+          "unit_price_c": 1.60,
+          "unit_price_p": 1.00,
+          "icon": "layers",
+          "doc2_note": "Document 2: €1.60 C / €1.00 P per m²."
+        }
+      ]
+    },
+    {
+      "id": "deck",
+      "match": [
+        "Vlonder",
+        "vlonder",
+        "Decking",
+        "decking"
+      ],
+      "items": [
+        {
+          "name": "Vlonderdelen (hardhout/composiet)",
+          "nameEn": "Decking planks (hardwood/composite)",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.55,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Liggers / Onderbalk",
+          "nameEn": "Decking joists / bearer beams",
+          "qty_type": "packs_div_3_ceil_pieces",
+          "cost_factor": 0.20,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Schroeven (RVS)",
+          "nameEn": "Stainless steel screws",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "Paal / Grondanker",
+          "nameEn": "Post / ground anchor",
+          "qty_type": "packs_div_4_ceil_pieces",
+          "cost_factor": 0.10,
+          "icon": "foundation"
+        },
+        {
+          "name": "Houtverduurzaming / Olie",
+          "nameEn": "Wood preservative / decking oil",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.05,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "pond",
+      "match": [
+        "Vijver",
+        "Pond"
+      ],
+      "items": [
+        {
+          "name": "Vijverfolie",
+          "nameEn": "Pond liner",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.40,
+          "icon": "water"
+        },
+        {
+          "name": "Vijverfilter / Pomp",
+          "nameEn": "Pond filter / pump",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.30,
+          "icon": "settings"
+        },
+        {
+          "name": "Sierstenen / Grind",
+          "nameEn": "Decorative stones / gravel",
+          "qty_type": "packs_div_4_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "terrain"
+        },
+        {
+          "name": "Waterplanten",
+          "nameEn": "Aquatic / pond plants",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "spa"
+        }
+      ]
+    },
+    {
+      "id": "overkapping",
+      "match": [
+        "Overkapping",
+        "Carport",
+        "Pergola",
+        "Afdak",
+        "Tuinoverkapping"
+      ],
+      "items": [
+        {
+          "name": "Houten palen / staanders",
+          "nameEn": "Wooden posts",
+          "dynamic_type": "overkapping_staanders",
+          "price_consumer": "€26.50",
+          "price_professional": "€21",
+          "unit": "piece",
+          "unit_price_c": 26.50,
+          "unit_price_p": 21.00,
+          "icon": "foundation",
+          "doc2_note": "Document 2: €26.50 C / €21 P per post."
+        },
+        {
+          "name": "Houten balken",
+          "nameEn": "Wooden beams",
+          "dynamic_type": "overkapping_balken",
+          "price_consumer": "€22.50",
+          "price_professional": "€16.50",
+          "unit": "m",
+          "unit_price_c": 22.50,
+          "unit_price_p": 16.50,
+          "icon": "horizontal_rule",
+          "doc2_note": "Document 2: €22.50 C / €16.50 P per meter."
+        },
+        {
+          "name": "Houten dakpanelen",
+          "nameEn": "Wooden roof panels",
+          "dynamic_type": "overkapping_dakplaten",
+          "price_consumer": "€32.50",
+          "price_professional": "€23",
+          "unit": "panel",
+          "unit_price_c": 32.50,
+          "unit_price_p": 23.00,
+          "icon": "roofing",
+          "doc2_note": "Document 2: €32.50 C / €23 P per panel."
+        },
+        {
+          "name": "Dakbedekking",
+          "nameEn": "Roofing material",
+          "dynamic_type": "overkapping_dakbedekking",
+          "price_consumer": "€7.50",
+          "price_professional": "€5.25",
+          "unit": "m²",
+          "unit_price_c": 7.50,
+          "unit_price_p": 5.25,
+          "icon": "layers",
+          "doc2_note": "Document 2: €7.50 C / €5.25 P per m²."
+        },
+        {
+          "name": "Betonpoeren / grondankers",
+          "nameEn": "Concrete footing blocks",
+          "dynamic_type": "overkapping_poeren",
+          "price_consumer": "€8",
+          "price_professional": "€5.50",
+          "unit": "piece",
+          "unit_price_c": 8.00,
+          "unit_price_p": 5.50,
+          "icon": "foundation",
+          "doc2_note": "Document 2: €8 C / €5.50 P per piece."
+        },
+        {
+          "name": "Hoekverbinders",
+          "nameEn": "Corner connectors",
+          "dynamic_type": "overkapping_hoekverbinders",
+          "price_consumer": "€4",
+          "price_professional": "€2.50",
+          "unit": "piece",
+          "unit_price_c": 4.00,
+          "unit_price_p": 2.50,
+          "icon": "hardware",
+          "doc2_note": "Document 2: €4 C / €2.50 P per piece."
+        },
+        {
+          "name": "Daktrim / regengoot",
+          "nameEn": "Roof trim / gutter",
+          "dynamic_type": "overkapping_daktrim",
+          "price_consumer": "€12",
+          "price_professional": "€8",
+          "unit": "piece",
+          "unit_price_c": 12.00,
+          "unit_price_p": 8.00,
+          "icon": "water_drop",
+          "doc2_note": "Document 2: €12 C / €8 P per piece."
+        },
+        {
+          "name": "Schroeven (RVS houtschroeven)",
+          "nameEn": "Screws (stainless steel wood screws)",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "price_consumer": "€15",
+          "price_professional": "€10",
+          "price": "€ 15.00",
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "fence",
+      "match": [
+        "Schutting",
+        "Fence",
+        "Omheining"
+      ],
+      "items": [
+        {
+          "name": "Schuttingpanelen 180×180 cm",
+          "nameEn": "Fence panels 180×180 cm (ready-made)",
+          "dynamic_type": "fence_panels",
+          "price_consumer": "€55",
+          "price_professional": "€41",
+          "unit": "panel",
+          "unit_price_c": 55.00,
+          "unit_price_p": 41.00,
+          "icon": "fence",
+          "doc2_note": "Standard app calculation material. Document 2: €55 C / €41 P per panel."
+        },
+        {
+          "name": "Schuttingpalen (geïmpregneerd, Douglas of hardhout)",
+          "nameEn": "Fence posts (impregnated, Douglas or hardwood)",
+          "dynamic_type": "fence_posts",
+          "price_consumer": "€20",
+          "price_professional": "€14",
+          "unit": "piece",
+          "unit_price_c": 20.00,
+          "unit_price_p": 14.00,
+          "icon": "foundation",
+          "doc2_note": "Document 2: €20 C / €14 P per post."
+        },
+        {
+          "name": "L-beugels / paalbeugels",
+          "nameEn": "L-brackets / fence supports",
+          "dynamic_type": "fence_brackets",
+          "price_consumer": "€2–4",
+          "price_professional": "€1.50–2.50",
+          "unit": "piece",
+          "unit_price": 3.00,
+          "icon": "hardware"
+        },
+        {
+          "name": "Schroeven (roestvrij staal)",
+          "nameEn": "Stainless-steel screws",
+          "qty": "1 doos",
+          "qtyEn": "1 box/pack",
+          "price_consumer": "€15",
+          "price_professional": "€10",
+          "price": "€ 15.00",
+          "icon": "hardware"
+        },
+        {
+          "name": "Snelbeton (paalkuil)",
+          "nameEn": "Fast-setting concrete",
+          "dynamic_type": "fence_concrete",
+          "price_consumer": "€8",
+          "price_professional": "€5.50",
+          "unit": "bag",
+          "unit_price_c": 8.00,
+          "unit_price_p": 5.50,
+          "icon": "layers",
+          "doc2_note": "Document 2: €8 C / €5.50 P per bag."
+        },
+        {
+          "name": "Paalbescherming (teer of vloeibaar rubber)",
+          "nameEn": "Post protection (tar or liquid rubber)",
+          "dynamic_type": "fence_post_protection",
+          "price_consumer": "€11.50",
+          "price_professional": "€7.50",
+          "unit": "piece",
+          "unit_price_c": 11.50,
+          "unit_price_p": 7.50,
+          "icon": "water_drop",
+          "doc2_note": "Optional. Document 2: €11.50 C / €7.50 P per piece."
+        },
+        {
+          "name": "Paalkapjes (zink of houten kap)",
+          "nameEn": "Post caps (zinc or wooden caps)",
+          "dynamic_type": "fence_post_caps",
+          "price_consumer": "€3.50",
+          "price_professional": "€2.50",
+          "unit": "piece",
+          "unit_price_c": 3.50,
+          "unit_price_p": 2.50,
+          "icon": "construction",
+          "doc2_note": "Optional. Document 2: €3.50 C / €2.50 P per piece."
+        },
+        {
+          "name": "Betonschuttingpalen (optioneel, hout-betonschutting)",
+          "nameEn": "Concrete panels (optional, for solid wood-concrete fence)",
+          "dynamic_type": "fence_concrete_panels",
+          "price_consumer": "€5–10",
+          "price_professional": "€3.50–7",
+          "unit": "piece",
+          "unit_price": 7.50,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Houtbeits of hout-olie (indien nodig)",
+          "nameEn": "Wood stain or wood oil (if required)",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "price_consumer": "€25",
+          "price_professional": "€18",
+          "price": "€ 25.00",
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "snoei",
+      "match": [
+        "Snoei",
+        "Pruning",
+        "Hagen",
+        "Hedge",
+        "Bomen",
+        "Tree"
+      ],
+      "doc2_note": "Job 23 (Pruning – hydrangea): No standard wound-treatment product required per Document 2.",
+      "items": [
+        {
+          "name": "Beschermingsmiddelen (werkhandschoenen, veiligheidsbril)",
+          "nameEn": "Protective equipment (gloves, safety glasses)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.35,
+          "icon": "safety_check"
+        },
+        {
+          "name": "Afvoer takken / groencontainer",
+          "nameEn": "Branch / green waste removal",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.65,
+          "icon": "recycling"
+        }
+      ]
+    },
+    {
+      "id": "border",
+      "match": [
+        "Planten border",
+        "Planting border",
+        "Bloembollen",
+        "Bulb",
+        "Moestuin",
+        "Vegetable"
+      ],
+      "items": [
+        {
+          "name": "Planten",
+          "nameEn": "Plants",
+          "qty_type": "packs_pieces",
+          "cost_factor": 0.50,
+          "icon": "local_florist"
+        },
+        {
+          "name": "Potgrond / Compost",
+          "nameEn": "Potting compost / compost",
+          "qty_type": "packs_div_4_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "terrain"
+        },
+        {
+          "name": "Anti-worteldoek (optioneel)",
+          "nameEn": "Weed barrier cloth (optional)",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        },
+        {
+          "name": "Borderrand (hout of kunststof)",
+          "nameEn": "Border edging (wood or plastic)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.12,
+          "icon": "border_all"
+        },
+        {
+          "name": "Sierstenen (optioneel)",
+          "nameEn": "Decorative stones (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "circle"
+        }
+      ]
+    },
+    {
+      "id": "winter",
+      "match": [
+        "winterklaar",
+        "Winterklaar",
+        "Winter-proofing",
+        "winter-proofing",
+        "winter",
+        "Winter"
+      ],
+      "items": [
+        {
+          "name": "Tuinvlies / Wintervlies (bescherming vorst)",
+          "nameEn": "Garden fleece / frost protection fleece",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Jute / Noppenfolie (potten & bomen)",
+          "nameEn": "Hessian / bubble wrap (for pots & trees)",
+          "qty": "1-2 rollen",
+          "qtyEn": "1-2 rolls",
+          "cost_factor": 0.12,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Mulch / Compost / Houtsnippers",
+          "nameEn": "Mulch / compost / wood chippings",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.15,
+          "icon": "terrain"
+        },
+        {
+          "name": "Bladaarde / Afgevallen bladeren (isolatie)",
+          "nameEn": "Leaf mould / fallen leaves (insulation)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 0.00",
+          "icon": "eco"
+        },
+        {
+          "name": "Najaars- / Wintergazonmest",
+          "nameEn": "Autumn / winter lawn fertiliser",
+          "qty": "1 zak (5-10 kg)",
+          "qtyEn": "1 bag (5-10 kg)",
+          "cost_factor": 0.14,
+          "icon": "grass"
+        },
+        {
+          "name": "Tuinmeubelhoes / Dekzeil",
+          "nameEn": "Garden furniture cover / tarpaulin",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.12,
+          "icon": "deck"
+        },
+        {
+          "name": "Vogelvoer (vetbollen, zaden, pinda's)",
+          "nameEn": "Bird feed (fat balls, seeds, peanuts)",
+          "qty": "1 emmer / net",
+          "qtyEn": "1 bucket / net",
+          "cost_factor": 0.06,
+          "icon": "flutter_dash"
+        },
+        {
+          "name": "Voorjaarsbloembollen (tulpen, narcissen)",
+          "nameEn": "Spring flower bulbs (tulips, daffodils)",
+          "qty": "1-2 netjes",
+          "qtyEn": "1-2 nets",
+          "cost_factor": 0.08,
+          "icon": "local_florist"
+        },
+        {
+          "name": "Anti-worteldoek / Beschermdoek",
+          "nameEn": "Weed barrier / protective membrane",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.05,
+          "icon": "layers"
+        },
+        {
+          "name": "Grind of zand (drainage & isolatie)",
+          "nameEn": "Gravel or sand (drainage & insulation)",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.05,
+          "icon": "grain"
+        },
+        {
+          "name": "Snoeiwondbalsem (boombalsem)",
+          "nameEn": "Tree wound sealant / pruning paste",
+          "qty": "1 potje / tube",
+          "qtyEn": "1 jar / tube",
+          "cost_factor": 0.05,
+          "icon": "healing"
+        }
+      ]
+    }
+  ],
+  "default_items": [
+    {
+      "name": "Potgrond / Teelaarde",
+      "nameEn": "Potting compost / topsoil",
+      "qty_type": "packs_div_4_ceil_bags",
+      "cost_factor": 0.35,
+      "icon": "terrain"
+    },
+    {
+      "name": "Planten / Struiken",
+      "nameEn": "Plants / shrubs",
+      "qty_type": "packs_pieces",
+      "cost_factor": 0.40,
+      "icon": "spa"
+    },
+    {
+      "name": "Meststof",
+      "nameEn": "Fertiliser",
+      "qty": "1 zak",
+      "qtyEn": "1 bag",
+      "cost_factor": 0.15,
+      "icon": "eco"
+    },
+    {
+      "name": "Onkruidfolie",
+      "nameEn": "Weed barrier membrane",
+      "qty": "1 rol",
+      "qtyEn": "1 roll",
+      "cost_factor": 0.10,
+      "icon": "layers"
+    }
+  ]
+}

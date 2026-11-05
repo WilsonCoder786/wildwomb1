@@ -1,0 +1,1102 @@
+{
+  "categories": [
+    {
+      "id": "vloertegels",
+      "doc1_note": "Job 11: Ceramic floor tiles, 60 × 60 cm. Tile adhesive guideline: 4 kg/m².",
+      "doc2_note": "Price per packaging unit. Quantity calculated from project dimensions. Material and labour costs are separate.",
+      "match": [
+        "Vloertegels",
+        "floor tiles",
+        "Vloertegels leggen",
+        "Laying floor tiles"
+      ],
+      "items": [
+        {
+          "name": "Vloertegels (60 × 60 cm)",
+          "nameEn": "Floor tiles (60 × 60 cm)",
+          "unit": "m²",
+          "qty_type": "tile_area_m2",
+          "price_consumer": "€27,50",
+          "price_professional": "€19,00",
+          "unit_price_c": 27.50,
+          "unit_price_p": 19.00,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm vloer (4 kg/m²)",
+          "nameEn": "Tile adhesive floor (4 kg/m²)",
+          "unit": "25 kg zak",
+          "unitEn": "25 kg bag",
+          "qty_type": "glue_bags_floor",
+          "price_consumer": "€15",
+          "price_professional": "€10",
+          "unit_price": 10,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel vloer (0,5 kg/m²)",
+          "nameEn": "Tile grout floor (0.5 kg/m²)",
+          "unit": "5 kg zak",
+          "unitEn": "5 kg bag",
+          "qty_type": "grout_bags_floor",
+          "price_consumer": "€12",
+          "price_professional": "€8",
+          "unit_price": 8,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "unit": "5 m²",
+          "price_consumer": "€4",
+          "price_professional": "€2,50",
+          "unit_price": 2.50,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk (indien nodig)",
+          "nameEn": "Tile primer (if required)",
+          "unit": "m²",
+          "optional": true,
+          "qty_type": "primer_units_5m2",
+          "price_consumer": "€8",
+          "price_professional": "€5,50",
+          "unit_price": 5.50,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Ontvetter/cleaner (bij vettige ondergrond)",
+          "nameEn": "Degreaser/cleaner (for greasy or contaminated surfaces)",
+          "unit": "fles",
+          "unitEn": "bottle",
+          "optional": true,
+          "price_consumer": "€7",
+          "price_professional": "€5",
+          "unit_price": 5,
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "wandtegels",
+      "doc1_note": "Job 12: Ceramic wall tiles, 30 × 60 cm; mosaic tiles on sheets. Tile adhesive guideline: 3 kg/m².",
+      "doc2_note": "Price per packaging unit. Quantity calculated from project dimensions. Material and labour costs are separate.",
+      "match": [
+        "Wandtegels",
+        "wall tiles",
+        "Wandtegels plaatsen",
+        "Installing wall tiles",
+        "mozaïek op matjes",
+        "mosaic sheets"
+      ],
+      "items": [
+        {
+          "name": "Wandtegels (30 × 60 cm)",
+          "nameEn": "Wall tiles (30 × 60 cm)",
+          "unit": "m²",
+          "qty_type": "tile_area_m2",
+          "price_consumer": "€27,50",
+          "price_professional": "€19,00",
+          "unit_price_c": 27.50,
+          "unit_price_p": 19.00,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Mozaïektegels op matjes",
+          "nameEn": "Mosaic tiles on sheets",
+          "unit": "vel",
+          "unitEn": "sheet",
+          "optional": true,
+          "price_consumer": "€5,50",
+          "price_professional": "€4,00",
+          "unit_price_c": 5.50,
+          "unit_price_p": 4.00,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm wand (3 kg/m²)",
+          "nameEn": "Tile adhesive wall (3 kg/m²)",
+          "unit": "m²",
+          "qty_type": "glue_bags_wall",
+          "price_consumer": "€12",
+          "price_professional": "€8",
+          "unit_price": 8,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel wand (0,4 kg/m²)",
+          "nameEn": "Tile grout wall (0.4 kg/m²)",
+          "unit": "m²",
+          "qty_type": "grout_bags_wall",
+          "price_consumer": "€10",
+          "price_professional": "€7",
+          "unit_price": 7,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Ontvetter/cleaner (bij vettige ondergrond)",
+          "nameEn": "Degreaser/cleaner (for greasy or contaminated surfaces)",
+          "unit": "fles",
+          "unitEn": "bottle",
+          "optional": true,
+          "price_consumer": "€7",
+          "price_professional": "€5",
+          "unit_price": 5,
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "badkamer",
+      "match": [
+        "Badkamer",
+        "Bathroom"
+      ],
+      "items": [
+        {
+          "name": "Tegels (wand en/of vloer)",
+          "nameEn": "Tiles (wall and/or floor)",
+          "qty_type": "tile_area_m2",
+          "cost_factor": 0.45,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (watervast)",
+          "nameEn": "Tile adhesive (waterproof)",
+          "qty_type": "glue_bags",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (watervast)",
+          "nameEn": "Tile grout (waterproof)",
+          "qty_type": "grout_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Siliconenkit (sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "2 tubes",
+          "qtyEn": "2 tubes",
+          "cost_factor": 0.07,
+          "icon": "compress"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.06,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "keuken",
+      "match": [
+        "Keuken",
+        "Kitchen"
+      ],
+      "items": [
+        {
+          "name": "Tegels (wand en/of vloer)",
+          "nameEn": "Tiles (wall and/or floor)",
+          "qty_type": "tile_area_m2",
+          "cost_factor": 0.45,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm",
+          "nameEn": "Tile adhesive",
+          "qty_type": "glue_bags",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel",
+          "nameEn": "Tile grout",
+          "qty_type": "grout_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Siliconenkit of acrylaatkit",
+          "nameEn": "Silicone or acrylic sealant",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.07,
+          "icon": "compress"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.06,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "mozaiek",
+      "match": [
+        "Mozaïek",
+        "mosaic"
+      ],
+      "items": [
+        {
+          "name": "Mozaïtegels",
+          "nameEn": "Mosaic tiles",
+          "qty_type": "tile_area_m2",
+          "cost_factor": 0.50,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (voor mozaïek)",
+          "nameEn": "Tile adhesive (for mosaic)",
+          "qty_type": "glue_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel",
+          "nameEn": "Tile grout",
+          "qty_type": "grout_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.10,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "repareren",
+      "doc1_note": "Job 13: One tile. Tile adhesive guideline: 1 kg per tile.",
+      "doc2_note": "Price per packaging unit. Quantity calculated from project dimensions. Material and labour costs are separate.",
+      "match": [
+        "repareren",
+        "Repairing",
+        "Tegels repareren",
+        "Repairing tiles"
+      ],
+      "items": [
+        {
+          "name": "Vervangende tegel",
+          "nameEn": "Replacement tile",
+          "unit": "stuk",
+          "unitEn": "piece",
+          "qty_type": "repair_tiles_qty",
+          "price_consumer": "€5,00",
+          "price_professional": "€3,75",
+          "unit_price_c": 5.00,
+          "unit_price_p": 3.75,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (1 kg/tegel)",
+          "nameEn": "Tile adhesive (1 kg/tile)",
+          "unit": "per tegel",
+          "unitEn": "per tile",
+          "qty_type": "repair_glue_qty",
+          "price_consumer": "€2",
+          "price_professional": "€1,50",
+          "unit_price": 1.50,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (0,3 kg/tegel)",
+          "nameEn": "Tile grout (0.3 kg/tile)",
+          "unit": "per tegel",
+          "unitEn": "per tile",
+          "qty_type": "repair_grout_qty",
+          "price_consumer": "€1",
+          "price_professional": "€0,70",
+          "unit_price": 0.70,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Ontvetter/cleaner (bij vettige ondergrond)",
+          "nameEn": "Degreaser/cleaner (for greasy or contaminated surfaces)",
+          "unit": "fles",
+          "unitEn": "bottle",
+          "optional": true,
+          "price_consumer": "€7",
+          "price_professional": "€5",
+          "unit_price": 5,
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "voegen",
+      "doc1_note": "Job 14: Indoors; cement-based grout.",
+      "doc2_note": "Price per packaging unit. Quantity calculated from project dimensions. Material and labour costs are separate.",
+      "match": [
+        "Voegen",
+        "Grouting"
+      ],
+      "items": [
+        {
+          "name": "Voegmiddel binnen (wand 0,4 kg/m²; vloer 0,5 kg/m²)",
+          "nameEn": "Indoor grout (wall 0.4 kg/m²; floor 0.5 kg/m²)",
+          "unit": "m²",
+          "qty_type": "grout_bags_floor",
+          "price_consumer": "€12",
+          "price_professional": "€8",
+          "unit_price": 8,
+          "icon": "grid_view"
+        }
+      ]
+    },
+    {
+      "id": "snijden",
+      "match": [
+        "snijden",
+        "Cutting"
+      ],
+      "items": [
+        {
+          "name": "Tegels",
+          "nameEn": "Tiles",
+          "qty_type": "packs_pieces",
+          "cost_factor": 0.75,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Afdektape (optioneel)",
+          "nameEn": "Masking tape (optional)",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.10,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Snijolie (optioneel)",
+          "nameEn": "Cutting oil / blade lubricant (optional)",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "cost_factor": 0.15,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "douche",
+      "match": [
+        "Douche",
+        "shower"
+      ],
+      "items": [
+        {
+          "name": "Tegels",
+          "nameEn": "Tiles",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.42,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (watervast)",
+          "nameEn": "Waterproof tile adhesive",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (watervast)",
+          "nameEn": "Waterproof tile grout",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Siliconenkit (sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "2 tubes",
+          "qtyEn": "2 tubes",
+          "cost_factor": 0.08,
+          "icon": "compress"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "trap",
+      "match": [
+        "Trap",
+        "stairs"
+      ],
+      "items": [
+        {
+          "name": "Tegels (treden & optrede)",
+          "nameEn": "Tiles (treads & risers)",
+          "qty_type": "packs_pieces",
+          "cost_factor": 0.45,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (voor trap)",
+          "nameEn": "Tile adhesive (for stairs)",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel",
+          "nameEn": "Tile grout",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Hoekprofielen (optioneel)",
+          "nameEn": "Corner profiles / stair nosing (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "border_all"
+        },
+        {
+          "name": "Kit (optioneel)",
+          "nameEn": "Sealant / caulk (optional)",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.03,
+          "icon": "compress"
+        }
+      ]
+    },
+    {
+      "id": "buiten",
+      "match": [
+        "Buitentegels",
+        "exterior tiles",
+        "outdoor tiles"
+      ],
+      "items": [
+        {
+          "name": "Buitentegels (vorstbestendig)",
+          "nameEn": "Outdoor frost-resistant tiles",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.48,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (vorstbestendig)",
+          "nameEn": "Frost-resistant tile adhesive",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (vorstbestendig)",
+          "nameEn": "Frost-resistant tile grout",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Anti-worteldoek (optioneel)",
+          "nameEn": "Weed barrier cloth (optional)",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.05,
+          "icon": "layers"
+        },
+        {
+          "name": "Zand of cement (optioneel)",
+          "nameEn": "Sand or cement (optional)",
+          "qty": "1 zak",
+          "qtyEn": "1 bag",
+          "cost_factor": 0.03,
+          "icon": "terrain"
+        }
+      ]
+    },
+    {
+      "id": "natuursteen",
+      "match": [
+        "Natuursteen",
+        "natural stone"
+      ],
+      "items": [
+        {
+          "name": "Natuursteen tegels",
+          "nameEn": "Natural stone tiles",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.50,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Natuursteenlijm",
+          "nameEn": "Natural stone tile adhesive",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (voor natuursteen)",
+          "nameEn": "Grout (for natural stone)",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Impregneermiddel",
+          "nameEn": "Stone impregnator / sealant",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "cost_factor": 0.08,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "glazen_mozaiek",
+      "match": [
+        "Glazen mozaïek",
+        "glass mosaic"
+      ],
+      "items": [
+        {
+          "name": "Glazen mozaïtegels",
+          "nameEn": "Glass mosaic tiles",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.50,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (voor glas, wit/transparant)",
+          "nameEn": "Glass tile adhesive (white/transparent)",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (voor glas)",
+          "nameEn": "Grout (for glass tiles)",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.10,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "visgraat",
+      "match": [
+        "Visgraat",
+        "herringbone"
+      ],
+      "items": [
+        {
+          "name": "Tegels (visgraatpatroon)",
+          "nameEn": "Tiles (herringbone pattern)",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.48,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm",
+          "nameEn": "Tile adhesive",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel",
+          "nameEn": "Tile grout",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.05,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.07,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "grote_tegels",
+      "match": [
+        "Grote tegels",
+        "large tiles"
+      ],
+      "items": [
+        {
+          "name": "Grote tegels (60×60 cm)",
+          "nameEn": "Large tiles (60×60 cm)",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.50,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm (voor grote tegels)",
+          "nameEn": "Tile adhesive (large format)",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel",
+          "nameEn": "Tile grout",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.04,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Zuignap (optioneel)",
+          "nameEn": "Suction cup lifter (optional)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.06,
+          "icon": "circle"
+        }
+      ]
+    },
+    {
+      "id": "zwarte_tegels",
+      "match": [
+        "Zwarte tegels",
+        "black tiles"
+      ],
+      "items": [
+        {
+          "name": "Zwarte tegels",
+          "nameEn": "Black tiles",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.50,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Tegellijm",
+          "nameEn": "Tile adhesive",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.20,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (donker/zwart)",
+          "nameEn": "Grout (dark/black)",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.12,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Tegelkruisjes",
+          "nameEn": "Tile spacers",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.05,
+          "icon": "add"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.05,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "kit_aanbrengen",
+      "doc1_note": "Job 15: Silicone sealant, indoors.",
+      "doc2_note": "Price per packaging unit. Quantity calculated from project dimensions. Material and labour costs are separate.",
+      "match": [
+        "Kit aanbrengen",
+        "kit work",
+        "Applying sealant",
+        "sealant"
+      ],
+      "items": [
+        {
+          "name": "Siliconenkit",
+          "nameEn": "Silicone sealant",
+          "unit": "10 m",
+          "dynamic_type": "kit_tubes_dynamic",
+          "price_consumer": "€7",
+          "price_professional": "€4,50",
+          "unit_price": 4.50,
+          "icon": "compress"
+        },
+        {
+          "name": "Ontvetter/cleaner",
+          "nameEn": "Degreaser/cleaner",
+          "unit": "stuk",
+          "unitEn": "piece",
+          "price_consumer": "€7",
+          "price_professional": "€5",
+          "unit_price": 5,
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Afwasmiddel",
+          "nameEn": "Dishwashing liquid",
+          "unit": "stuk",
+          "unitEn": "piece",
+          "price_consumer": "€2",
+          "price_professional": "€1,50",
+          "unit_price": 1.50,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Keukenpapier",
+          "nameEn": "Kitchen paper towel",
+          "unit": "rol",
+          "unitEn": "roll",
+          "price_consumer": "€1",
+          "price_professional": "€0,80",
+          "unit_price": 0.80,
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "plinten",
+      "match": [
+        "Plinten",
+        "skirting"
+      ],
+      "items": [
+        {
+          "name": "Plinten (hout, MDF of kunststof)",
+          "dynamic_type": "plinten_base",
+          "icon": "border_bottom"
+        },
+        {
+          "name": "Montagekit (high-tack)",
+          "dynamic_type": "plinten_kit",
+          "icon": "compress"
+        },
+        {
+          "name": "Plintenspijkers of schroeven",
+          "dynamic_type": "plinten_schroeven",
+          "icon": "hardware"
+        },
+        {
+          "name": "Pluggen (indien nodig)",
+          "dynamic_type": "plinten_pluggen",
+          "icon": "construction"
+        },
+        {
+          "name": "Acrylaatkit of latexkit",
+          "dynamic_type": "plinten_acrylaat",
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen (hoeken & eindstukken)",
+          "dynamic_type": "plinten_profielen",
+          "icon": "border_all"
+        },
+        {
+          "name": "Plintenvuller (optioneel)",
+          "qty": "1 set",
+          "price": "€ 5.00",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Verf of beits",
+          "qty": "1 blik",
+          "price": "€ 12.50",
+          "icon": "format_paint"
+        }
+      ]
+    },
+    {
+      "id": "oude_tegels",
+      "match": [
+        "Oude tegels",
+        "old tiles"
+      ],
+      "items": [
+        {
+          "name": "Vuilniszakken / afvalcontainer",
+          "nameEn": "Rubbish bags / skip container",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.70,
+          "icon": "delete"
+        },
+        {
+          "name": "Stofmasker & veiligheidsbril",
+          "nameEn": "Dust mask & safety goggles",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.20,
+          "icon": "safety_check"
+        },
+        {
+          "name": "Bezem & emmer",
+          "nameEn": "Broom & bucket",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "natuurstenen",
+      "match": [
+        "Natuurstenen",
+        "natural stones"
+      ],
+      "items": [
+        {
+          "name": "Natuursteen tegels",
+          "nameEn": "Natural stone tiles",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.48,
+          "icon": "grid_on"
+        },
+        {
+          "name": "Natuursteenlijm",
+          "nameEn": "Natural stone tile adhesive",
+          "qty_type": "packs_div_3_ceil_bags",
+          "cost_factor": 0.18,
+          "icon": "layers"
+        },
+        {
+          "name": "Voegmiddel (voor natuursteen)",
+          "nameEn": "Grout (for natural stone)",
+          "qty_type": "packs_div_5_ceil_bags",
+          "cost_factor": 0.10,
+          "icon": "grid_view"
+        },
+        {
+          "name": "Voorstrijk",
+          "nameEn": "Tile primer / sealer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.07,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Impregneermiddel",
+          "nameEn": "Stone impregnator / sealant",
+          "qty": "1 fles",
+          "qtyEn": "1 bottle",
+          "cost_factor": 0.10,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen / kit (optioneel)",
+          "nameEn": "Finishing profiles / sealant (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.07,
+          "icon": "border_all"
+        }
+      ]
+    }
+  ],
+  "default_items": [
+    {
+      "name": "Tegels",
+      "nameEn": "Tiles",
+      "qty_type": "packs_pak",
+      "cost_factor": 0.55,
+      "icon": "grid_on"
+    },
+    {
+      "name": "Tegellijm",
+      "nameEn": "Tile adhesive",
+      "qty_type": "packs_div_3_ceil_bags",
+      "cost_factor": 0.20,
+      "icon": "layers"
+    },
+    {
+      "name": "Voegmiddel",
+      "nameEn": "Tile grout",
+      "qty_type": "packs_div_5_ceil_bags",
+      "cost_factor": 0.12,
+      "icon": "grid_view"
+    },
+    {
+      "name": "Tegelkruisjes & wiggen",
+      "nameEn": "Tile spacers & levelling wedges",
+      "qty": "1 set",
+      "qtyEn": "1 set",
+      "cost_factor": 0.06,
+      "icon": "add"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "source": "onboarding_view.dart",
+  "job_l10n_keys": [
+    "jobCarpenter01",
+    "jobCarpenter02",
+    "jobCarpenter03",
+    "jobCarpenter04",
+    "jobCarpenter05",
+    "jobPlumber01",
+    "jobPlumber02",
+    "jobPlumber03",
+    "jobPlumber04",
+    "jobPlumber05",
+    "jobPainter01",
+    "jobPainter02",
+    "jobPainter03",
+    "jobPainter04",
+    "jobPainter05",
+    "jobGardener01",
+    "jobGardener02",
+    "jobGardener03",
+    "jobGardener04",
+    "jobGardener05",
+    "jobElectrician01",
+    "jobElectrician02",
+    "jobElectrician03",
+    "jobElectrician04",
+    "jobElectrician05",
+    "jobTiler01",
+    "jobTiler02",
+    "jobTiler03",
+    "jobTiler04",
+    "jobTiler05"
+  ],
+  "options": {
+    "door_location": [
+      "Binnen",
+      "Buiten"
+    ],
+    "door_outside_type": [
+      "Voordeur",
+      "Achterdeur",
+      "Balkondeur"
+    ],
+    "door_construction": [
+      "Stomp",
+      "Opdek",
+      "Inleg"
+    ],
+    "door_material": [
+      "Massief",
+      "Volspaan",
+      "Honingraat",
+      "Spaanplaat",
+      "Board",
+      "Paneel",
+      "Met glas",
+      "Met bovenlicht"
+    ],
+    "door_glass_mounting": [
+      "Glaslatten",
+      "Direct in deur"
+    ],
+    "door_treatment": [
+      "Gegrond",
+      "Onbehandeld",
+      "Blank hout"
+    ],
+    "door_handle": [
+      "Krukstel",
+      "Deurknop"
+    ],
+    "door_frame": [
+      "Bestaand",
+      "Nieuw"
+    ],
+    "staircase_type": [
+      "Dicht",
+      "Open"
+    ],
+    "staircase_covering": [
+      "Tapijt",
+      "PVC / Vinyl",
+      "Overzettreden"
+    ],
+    "staircase_tread_quick_choices": [
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "assets_referenced": {
+    "video_assets": [
+      "assets/images/final_2.mp4",
+      "assets/images/final.mp4"
+    ],
+    "job_icon_assets": [
+      "assets/images/easy_4_diy2.png",
+      "assets/images/hammer.png",
+      "assets/images/lodgieter.png",
+      "assets/images/schilder.png",
+      "assets/images/tuinier.png",
+      "assets/images/elektricien.png",
+      "assets/images/tegelzetter.png"
+    ]
+  },
+  "note": "Localization keys are preserved because the actual Dutch/English display strings are provided by AppLocalizations, which is imported by this file."
+}

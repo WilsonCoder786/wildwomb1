@@ -1,0 +1,294 @@
+[
+  {
+    "trade": "Timmerman",
+    "rate_per_hour_eur": 45,
+    "tools_owned": ["Klein gereedschap (eigen bezit)"],
+    "tools_rented": ["Groot gereedschap (huur)"],
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Vloer leggen – laminaat",
+        "small_tools": ["Waterpas", "blokhaak", "zweihaak", "stanleymes", "hamer", "contourmal", "kniebeschermers", "decoupeerzaag", "verlengkabel"],
+        "rental_tools": ["Afkortzaag (indien vereist)"],
+        "required_tools": ["Waterpas", "blokhaak", "zweihaak", "stanleymes", "hamer", "contourmal", "kniebeschermers", "decoupeerzaag", "verlengkabel", "Afkortzaag (indien vereist)"],
+        "doc3_safety": "Gebruik geschikte persoonlijke beschermingsmiddelen. Controleer snoeren/accu's en zaagbladen voor gebruik."
+      },
+      {
+        "id": 2,
+        "description": "Deur plaatsen – binnendeur (stomp)",
+        "small_tools": ["Rolmaat", "waterpas", "blokhaak", "hamer", "beitel", "accu-schroefmachine + bitjes", "decoupeerzaag", "speedboor", "kitpistool", "deken", "deurheffer", "verlengkabel"],
+        "rental_tools": ["Handcirkelzaag", "Freesmachine"],
+        "required_tools": ["Rolmaat", "waterpas", "blokhaak", "hamer", "beitel", "accu-schroefmachine + bitjes", "decoupeerzaag", "speedboor", "kitpistool", "deken", "deurheffer", "verlengkabel", "Handcirkelzaag", "Freesmachine"],
+        "doc3_safety": "Gebruik geschikte persoonlijke beschermingsmiddelen. Bij boren of zagen in bestaande wanden eerst controleren op kabels of elektrische bedrading."
+      },
+      {
+        "id": 3,
+        "description": "Plinten monteren – plakplint",
+        "small_tools": ["Rolmaat", "waterpas", "zweihaak", "blokhaak", "verstekbak", "fijngetande zaag of laminaatknipschaar", "doek", "verlengkabel"],
+        "rental_tools": ["Verstekzaag (optioneel)"],
+        "required_tools": ["Rolmaat", "waterpas", "zweihaak", "blokhaak", "verstekbak", "fijngetande zaag of laminaatknipschaar", "doek", "verlengkabel", "Verstekzaag (optioneel)"],
+        "doc3_safety": "Gebruik geschikte persoonlijke beschermingsmiddelen. Controleer snoeren/accu's en zaagbladen voor gebruik."
+      },
+      {
+        "id": 4,
+        "description": "Trap renoveren – laminaat",
+        "small_tools": ["Zweihaak", "trapspin", "waterpas", "plamuurmes", "lijmkam", "stanleymes", "kitpistool", "decoupeerzaag", "accu-schroefmachine", "verlengkabel"],
+        "rental_tools": ["Afkortzaag", "Nietpistool (alleen indien voorgeschreven)"],
+        "required_tools": ["Zweihaak", "trapspin", "waterpas", "plamuurmes", "lijmkam", "stanleymes", "kitpistool", "decoupeerzaag", "accu-schroefmachine", "verlengkabel", "Afkortzaag", "Nietpistool (alleen indien voorgeschreven)"],
+        "doc3_safety": "Gebruik geschikte persoonlijke beschermingsmiddelen. Werk in een stabiele positie en houd rekening met stof, geluid en rondvliegende deeltjes."
+      },
+      {
+        "id": 5,
+        "description": "Wand plaatsen – gipsplaat met metaalstud",
+        "small_tools": ["Waterpas", "stanleymes", "gips-/blikschaar", "plamuurmes", "decoupeerzaag", "accu-schroefmachine", "huishoudtrap", "verlengkabel"],
+        "rental_tools": ["Boorhamer", "Steiger (indien nodig)"],
+        "required_tools": ["Waterpas", "stanleymes", "gips-/blikschaar", "plamuurmes", "decoupeerzaag", "accu-schroefmachine", "huishoudtrap", "verlengkabel", "Boorhamer", "Steiger (indien nodig)"],
+        "doc3_safety": "Gebruik persoonlijke bescherming, controleer gereedschap, werk stabiel. Bij boren of zagen in wanden: eerst controleren op leidingen en kabels."
+      }
+    ]
+  },
+  {
+    "trade": "Schilder",
+    "rate_per_hour_eur": 45,
+    "tools_owned": ["Klein gereedschap (eigen bezit)"],
+    "tools_rented": ["Groot gereedschap (huur)"],
+    "tasks": [
+      {
+        "id": 6,
+        "description": "Muur sauzen",
+        "small_tools": ["kwasten", "verfroller", "verfbak", "plamuurmes", "doek", "geschikte ladder/trap", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel"],
+        "rental_tools": ["Schuurmachine (voor grotere oppervlakken)", "Steiger (indien vereist, bijv. buitenwerk)"],
+        "required_tools": ["kwasten", "verfroller", "verfbak", "plamuurmes", "doek", "geschikte ladder/trap", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel", "Schuurmachine (voor grotere oppervlakken)", "Steiger (indien vereist)"],
+        "doc3_safety": "Controleer voor gebruik of het gereedschap geschikt is voor het materiaal en de taak. Klein gereedschap = normaal in eigendom. Groot gereedschap = gehuurd."
+      },
+      {
+        "id": 7,
+        "description": "Plafond sauzen",
+        "small_tools": ["kwasten", "verfroller met verlengstok", "verfbak", "plamuurmes", "doek", "geschikte ladder/trap", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel"],
+        "rental_tools": ["Schuurmachine (voor grotere oppervlakken)"],
+        "required_tools": ["kwasten", "verfroller met verlengstok", "verfbak", "plamuurmes", "doek", "geschikte ladder/trap", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel", "Schuurmachine (voor grotere oppervlakken)"],
+        "doc3_safety": "Controleer voor gebruik of het gereedschap geschikt is voor het materiaal en de taak. Klein gereedschap = normaal in eigendom. Groot gereedschap = gehuurd."
+      },
+      {
+        "id": 8,
+        "description": "Behangen",
+        "small_tools": ["Waterpas", "behangtafel (alleen bij traditioneel papierbehang)", "behangroller", "snijmes", "schaar", "spons", "emmer", "plamuurmes", "doek", "behangborstel/naadroller", "geschikte ladder/trap", "handschoenen", "verlengkabel"],
+        "rental_tools": ["Behangafstomer (voor geschikt oud behang)", "Veilig werkmateriaal voor werken op hoogte (indien vereist)"],
+        "required_tools": ["Waterpas", "behangtafel (alleen bij traditioneel papierbehang)", "behangroller", "snijmes", "schaar", "spons", "emmer", "plamuurmes", "doek", "behangborstel/naadroller", "geschikte ladder/trap", "handschoenen", "verlengkabel", "Behangafstomer (voor geschikt oud behang)", "Veilig werkmateriaal voor werken op hoogte (indien vereist)"],
+        "doc3_safety": "Controleer voor gebruik of het gereedschap geschikt is voor het materiaal en de taak. Klein gereedschap = normaal in eigendom. Groot gereedschap = gehuurd."
+      },
+      {
+        "id": 9,
+        "description": "Kozijn/deur schilderen",
+        "small_tools": ["kwasten", "kleine verfroller", "verfbak", "plamuurmes", "doek", "geschikte ladder/trap", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel"],
+        "rental_tools": ["Schuurmachine (voor grotere oppervlakken of geschikte oude verflagen)"],
+        "required_tools": ["kwasten", "kleine verfroller", "verfbak", "plamuurmes", "doek", "geschikte ladder/trap", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel", "Schuurmachine (voor grotere oppervlakken of geschikte oude verflagen)"],
+        "doc3_safety": "Controleer voor gebruik of het gereedschap geschikt is voor het materiaal en de taak. Belangrijk: als een oude verflaag lood kan bevatten, vermijd dan droog mechanisch schuren totdat de situatie is beoordeeld."
+      },
+      {
+        "id": 10,
+        "description": "Radiator schilderen",
+        "small_tools": ["Kwasten", "radiatorroller", "verfbak", "doek", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel"],
+        "rental_tools": ["Kleine schuurmachine (alleen waar passend en veilig)"],
+        "required_tools": ["Kwasten", "radiatorroller", "verfbak", "doek", "handschoenen", "stofmasker", "veiligheidsbril", "verlengkabel", "Kleine schuurmachine (alleen waar passend en veilig)"],
+        "doc3_safety": "Controleer voor gebruik of het gereedschap geschikt is voor het materiaal en de taak. Belangrijk: als een oude verflaag lood kan bevatten, vermijd dan droog mechanisch schuren totdat de situatie is beoordeeld."
+      }
+    ]
+  },
+  {
+    "trade": "Tegelzetter",
+    "rate_per_hour_eur": 45,
+    "tools_owned": ["Klein gereedschap (eigen bezit)"],
+    "tools_rented": ["Groot gereedschap / machines (huur)"],
+    "doc3_safe_working": "Beheers stof bij het zagen en slijpen door natte verwerking of bronafzuiging. Draag geschikte persoonlijke beschermingsmiddelen. Gebruik een stabiele trap of steiger.",
+    "tasks": [
+      {
+        "id": 11,
+        "description": "Vloertegels leggen",
+        "doc1_note": "Keramische vloertegels, 60 \u00d7 60 cm. Tegellijm richtlijn: 4 kg/m\u00b2.",
+        "small_tools": ["Waterpas", "Blokhaak", "Tandspaan (gekartelde spaan)", "Rubberen hamer", "Voegrubber", "Spons", "Emmer", "Kniebeschermers", "Werkhandschoenen"],
+        "rental_tools": ["Tegelsnijder", "Slijptol met diamantschijf", "Trilplaat", "Bouwstofzuiger (bij droog zagen/slijpen)"],
+        "required_tools": ["Waterpas", "Blokhaak", "Tandspaan (gekartelde spaan)", "Rubberen hamer", "Voegrubber", "Spons", "Emmer", "Kniebeschermers", "Werkhandschoenen", "Tegelsnijder", "Slijptol met diamantschijf", "Trilplaat", "Bouwstofzuiger (bij droog zagen/slijpen)"]
+      },
+      {
+        "id": 12,
+        "description": "Wandtegels plaatsen",
+        "doc1_note": "Keramische wandtegels, 30 \u00d7 60 cm; moza\u00efektegels op matjes. Tegellijm richtlijn: 3 kg/m\u00b2.",
+        "small_tools": ["Waterpas", "Blokhaak", "Glijhoek (voor schuine wanden)", "Tandspaan (gekartelde spaan)", "Rubberen hamer", "Voegrubber", "Spons", "Emmer", "Huishoudtrap", "Werkhandschoenen"],
+        "rental_tools": ["Tegelsnijder", "Slijptol met diamantschijf", "Bouwstofzuiger (bij droog zagen/slijpen)"],
+        "required_tools": ["Waterpas", "Blokhaak", "Glijhoek (voor schuine wanden)", "Tandspaan (gekartelde spaan)", "Rubberen hamer", "Voegrubber", "Spons", "Emmer", "Huishoudtrap", "Werkhandschoenen", "Tegelsnijder", "Slijptol met diamantschijf", "Bouwstofzuiger (bij droog zagen/slijpen)"]
+      },
+      {
+        "id": 13,
+        "description": "Tegels repareren",
+        "doc1_note": "E\u00e9n tegel. Tegellijm richtlijn: 1 kg per tegel.",
+        "small_tools": ["Beitel", "Hamer", "Tandspaan (gekartelde spaan)", "Voegrubber", "Spons", "Emmer", "Huishoudtrap (indien nodig)", "Werkhandschoenen"],
+        "rental_tools": ["Slijptol met diamantschijf", "Boorhamer", "Bouwstofzuiger (bij droog zagen/slijpen)"],
+        "required_tools": ["Beitel", "Hamer", "Tandspaan (gekartelde spaan)", "Voegrubber", "Spons", "Emmer", "Werkhandschoenen", "Slijptol met diamantschijf", "Boorhamer", "Bouwstofzuiger (bij droog zagen/slijpen)"]
+      },
+      {
+        "id": 14,
+        "description": "Voegen",
+        "doc1_note": "Binnenshuis; cementgebonden voegmiddel.",
+        "small_tools": ["Voegrubber", "Voegkrabber", "Spons", "Emmer", "Werkhandschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Voegrubber", "Voegkrabber", "Spons", "Emmer", "Werkhandschoenen"]
+      },
+      {
+        "id": 15,
+        "description": "Kit aanbrengen",
+        "doc1_note": "Siliconenkit, binnenshuis.",
+        "small_tools": ["Kitpistool", "Kitmes / kitspatel (afstrijkmesje)", "Rubberen kitspatel / afstrijker", "Kitschraper", "Plantenspuit met afwerkmiddel", "Spons", "Doek", "Werkhandschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Kitpistool", "Kitmes / kitspatel (afstrijkmesje)", "Rubberen kitspatel / afstrijker", "Kitschraper", "Plantenspuit met afwerkmiddel", "Spons", "Doek", "Werkhandschoenen"]
+      }
+    ]
+  },
+  {
+    "trade": "Loodgieter",
+    "rate_per_hour_eur": 55,
+    "tools_owned": ["Klein gereedschap (eigen bezit)"],
+    "tools_rented": ["Groot gereedschap (huur)"],
+    "tasks": [
+      {
+        "id": 16,
+        "description": "Kraan vervangen",
+        "small_tools": ["Waterpomptang (bahco)", "Verstelbare moersleutel", "Pijptang / kraantang (opzetmontage)", "Open-ringsleutel (wandmontage)", "Kitpistool", "Schraper/plamuurmes", "Emmer", "Doek", "Handschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Waterpomptang (bahco)", "Verstelbare moersleutel", "Pijptang / kraantang (opzetmontage)", "Open-ringsleutel (wandmontage)", "Kitpistool", "Schraper/plamuurmes", "Emmer", "Doek", "Handschoenen"],
+        "doc3_safety": "Sluit de watertoevoer af voor aanvang van de werkzaamheden. Gebruik geschikte persoonlijke beschermingsmiddelen."
+      },
+      {
+        "id": 17,
+        "description": "Leiding ontstoppen",
+        "small_tools": ["Emmer", "Doek", "Handschoenen", "Oogbescherming"],
+        "rental_tools": ["Ontstoppingsveer (te koop)", "Ontstoppingsmachine (huur)", "Rioolkabel / afvoerkabel"],
+        "required_tools": ["Emmer", "Doek", "Handschoenen", "Oogbescherming", "Ontstoppingsveer (te koop)", "Ontstoppingsmachine (huur)", "Rioolkabel / afvoerkabel"],
+        "doc3_safety": "Gebruik handschoenen en oogbescherming. Controleer gereedschap voor gebruik."
+      },
+      {
+        "id": 18,
+        "description": "Toilet installeren",
+        "small_tools": ["Waterpomptang", "Verstelbare moersleutel", "Kitpistool", "Waterpas", "Rolmaat", "Emmer", "Doek", "Handschoenen"],
+        "rental_tools": ["Boormachine (voor bevestiging)"],
+        "required_tools": ["Waterpomptang", "Verstelbare moersleutel", "Kitpistool", "Waterpas", "Rolmaat", "Emmer", "Doek", "Handschoenen", "Boormachine (voor bevestiging)"],
+        "doc3_safety": "Sluit de watertoevoer af voor aanvang. Gebruik geschikte persoonlijke beschermingsmiddelen."
+      },
+      {
+        "id": 19,
+        "description": "CV bijvullen",
+        "small_tools": ["Waterpomptang", "Verstelbare moersleutel", "Ontluchtingssleutel", "Doek", "Emmer", "Handschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Waterpomptang", "Verstelbare moersleutel", "Ontluchtingssleutel", "Doek", "Emmer", "Handschoenen"],
+        "doc3_safety": "Volg de instructies van de toestelfabrikant. Gebruik geschikte persoonlijke beschermingsmiddelen."
+      },
+      {
+        "id": 20,
+        "description": "Leiding aanleggen",
+        "small_tools": ["Pijpsnijder", "Ontbramer", "Buigtang (optioneel)", "Rolmaat", "Potlood", "Waterpas", "Verstelbare moersleutel of open-ringsleutel", "Waterpomptang", "Leiding-/kabeldetector", "Fijnboogzaag / ijzerzaag", "Veiligheidsbril", "Handschoenen"],
+        "rental_tools": ["Boorhamer (voor werk in muren)", "Wandenfrees of haakse slijper met metsel-/diamantschijf (voor werk in muren)", "Buigtang (indien gehuurd)"],
+        "required_tools": ["Pijpsnijder", "Ontbramer", "Rolmaat", "Potlood", "Waterpas", "Verstelbare moersleutel of open-ringsleutel", "Waterpomptang", "Leiding-/kabeldetector", "Fijnboogzaag / ijzerzaag", "Veiligheidsbril", "Handschoenen", "Boorhamer (voor werk in muren)", "Wandenfrees of haakse slijper met metsel-/diamantschijf (voor werk in muren)", "Buigtang (optioneel/huur)"],
+        "doc3_safety": "Bij boren of zagen in muren eerst controleren op bestaande leidingen. Sluit de watertoevoer af voor aanvang. Gebruik stofafzuiging bij ingebouwde leidingen. Gebruik geschikte persoonlijke beschermingsmiddelen."
+      }
+    ]
+  },
+  {
+    "trade": "Tuinier",
+    "rate_per_hour_eur": 40,
+    "tools_owned": ["Klein gereedschap (eigen bezit)"],
+    "tools_rented": ["Groot gereedschap / machines (huur)"],
+    "doc3_safe_working": "Gebruik geschikte persoonlijke beschermingsmiddelen. Controleer gereedschap en machines voor gebruik. Werk vanuit een stabiele positie. Gebruik bij machines alleen geschikte accessoires, houd omstanders op veilige afstand en schakel de machine uit voor het verwijderen van blokkades of onderhoud.",
+    "tasks": [
+      {
+        "id": 21,
+        "description": "Schutting plaatsen",
+        "doc3_note": "Standaard paneel 180 × 180 cm",
+        "small_tools": ["Rolmaat / duimstok", "Waterpas", "Loodlijn", "Hamer", "Spade", "Kruiwagen", "Geschikte en veilige ladder", "Handschoenen", "Kniebeschermers", "Decoupeerzaag (indien nodig)", "Verfbak", "Roller", "Kwast (voor beits)"],
+        "rental_tools": ["Grondboor", "Accuboormachine", "Afkortzaag"],
+        "required_tools": ["Rolmaat / duimstok", "Waterpas", "Loodlijn", "Hamer", "Spade", "Kruiwagen", "Geschikte en veilige ladder", "Handschoenen", "Kniebeschermers", "Decoupeerzaag (indien nodig)", "Verfbak", "Roller", "Kwast (voor beits)", "Grondboor", "Accuboormachine", "Afkortzaag"]
+      },
+      {
+        "id": 22,
+        "description": "Bestrating aanleggen",
+        "doc3_note": "Sierbestratingstegels 60 × 60 cm",
+        "small_tools": ["Waterpas", "Rubberen hamer", "Hark", "Spade", "Bezem", "Kruiwagen", "Handschoenen", "Kniebeschermers"],
+        "rental_tools": ["Trilplaat"],
+        "required_tools": ["Waterpas", "Rubberen hamer", "Hark", "Spade", "Bezem", "Kruiwagen", "Handschoenen", "Kniebeschermers", "Trilplaat"]
+      },
+      {
+        "id": 23,
+        "description": "Snoeien",
+        "doc3_note": "Hortensia snoeien",
+        "small_tools": ["Snoeischaar", "Handschoenen", "Kniebeschermers"],
+        "rental_tools": ["Takkensnoeier of snoeizaag (voor dikkere takken)"],
+        "required_tools": ["Snoeischaar", "Handschoenen", "Kniebeschermers", "Takkensnoeier of snoeizaag (voor dikkere takken)"]
+      },
+      {
+        "id": 24,
+        "description": "Overkapping bouwen",
+        "doc3_note": "Houten overkapping",
+        "small_tools": ["Rolmaat / duimstok", "Waterpas", "Loodlijn", "Hamer", "Beitel", "Verstekbak", "Kruiwagen", "Geschikte en veilige ladder of steiger", "Handschoenen", "Kniebeschermers"],
+        "rental_tools": ["Grondboor", "Cirkelzaag", "Afkortzaag", "Decoupeerzaag", "Boorhamer", "Accuboormachine", "Steiger"],
+        "required_tools": ["Rolmaat / duimstok", "Waterpas", "Loodlijn", "Hamer", "Beitel", "Verstekbak", "Kruiwagen", "Geschikte en veilige ladder of steiger", "Handschoenen", "Kniebeschermers", "Grondboor", "Cirkelzaag", "Afkortzaag", "Decoupeerzaag", "Boorhamer", "Accuboormachine", "Steiger"]
+      },
+      {
+        "id": 25,
+        "description": "Gazon leggen",
+        "doc3_note": "Kunstgras leggen",
+        "small_tools": ["Hark", "Spade", "Handschoenen", "Kniebeschermers", "Kruiwagen"],
+        "rental_tools": ["Trilplaat", "Kunstgrasborstel"],
+        "required_tools": ["Hark", "Spade", "Handschoenen", "Kniebeschermers", "Kruiwagen", "Trilplaat", "Kunstgrasborstel"]
+      }
+    ]
+  },
+  {
+    "trade": "Elektricien",
+    "rate_per_hour_eur": 55,
+    "tools_owned": ["Klein gereedschap (eigen bezit)"],
+    "tools_rented": ["Groot gereedschap (huur) — alleen bij job 28"],
+    "doc3_safe_working": "Gebruik geschikte persoonlijke beschermingsmiddelen. Inspecteer gereedschap voor gebruik en werk vanuit een stabiele positie. Bij boren of zagen in wanden: controleer eerst met een leidingendetector op kabels en leidingen. Schakel de elektriciteit altijd uit voor aanvang van werkzaamheden.",
+    "tasks": [
+      {
+        "id": 26,
+        "description": "Stopcontact plaatsen",
+        "doc1_note": "Inbouw, binnenshuis. Geaard of ongeaard; in natte ruimten is aarding verplicht.",
+        "small_tools": ["Tweepolige spanningstester", "Striptang", "Geïsoleerde schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Leiding-/kabeldetector", "Veiligheidsbril", "Handschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Tweepolige spanningstester", "Striptang", "Geïsoleerde schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Leiding-/kabeldetector", "Veiligheidsbril", "Handschoenen"]
+      },
+      {
+        "id": 27,
+        "description": "Verlichting plaatsen",
+        "doc1_note": "Binnenshuis. Natte ruimten vereisen een vochtbestendige armatuur (IP44+).",
+        "small_tools": ["Tweepolige spanningstester", "Striptang", "Geïsoleerde schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Tweepolige spanningstester", "Striptang", "Geïsoleerde schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"]
+      },
+      {
+        "id": 28,
+        "description": "Stroomleiding leggen",
+        "doc1_note": "Op/in de wand; 1,5/2,5 mm² afhankelijk van de toepassing.",
+        "small_tools": ["Tweepolige spanningstester", "Striptang", "Geïsoleerde schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Trekveer", "Fijnboogzaag", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"],
+        "rental_tools": ["Wandenfrees", "Bouwstofzuiger", "Boorhamer (voor inbouw in de wand)"],
+        "required_tools": ["Tweepolige spanningstester", "Striptang", "Geïsoleerde schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Trekveer", "Fijnboogzaag", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen", "Wandenfrees", "Bouwstofzuiger", "Boorhamer (voor inbouw in de wand)"]
+      },
+      {
+        "id": 29,
+        "description": "Kabelgoot monteren",
+        "doc1_note": "Zelfklevend of schroefmontage; maten 20×12 mm tot 25×16 mm.",
+        "small_tools": ["Waterpas", "Schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Fijnboogzaag", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Waterpas", "Schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Fijnboogzaag", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"]
+      },
+      {
+        "id": 30,
+        "description": "Rookmelder plaatsen",
+        "doc1_note": "Aantal en positie conform geldende regelgeving.",
+        "small_tools": ["Schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"],
+        "rental_tools": [],
+        "required_tools": ["Schroefboormachine + bitjes", "Boorhamer + SDS-boren", "Leiding-/kabeldetector", "Geschikte en veilige trap", "Veiligheidsbril", "Handschoenen"]
+      }
+    ]
+  }
+]
+

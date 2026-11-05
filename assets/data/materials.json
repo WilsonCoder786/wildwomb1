@@ -1,0 +1,31 @@
+{
+  "materials_explicitly_defined_in_provider": [
+    "Aluminium",
+    "Bedrade deurbel met trafo",
+    "Draadloze deurbel (batterij)",
+    "Gipsplaat / Metal stud",
+    "Glas",
+    "Hout",
+    "Kunststof",
+    "MDF",
+    "MDF / Hout",
+    "Massief hout",
+    "Multiplex",
+    "Multiplex / Hout",
+    "Overzettreden",
+    "PVC / Vinyl",
+    "Polycarbonaat kanaalplaten (16mm)",
+    "Slimme videodeurbel",
+    "Spaanplaat",
+    "Staal",
+    "Stucplaat",
+    "Tapijt",
+    "hoge_plinten",
+    "hoge_plinten_lijm",
+    "hoge_plinten_schroeven",
+    "lijmen",
+    "plakplinten",
+    "schroeven"
+  ],
+  "note": "This file contains material/option names explicitly found in OnboardingProvider. The complete material catalog is imported from material_catalog_repository.dart and is not contained in the supplied file."
+}

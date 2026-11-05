@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "treads": 14,
+    "tread_depth_m": 0.3,
+    "riser_height_m": 0.18,
+    "width_m": 0.9,
+    "type": "Dicht",
+    "covering_material": "Tapijt",
+    "include_cutting_waste": true
+  },
+  "types": [
+    "Dicht",
+    "Open"
+  ],
+  "covering_materials": [
+    "Tapijt",
+    "PVC / Vinyl",
+    "Overzettreden"
+  ],
+  "calculation": {
+    "cutting_waste_factor": 1.1,
+    "estimated_hours_per_tread": 0.55,
+    "minimum_hours": 6
+  }
+}

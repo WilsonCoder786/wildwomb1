@@ -1,0 +1,1180 @@
+{
+  "categories": [
+    {
+      "id": "cv_bijvullen",
+      "match": [
+        "CV bijvullen",
+        "CV-installatie bijvullen",
+        "Refill central heating",
+        "Central heating refill",
+        "CV",
+        "cv"
+      ],
+      "items": [
+        {
+          "name": "Vulslang voor CV-installatie",
+          "nameEn": "Fill hose for central heating system",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 13 (C) / € 9 (P)",
+          "icon": "horizontal_rule",
+          "note": "Standaard app-rekenmateriaal: €13 C / €9 P. Alleen de voorgeschreven vulprocedure van het specifieke toestel volgen.",
+          "noteEn": "Standard app calculation material: €13 C / €9 P. Only follow the prescribed filling procedure of the specific appliance."
+        },
+        {
+          "name": "Ontluchtingssleutel",
+          "nameEn": "Radiator bleed key",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 3.50",
+          "icon": "hardware",
+          "note": "Optioneel, vaak al aanwezig.",
+          "noteEn": "Optional, often already present."
+        },
+        {
+          "name": "Schone doek / absorptiemateriaal",
+          "nameEn": "Clean cloth / absorbent material",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "price": "€ 2.00",
+          "icon": "cleaning_services"
+        },
+        {
+          "name": "Emmer (opvangbak restwater)",
+          "nameEn": "Bucket (for residual water)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 3.00",
+          "icon": "water"
+        }
+      ]
+    },
+    {
+      "id": "leiding_leggen",
+      "match": [
+        "Leiding aanleggen",
+        "Waterleiding aanleggen (koper)",
+        "Water pipe installation (copper)",
+        "Pipe laying",
+        "Leiding leggen",
+        "leiding",
+        "pipe",
+        "Install a water pipe",
+        "copper pipe",
+        "Waterleiding",
+        "Water pipe"
+      ],
+      "items": [
+        {
+          "name": "Koperen waterleiding (veelgebruikte maat)",
+          "nameEn": "Copper water pipe (commonly used size)",
+          "qty": "per meter",
+          "qtyEn": "per metre",
+          "price": "€ 6.50 (C) / € 4.50 (P)",
+          "icon": "horizontal_rule",
+          "note": "De app gebruikt geen vaste diameter als universele regel. De juiste diameter wordt bepaald door de toepassing en het gekozen systeem. De leidingprijs wordt per meter berekend.",
+          "noteEn": "The app does not use a fixed diameter as a universal rule. The correct diameter is determined by the application and the chosen system. The pipe price is calculated per meter."
+        },
+        {
+          "name": "Knelkoppeling",
+          "nameEn": "Compression fitting",
+          "qty": "per stuk",
+          "qtyEn": "per piece",
+          "price": "€ 3 (C) / € 2 (P)",
+          "icon": "settings_input_component",
+          "note": "Koppelingen worden afzonderlijk toegevoegd op basis van de gekozen route en situatie.",
+          "noteEn": "Couplings are added separately based on the chosen route and situation."
+        },
+        {
+          "name": "Afsluiter",
+          "nameEn": "Shut-off valve",
+          "qty": "per stuk",
+          "qtyEn": "per piece",
+          "price": "€ 10 (C) / € 7 (P)",
+          "icon": "water",
+          "note": "Afsluiters worden afzonderlijk toegevoegd op basis van de gekozen route en situatie.",
+          "noteEn": "Shut-off valves are added separately based on the chosen route and situation."
+        },
+        {
+          "name": "Muur-/zadelbeugel",
+          "nameEn": "Wall/saddle bracket",
+          "qty": "per stuk",
+          "qtyEn": "per piece",
+          "price": "€ 0.80 (C) / € 0.50 (P)",
+          "icon": "hardware",
+          "note": "Bevestiging wordt afzonderlijk toegevoegd op basis van de gekozen route en situatie.",
+          "noteEn": "Fixing is added separately based on the chosen route and situation."
+        },
+        {
+          "name": "Leidingisolatie warmwater",
+          "nameEn": "Hot water pipe insulation",
+          "qty": "per meter",
+          "qtyEn": "per metre",
+          "price": "€ 1.50 (C) / € 1 (P)",
+          "icon": "thermostat",
+          "note": "Isolatie wordt afzonderlijk toegevoegd op basis van de gekozen route en situatie. Voor drinkwater moeten geschikte materialen en de toepasselijke Nederlandse eisen worden gevolgd. NEN 1006 en de Waterwerkbladen zijn hiervoor belangrijke uitgangspunten.",
+          "noteEn": "Insulation is added separately based on the chosen route and situation. For drinking water, suitable materials and applicable Dutch requirements must be followed. NEN 1006 and the Water worksheets are important starting points for this."
+        }
+      ]
+    },
+    {
+      "id": "badkamer_installeren",
+      "match": [
+        "Badkamer installeren"
+      ],
+      "items": [
+        {
+          "name": "Bad of douchebak",
+          "nameEn": "Bath or shower tray",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.30,
+          "icon": "bathtub"
+        },
+        {
+          "name": "Wastafel",
+          "nameEn": "Washbasin / sink",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.15,
+          "icon": "wash"
+        },
+        {
+          "name": "Kranen (wastafel en douche)",
+          "nameEn": "Taps (washbasin and shower)",
+          "qty": "2 sets",
+          "qtyEn": "2 sets",
+          "cost_factor": 0.18,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Flexibele slangen",
+          "nameEn": "Flexible hoses",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.05,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Afvoerbuizen (PVC, 40 mm)",
+          "nameEn": "Drain pipes (PVC, 40 mm)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.10,
+          "icon": "plumbing"
+        },
+        {
+          "name": "Sifon",
+          "nameEn": "Sink trap / siphon",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.05,
+          "icon": "settings"
+        },
+        {
+          "name": "Kit (sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "2 tubes",
+          "qtyEn": "2 tubes",
+          "cost_factor": 0.07,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.10,
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "cv_ketel_plaatsen",
+      "match": [
+        "CV ketel plaatsen"
+      ],
+      "items": [
+        {
+          "name": "CV ketel",
+          "nameEn": "Central heating boiler",
+          "qty": "1 stuk",
+          "qtyEn": "1 unit",
+          "cost_factor": 0.45,
+          "icon": "local_fire_department"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Pipe brackets",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.05,
+          "icon": "hardware"
+        },
+        {
+          "name": "Leidingen (koper of kunststof)",
+          "nameEn": "Pipes (copper or plastic)",
+          "qty": "10 meter",
+          "qtyEn": "10 meters",
+          "cost_factor": 0.15,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Koppelingen & afsluiters",
+          "nameEn": "Couplings & shut-off valves",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.10,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Buisisolatie",
+          "nameEn": "Pipe insulation foam",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.07,
+          "icon": "thermostat"
+        },
+        {
+          "name": "Veiligheidsventiel",
+          "nameEn": "Pressure relief / safety valve",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.08,
+          "icon": "security"
+        },
+        {
+          "name": "Expansievat",
+          "nameEn": "Expansion vessel",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.10,
+          "icon": "compress"
+        }
+      ]
+    },
+    {
+      "id": "douche_monteren",
+      "match": [
+        "Douche monteren"
+      ],
+      "items": [
+        {
+          "name": "Douchekop",
+          "nameEn": "Shower head",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.18,
+          "icon": "shower"
+        },
+        {
+          "name": "Douchestang",
+          "nameEn": "Shower rail / bar",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.12,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Doucheslang",
+          "nameEn": "Shower hose",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.08,
+          "icon": "plumbing"
+        },
+        {
+          "name": "Thermostatische kraan",
+          "nameEn": "Thermostatic shower valve",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.35,
+          "icon": "thermostat"
+        },
+        {
+          "name": "Flexibele slangen",
+          "nameEn": "Flexible hoses",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.08,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Kit (sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.07,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.12,
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "warmtepomp_aansluiten",
+      "match": [
+        "Warmtepomp aansluiten"
+      ],
+      "items": [
+        {
+          "name": "Warmtepomp",
+          "nameEn": "Heat pump unit",
+          "qty": "1 stuk",
+          "qtyEn": "1 unit",
+          "cost_factor": 0.50,
+          "icon": "heat_pump"
+        },
+        {
+          "name": "Leidingen (koper of kunststof)",
+          "nameEn": "Pipes (copper or plastic)",
+          "qty": "10 meter",
+          "qtyEn": "10 meters",
+          "cost_factor": 0.15,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Koppelingen & afsluiters",
+          "nameEn": "Couplings & shut-off valves",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.10,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Buisisolatie",
+          "nameEn": "Pipe insulation foam",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.08,
+          "icon": "thermostat"
+        },
+        {
+          "name": "Vulkraan",
+          "nameEn": "System fill valve",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.08,
+          "icon": "water"
+        },
+        {
+          "name": "Expansievat",
+          "nameEn": "Expansion vessel",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.09,
+          "icon": "compress"
+        }
+      ]
+    },
+    {
+      "id": "toilet_installeren",
+      "match": [
+        "Toilet installeren",
+        "Toilet installation",
+        "Toilet",
+        "toilet",
+        "WC",
+        "wc"
+      ],
+      "items": [
+        {
+          "name": "Staand standaard toilet",
+          "nameEn": "Floor-standing standard toilet",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 300 (C) / € 225 (P)",
+          "icon": "wc",
+          "note": "Meest voorkomende uitgangssituatie. Standaard app-rekenmateriaal: €300.",
+          "noteEn": "Most common starting situation. Standard app calculation material: €300."
+        },
+        {
+          "name": "Staand verhoogd/senior toilet",
+          "nameEn": "Floor-standing raised/senior toilet",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "variabel",
+          "icon": "wc",
+          "note": "Voor een verhoogd/senior toilet wordt een aparte productkeuze gebruikt, omdat de aanschafprijs en aansluitingssituatie kunnen verschillen.",
+          "noteEn": "For a raised/senior toilet, a separate product choice is used, as the purchase price and connection situation may differ."
+        },
+        {
+          "name": "Afvoer-/aansluitset (indien niet meegeleverd)",
+          "nameEn": "Drain/connection set (if not supplied)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 12 (C) / € 8 (P)",
+          "icon": "plumbing",
+          "note": "Alleen toevoegen indien niet meegeleverd.",
+          "noteEn": "Only add if not supplied."
+        },
+        {
+          "name": "Sanitairkit (indien voorgeschreven)",
+          "nameEn": "Sanitary sealant (if prescribed)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 7 (C) / € 4.50 (P)",
+          "icon": "water_drop",
+          "note": "Alleen toevoegen indien voorgeschreven.",
+          "noteEn": "Only add if prescribed."
+        },
+        {
+          "name": "Bevestigingsmateriaal",
+          "nameEn": "Fixing materials",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 15 (C) / € 10 (P)",
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "wasmachine_aansluiten",
+      "match": [
+        "Wasmachine aansluiten"
+      ],
+      "items": [
+        {
+          "name": "Wasmachinekraan (met beluchter en keerklep)",
+          "nameEn": "Washing machine valve (with aerator & backflow check)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 14.95",
+          "icon": "water"
+        },
+        {
+          "name": "Aanvoerslang (flexibel met waterslot)",
+          "nameEn": "Inlet hose (flexible with water lock)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 18.50",
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Wasmachinesifon met beluchter",
+          "nameEn": "Washing machine standpipe trap with aerator",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 12.95",
+          "icon": "settings"
+        },
+        {
+          "name": "Afvoerbuis (PVC, 40 mm, 2 meter)",
+          "nameEn": "Drain pipe (PVC, 40 mm, 2 metres)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 8.50",
+          "icon": "plumbing"
+        },
+        {
+          "name": "PVC lijm & buiszadels / beugels",
+          "nameEn": "PVC solvent cement & pipe saddles / brackets",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 6.50",
+          "icon": "compress"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 4.50",
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "kraan_vervangen",
+      "match": [
+        "Kraan vervangen",
+        "Keukenkraan vervangen",
+        "Tap replacement",
+        "Kitchen tap replacement",
+        "Keuken kraan monteren",
+        "Kraan",
+        "kraan",
+        "Tap",
+        "tap",
+        "mengkraan"
+      ],
+      "items": [
+        {
+          "name": "Keukenkraan standaard bladmontage (inclusief gebruikelijke montageset)",
+          "nameEn": "Standard kitchen faucet countertop mounting (including standard mounting kit)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 110 (C) / € 75 (P)",
+          "icon": "water_drop",
+          "note": "Standaard app-rekenmateriaal: €110 voor een normale keukenkraan. Optionele onderdelen worden alleen toegevoegd wanneer ze niet bij de kraan zijn inbegrepen of wanneer de situatie daarom vraagt.",
+          "noteEn": "Standard app calculation material: €110 for a normal kitchen faucet. Optional parts are only added when they are not included with the faucet or when the situation requires them."
+        },
+        {
+          "name": "Flexibele aansluitslangen (indien niet meegeleverd)",
+          "nameEn": "Flexible connection hoses (if not supplied)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 10 (C) / € 7 (P)",
+          "icon": "horizontal_rule",
+          "note": "Alleen toevoegen indien niet bij de kraan inbegrepen.",
+          "noteEn": "Only add if not included with the faucet."
+        },
+        {
+          "name": "Rubberen afdichtingsringen (indien niet meegeleverd)",
+          "nameEn": "Rubber sealing rings (if not supplied)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 2 (C) / € 1.50 (P)",
+          "icon": "settings",
+          "note": "Alleen toevoegen indien niet bij de kraan inbegrepen.",
+          "noteEn": "Only add if not included with the faucet."
+        },
+        {
+          "name": "Transparante siliconenkit (alleen indien nodig bij houten werkblad)",
+          "nameEn": "Transparent silicone sealant (only if needed for wooden countertop)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 7 (C) / € 4.50 (P)",
+          "icon": "water_drop",
+          "note": "Alleen toevoegen bij houten werkblad.",
+          "noteEn": "Only add for wooden countertop."
+        }
+      ]
+    },
+    {
+      "id": "leiding_door_frezen",
+      "match": [
+        "Leiding door frezen"
+      ],
+      "items": [
+        {
+          "name": "Leidingen (koper of kunststof)",
+          "nameEn": "Pipes (copper or plastic)",
+          "qty": "10 meter",
+          "qtyEn": "10 meters",
+          "cost_factor": 0.55,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Koppelingen en bochten",
+          "nameEn": "Couplings and elbows",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.25,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Buisisolatie",
+          "nameEn": "Pipe insulation foam",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.20,
+          "icon": "thermostat"
+        }
+      ]
+    },
+    {
+      "id": "watermeter_plaatsen",
+      "match": [
+        "Watermeter plaatsen"
+      ],
+      "items": [
+        {
+          "name": "Watermeter",
+          "nameEn": "Water meter",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.55,
+          "icon": "speed"
+        },
+        {
+          "name": "Koppelingen",
+          "nameEn": "Couplings / fittings",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.12,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Afsluiters",
+          "nameEn": "Shut-off valves",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.15,
+          "icon": "water"
+        },
+        {
+          "name": "Teflontape",
+          "nameEn": "Teflon tape / thread seal",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Bevestigingsmateriaal",
+          "nameEn": "Mounting hardware / fixings",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.13,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "hemelwater_afvoer",
+      "match": [
+        "Hemelwater afvoer"
+      ],
+      "items": [
+        {
+          "name": "Hemelwaterafvoer (PVC)",
+          "nameEn": "Rainwater downpipe (PVC)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.38,
+          "icon": "plumbing"
+        },
+        {
+          "name": "Bochten en moffen",
+          "nameEn": "Elbows and couplings",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.18,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Pipe brackets / clips",
+          "qty": "10 stuks",
+          "qtyEn": "10 pieces",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "PVC lijm",
+          "nameEn": "PVC solvent cement",
+          "qty": "1 bus",
+          "qtyEn": "1 can",
+          "cost_factor": 0.08,
+          "icon": "compress"
+        },
+        {
+          "name": "Dakkit (buitenkit)",
+          "nameEn": "Roof sealant (exterior)",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.10,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.16,
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "leiding_ontstoppen",
+      "match": [
+        "Leiding ontstoppen",
+        "Afvoer ontstoppen",
+        "Pipe unblocking",
+        "Drain unblocking",
+        "Riool ontstoppen",
+        "ontstoppen",
+        "unblock",
+        "sifon",
+        "drain"
+      ],
+      "items": [
+        {
+          "name": "Plopper/ontstopper",
+          "nameEn": "Plunger",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 10 (C) / € 7 (P)",
+          "icon": "cleaning_services",
+          "note": "Standaard app-rekenmateriaal: €10.",
+          "noteEn": "Standard app calculation material: €10."
+        },
+        {
+          "name": "Ontstoppingsveer (indien nodig)",
+          "nameEn": "Drain cleaning snake / auger (if needed)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 20 (C) / € 14 (P)",
+          "icon": "plumbing",
+          "note": "Alleen toevoegen indien nodig.",
+          "noteEn": "Only add if needed."
+        },
+        {
+          "name": "Chemische ontstopper (alleen indien passend en volgens etiket)",
+          "nameEn": "Chemical drain cleaner (only if suitable and according to label)",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "price": "€ 10 (C) / € 6 (P)",
+          "icon": "science",
+          "note": "Chemische ontstopper is geen standaard eerste stap. Alleen gebruiken indien passend en volgens etiket.",
+          "noteEn": "Chemical drain cleaner is not a standard first step. Only use if suitable and according to label."
+        }
+      ]
+    },
+    {
+      "id": "vloerverwarming_aansluiten",
+      "match": [
+        "Vloerverwarming aansluiten"
+      ],
+      "items": [
+        {
+          "name": "Vloerverwarmingsslangen",
+          "nameEn": "Underfloor heating pipes",
+          "qty": "10 meter",
+          "qtyEn": "10 meters",
+          "cost_factor": 0.28,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Verdeler",
+          "nameEn": "Manifold / distributor",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.25,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Thermostaat",
+          "nameEn": "Thermostat",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.20,
+          "icon": "thermostat"
+        },
+        {
+          "name": "Koppelingen en afsluiters",
+          "nameEn": "Couplings and shut-off valves",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.10,
+          "icon": "water"
+        },
+        {
+          "name": "Buisisolatie",
+          "nameEn": "Pipe insulation",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Pipe brackets / clips",
+          "qty": "10 stuks",
+          "qtyEn": "10 pieces",
+          "cost_factor": 0.07,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "zonneboiler_installeren",
+      "match": [
+        "Zonneboiler installeren"
+      ],
+      "items": [
+        {
+          "name": "Zonneboiler",
+          "nameEn": "Solar water heater / solar boiler",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.50,
+          "icon": "wb_sunny"
+        },
+        {
+          "name": "Leidingen (koper of kunststof)",
+          "nameEn": "Pipes (copper or plastic)",
+          "qty": "10 meter",
+          "qtyEn": "10 meters",
+          "cost_factor": 0.18,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Koppelingen en afsluiters",
+          "nameEn": "Couplings and shut-off valves",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.10,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Buisisolatie",
+          "nameEn": "Pipe insulation foam",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.10,
+          "icon": "thermostat"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Pipe brackets / clips",
+          "qty": "10 stuks",
+          "qtyEn": "10 pieces",
+          "cost_factor": 0.12,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "regendouche_monteren",
+      "match": [
+        "Regendouche monteren"
+      ],
+      "items": [
+        {
+          "name": "Regendouche (kop, stang, slang, kraan)",
+          "nameEn": "Rain shower set (head, bar, hose, valve)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.55,
+          "icon": "shower"
+        },
+        {
+          "name": "Flexibele slangen",
+          "nameEn": "Flexible hoses",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.10,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Teflontape",
+          "nameEn": "Teflon tape / thread seal",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Kit (sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.10,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.20,
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "bad_plaatsen",
+      "match": [
+        "Bad plaatsen"
+      ],
+      "items": [
+        {
+          "name": "Bad",
+          "nameEn": "Bathtub",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.45,
+          "icon": "bathtub"
+        },
+        {
+          "name": "Verstelbare badpoten",
+          "nameEn": "Adjustable bath legs",
+          "qty": "4 stuks",
+          "qtyEn": "4 pieces",
+          "cost_factor": 0.08,
+          "icon": "settings"
+        },
+        {
+          "name": "Afvoerbuis (PVC)",
+          "nameEn": "Drain pipe (PVC)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "plumbing"
+        },
+        {
+          "name": "Sifon",
+          "nameEn": "Bath trap / overflow siphon",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.07,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Flexibele slang",
+          "nameEn": "Flexible hose",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.05,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "PVC lijm",
+          "nameEn": "PVC solvent cement",
+          "qty": "1 bus",
+          "qtyEn": "1 can",
+          "cost_factor": 0.05,
+          "icon": "compress"
+        },
+        {
+          "name": "Kit (sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "2 tubes",
+          "qtyEn": "2 tubes",
+          "cost_factor": 0.07,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.08,
+          "icon": "construction"
+        },
+        {
+          "name": "Teflontape",
+          "nameEn": "Teflon tape / thread seal",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        }
+      ]
+    },
+    {
+      "id": "afvoer_verleggen",
+      "match": [
+        "Afvoer verleggen"
+      ],
+      "items": [
+        {
+          "name": "Afvoerbuizen (PVC, 40/50 mm)",
+          "nameEn": "Drain pipes (PVC, 40/50 mm)",
+          "qty": "5 meter",
+          "qtyEn": "5 meters",
+          "cost_factor": 0.38,
+          "icon": "plumbing"
+        },
+        {
+          "name": "Bochten en moffen",
+          "nameEn": "Elbows and couplings",
+          "qty": "assorti",
+          "qtyEn": "assorted",
+          "cost_factor": 0.20,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Pipe brackets / clips",
+          "qty": "10 stuks",
+          "qtyEn": "10 pieces",
+          "cost_factor": 0.12,
+          "icon": "hardware"
+        },
+        {
+          "name": "PVC lijm",
+          "nameEn": "PVC solvent cement",
+          "qty": "1 bus",
+          "qtyEn": "1 can",
+          "cost_factor": 0.15,
+          "icon": "compress"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.15,
+          "icon": "construction"
+        }
+      ]
+    },
+    {
+      "id": "ketel_onderhouden",
+      "match": [
+        "Ketel onderhouden"
+      ],
+      "items": [
+        {
+          "name": "Pakkingen (vervanging)",
+          "nameEn": "Gaskets / seals (replacement)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.30,
+          "icon": "settings"
+        },
+        {
+          "name": "Waterfilter",
+          "nameEn": "Water filter / magnetic filter",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.30,
+          "icon": "water"
+        },
+        {
+          "name": "Ontluchter",
+          "nameEn": "Auto air vent / bleeder valve",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.25,
+          "icon": "air"
+        },
+        {
+          "name": "Emmer",
+          "nameEn": "Bucket",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.15,
+          "icon": "water_drop"
+        }
+      ]
+    },
+    {
+      "id": "leiding_isoleren",
+      "match": [
+        "Leiding isoleren"
+      ],
+      "items": [
+        {
+          "name": "Buisisolatie",
+          "nameEn": "Pipe insulation foam",
+          "qty": "10 meter",
+          "qtyEn": "10 meters",
+          "cost_factor": 0.60,
+          "icon": "thermostat"
+        },
+        {
+          "name": "Isolatietape",
+          "nameEn": "Insulation tape",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.15,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Beugels (optioneel)",
+          "nameEn": "Pipe clips (optional)",
+          "qty": "10 stuks",
+          "qtyEn": "10 pieces",
+          "cost_factor": 0.25,
+          "icon": "hardware"
+        }
+      ]
+    },
+    {
+      "id": "buitenkraan_monteren",
+      "match": [
+        "Buitenkraan monteren"
+      ],
+      "items": [
+        {
+          "name": "Buitenkraan",
+          "nameEn": "Outdoor tap / garden tap",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.38,
+          "icon": "water"
+        },
+        {
+          "name": "Knelkoppeling",
+          "nameEn": "Compression fitting",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.12,
+          "icon": "settings_input_component"
+        },
+        {
+          "name": "Afsluiter",
+          "nameEn": "Isolating / shut-off valve",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.12,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Teflontape",
+          "nameEn": "Teflon tape / thread seal",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.05,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Schroeven en pluggen",
+          "nameEn": "Screws and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.18,
+          "icon": "construction"
+        },
+        {
+          "name": "Beugels",
+          "nameEn": "Pipe brackets / clips",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.15,
+          "icon": "hardware"
+        }
+      ]
+    }
+  ],
+  "default_items": [
+    {
+      "name": "Leidingbuizen (PEX/koper)",
+      "nameEn": "Pipe tubes (PEX/copper)",
+      "qty_type": "packs_x_2_meter",
+      "cost_factor": 0.45,
+      "icon": "horizontal_rule"
+    },
+    {
+      "name": "Koppelingen & fittingen",
+      "nameEn": "Couplings & fittings",
+      "qty": "1 set",
+      "qtyEn": "1 set",
+      "cost_factor": 0.25,
+      "icon": "settings_input_component"
+    },
+    {
+      "name": "Afsluitkranen",
+      "nameEn": "Shut-off valves",
+      "qty_type": "packs_half_ceil_pieces",
+      "cost_factor": 0.15,
+      "icon": "water"
+    },
+    {
+      "name": "Teflon tape & kit",
+      "nameEn": "Teflon tape & sealant",
+      "qty": "1 set",
+      "qtyEn": "1 set",
+      "cost_factor": 0.08,
+      "icon": "layers"
+    },
+    {
+      "name": "Isolatiemateriaal",
+      "nameEn": "Pipe insulation material",
+      "qty_type": "packs_meter",
+      "cost_factor": 0.07,
+      "icon": "thermostat"
+    }
+  ]
+}

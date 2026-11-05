@@ -1,0 +1,1096 @@
+{
+  "categories": [
+    {
+      "id": "laminaat",
+      "match": ["Laminaat", "Laminate", "laminate", "Vloer leggen", "Floor installation", "Floor laying", "Laying flooring", "Laying floor", "Vloer"],
+      "base_items": [
+        {
+          "name": "Laminaatplanken (kliksysteem, ca. 8 mm)",
+          "nameEn": "Laminate floorboards (click system, approx. 8 mm)",
+          "qty_type": "packs_pak",
+          "cost_factor": 0.846,
+          "doc2_unit_c": 22.0,
+          "doc2_unit_p": 18.0,
+          "icon": "layers"
+        },
+        {
+          "name": "Ondervloer (isolerend, geluiddempend, rol of platen)",
+          "nameEn": "Underlay (insulating, sound-reducing, roll or boards)",
+          "qty_type": "underlay_rolls",
+          "cost_factor": 0.154,
+          "doc2_unit_c": 4.0,
+          "doc2_unit_p": 3.0,
+          "icon": "table_rows"
+        }
+      ],
+      "plakplinten_items": [
+        {
+          "name": "Zelfklevende plakplinten (bijpassend laminaat)",
+          "nameEn": "Self-adhesive flat skirting strips (matching laminate)",
+          "qty_type": "plakplinten_pieces",
+          "price_type": "plakplinten_price",
+          "doc2_unit_c": 10.0,
+          "doc2_unit_p": 7.0,
+          "icon": "border_bottom"
+        },
+        {
+          "name": "Speciale ontvetter / reinigingsdoekjes voor vloerhechting",
+          "nameEn": "Surface degreaser & cleaning wipes for floor adhesion",
+          "qty": "1 bus / flacon",
+          "qtyEn": "1 pack",
+          "price": "€ 7.00",
+          "doc2_unit_c": 7.0,
+          "doc2_unit_p": 5.0,
+          "icon": "cleaning_services"
+        }
+      ],
+      "hoge_plinten_schroeven_items": [
+        {
+          "name": "Hoge plinten (bijpassend laminaat)",
+          "nameEn": "High skirting boards (matching laminate)",
+          "qty_type": "packs_times_2_meter",
+          "cost_factor": 0.10,
+          "icon": "border_bottom"
+        },
+        {
+          "name": "Plintschroeven / nagels en pluggen",
+          "nameEn": "Skirting screws / nails and wall plugs",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.04,
+          "icon": "hardware"
+        },
+        {
+          "name": "Acrylaatkit (overschilderbaar)",
+          "nameEn": "Acrylic sealant (paintable)",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.05,
+          "icon": "water_drop"
+        }
+      ],
+      "hoge_plinten_lijm_items": [
+        {
+          "name": "Hoge plinten (bijpassend laminaat)",
+          "nameEn": "High skirting boards (matching laminate)",
+          "qty_type": "packs_times_2_meter",
+          "cost_factor": 0.10,
+          "icon": "border_bottom"
+        },
+        {
+          "name": "Montagekit / High-Tack lijm",
+          "nameEn": "High-Tack mounting adhesive",
+          "qty_type": "tubes_packs_div_8",
+          "cost_factor": 0.06,
+          "icon": "compress"
+        },
+        {
+          "name": "Acrylaatkit (overschilderbaar)",
+          "nameEn": "Acrylic sealant (paintable)",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.05,
+          "icon": "water_drop"
+        }
+      ],
+      "tail_items": [
+        {
+          "name": "Overgangsprofiel / T-profiel (alleen indien nodig)",
+          "nameEn": "Transition strip / T-profile (only when needed)",
+          "qty_type": "packs_div_10_ceil_pieces",
+          "unit_price": 12.00,
+          "doc2_unit_c": 12.0,
+          "doc2_unit_p": 8.0,
+          "icon": "horizontal_rule"
+        }
+      ]
+    },
+    {
+      "id": "pvc",
+      "match": ["PVC vloer", "PVC floor"],
+      "items": [
+        {
+          "name": "PVC vloerplanken / PVC stroken",
+          "nameEn": "PVC floorboards / PVC strips",
+          "qty_type": "packs_pak",
+          "cost_factor": 0.45,
+          "icon": "layers"
+        },
+        {
+          "name": "PVC ondervloer (optioneel)",
+          "nameEn": "PVC underlayment (optional)",
+          "qty_type": "pvc_underlay_rolls",
+          "cost_factor": 0.15,
+          "icon": "table_rows"
+        },
+        {
+          "name": "PVC vloerlijm of kliksysteem",
+          "nameEn": "PVC floor adhesive or click system",
+          "qty": "1 emmer / set",
+          "qtyEn": "1 bucket / set",
+          "cost_factor": 0.12,
+          "icon": "compress"
+        },
+        {
+          "name": "Plinten (bijpassend)",
+          "nameEn": "Matching skirting boards",
+          "qty_type": "packs_times_2_meter",
+          "cost_factor": 0.10,
+          "icon": "border_bottom"
+        },
+        {
+          "name": "Schroeven of spijkers voor plinten",
+          "nameEn": "Skirting screws or nails",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.04,
+          "icon": "hardware"
+        },
+        {
+          "name": "Kit (voor randen)",
+          "nameEn": "Sealant (for edges)",
+          "qty": "1-2 tubes",
+          "qtyEn": "1-2 tubes",
+          "cost_factor": 0.04,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Overgangsprofielen",
+          "nameEn": "Transition profiles",
+          "qty_type": "packs_div_10_ceil_pieces",
+          "cost_factor": 0.06,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Afdekfolie / Stucloper",
+          "nameEn": "Protective floor film / runner",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.04,
+          "icon": "layers"
+        }
+      ]
+    },
+    {
+      "id": "cabinet",
+      "match": ["Kasten", "Cabinet building"],
+      "items": [
+        {
+          "name": "MDF / spaanplaat (18mm) – zijwanden",
+          "nameEn": "MDF / chipboard (18mm) – side panels",
+          "qty": "3 platen",
+          "qtyEn": "3 sheets",
+          "cost_factor": 0.25,
+          "icon": "layers"
+        },
+        {
+          "name": "Achterwand (MDF dun)",
+          "nameEn": "Back panel (thin MDF)",
+          "qty": "1 plaat",
+          "qtyEn": "1 sheet",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        },
+        {
+          "name": "Planken (18mm MDF)",
+          "nameEn": "Shelves (18mm MDF)",
+          "qty": "3-5 stuks",
+          "qtyEn": "3-5 pieces",
+          "cost_factor": 0.15,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Front / Deuren (MDF)",
+          "nameEn": "Front / doors (MDF)",
+          "qty": "2 stuks",
+          "qtyEn": "2 pieces",
+          "cost_factor": 0.18,
+          "icon": "door_back_door"
+        },
+        {
+          "name": "Scharnieren",
+          "nameEn": "Hinges",
+          "qty": "4-6 stuks",
+          "qtyEn": "4-6 pieces",
+          "cost_factor": 0.05,
+          "icon": "settings"
+        },
+        {
+          "name": "Handgrepen of knoppen",
+          "nameEn": "Handles or knobs",
+          "qty": "2-4 stuks",
+          "qtyEn": "2-4 pieces",
+          "cost_factor": 0.04,
+          "icon": "hardware"
+        },
+        {
+          "name": "Schroeven + houtlijm + pluggen (deuvels)",
+          "nameEn": "Screws + wood glue + dowels",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "construction"
+        },
+        {
+          "name": "Verf / beits of lak",
+          "nameEn": "Paint / stain or lacquer",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.10,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Verstelbare kastpoten (optioneel)",
+          "nameEn": "Adjustable cabinet legs (optional)",
+          "qty": "4 stuks",
+          "qtyEn": "4 pieces",
+          "cost_factor": 0.07,
+          "icon": "table_bar"
+        }
+      ]
+    },
+    {
+      "id": "window_repair",
+      "match": ["Raamkozijn", "Window frame repair"],
+      "items": [
+        {
+          "name": "Houtvuller of plamuur",
+          "nameEn": "Wood filler or stopper",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.10,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Schuurpapier (korrel 120-180)",
+          "nameEn": "Sandpaper (grit 120-180)",
+          "qty": "5 vellen",
+          "qtyEn": "5 sheets",
+          "cost_factor": 0.05,
+          "icon": "texture"
+        },
+        {
+          "name": "Kit (acrylaat)",
+          "nameEn": "Acrylic sealant / caulk",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.08,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Tochtstrip",
+          "nameEn": "Draught excluder strip",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.12,
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Verf of beits (optioneel)",
+          "nameEn": "Paint or stain (optional)",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.15,
+          "icon": "format_paint"
+        },
+        {
+          "name": "Nieuw hout bij ernstige rot (optioneel)",
+          "nameEn": "New timber for severe rot repair (optional)",
+          "qty": "1 plankje",
+          "qtyEn": "1 small board",
+          "cost_factor": 0.10,
+          "icon": "park"
+        }
+      ]
+    },
+    {
+      "id": "dormer",
+      "match": ["Dakkapel", "Dormer window"],
+      "items": [
+        {
+          "name": "Dakkapel (hout of kunststof, op maat)",
+          "nameEn": "Dormer window (timber or uPVC, custom)",
+          "qty": "1 stuk",
+          "qtyEn": "1 unit",
+          "cost_factor": 0.45,
+          "icon": "roofing"
+        },
+        {
+          "name": "Dakbedekking (bitumen)",
+          "nameEn": "Roofing felt / bitumen membrane",
+          "qty": "1 rol",
+          "qtyEn": "1 roll",
+          "cost_factor": 0.12,
+          "icon": "layers"
+        },
+        {
+          "name": "Schroeven (roestvrij)",
+          "nameEn": "Stainless steel screws",
+          "qty": "1 doos (100 stuks)",
+          "qtyEn": "1 box (100 pieces)",
+          "cost_factor": 0.05,
+          "icon": "hardware"
+        },
+        {
+          "name": "Isolatiemateriaal",
+          "nameEn": "Insulation material",
+          "qty": "1 pak",
+          "qtyEn": "1 pack",
+          "cost_factor": 0.10,
+          "icon": "layers"
+        },
+        {
+          "name": "Impregneermiddel",
+          "nameEn": "Wood preservative / impregnation agent",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.06,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Buitenkit",
+          "nameEn": "Exterior sealant / weather-proof caulk",
+          "qty": "2 tubes",
+          "qtyEn": "2 tubes",
+          "cost_factor": 0.05,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen",
+          "nameEn": "Finishing trims / profiles",
+          "qty": "2 stuks (1.50m)",
+          "qtyEn": "2 pieces (1.50 m)",
+          "cost_factor": 0.07,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "frame",
+      "match": ["Kozijn plaatsen", "Window frame installation"],
+      "items": [
+        {
+          "name": "Kozijn (hout, PVC of staal)",
+          "nameEn": "Window / door frame (timber, uPVC or steel)",
+          "dynamic_type": "packs_pieces",
+          "unit_price": 65.00,
+          "icon": "window"
+        },
+        {
+          "name": "Scharnieren (set)",
+          "nameEn": "Hinge sets",
+          "dynamic_type": "packs_sets",
+          "unit_price": 8.00,
+          "icon": "settings"
+        },
+        {
+          "name": "Kruk / krukstel (deurbeslag)",
+          "nameEn": "Door handle / lever set (door furniture)",
+          "dynamic_type": "packs_pieces",
+          "unit_price": 12.00,
+          "icon": "hardware"
+        },
+        {
+          "name": "Sluitplaat & deurslot",
+          "nameEn": "Strike plate & door lock",
+          "dynamic_type": "packs_pieces",
+          "unit_price": 14.00,
+          "icon": "lock"
+        },
+        {
+          "name": "Tochtstrips / Tochtband",
+          "nameEn": "Draught strips / weather seal tape",
+          "dynamic_type": "packs_times_5_meters",
+          "unit_price": 6.50,
+          "icon": "linear_scale"
+        },
+        {
+          "name": "Montageschuim (low-expansion)",
+          "nameEn": "Low-expansion mounting foam",
+          "dynamic_type": "foam_cans",
+          "unit_price": 8.50,
+          "icon": "compress"
+        },
+        {
+          "name": "Kit (acrylaat of siliconen)",
+          "nameEn": "Acrylic or silicone sealant",
+          "dynamic_type": "kit_tubes",
+          "unit_price": 7.50,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Kozijnschroeven / Ankerbouten",
+          "nameEn": "Frame screws / anchor bolts",
+          "dynamic_type": "screw_boxes",
+          "unit_price": 11.50,
+          "icon": "hardware"
+        },
+        {
+          "name": "Kozijnpluggen / Muurpluggen",
+          "nameEn": "Frame plugs / wall plugs",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "dynamic_type": "screw_boxes_times_4_50",
+          "icon": "construction"
+        },
+        {
+          "name": "Afwerkprofielen / Deklatten (binnen/buiten)",
+          "nameEn": "Architrave / cover trims (interior/exterior)",
+          "dynamic_type": "packs_times_2_pieces",
+          "unit_price": 8.00,
+          "icon": "border_all"
+        },
+        {
+          "name": "Isolatiemateriaal / Dampscherm",
+          "nameEn": "Insulation / vapour barrier membrane",
+          "dynamic_type": "foil_rolls",
+          "unit_price": 14.50,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Impregneermiddel / Grondverf (optioneel)",
+          "nameEn": "Preservative / primer coat (optional)",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "dynamic_type": "packs_times_6_50",
+          "icon": "format_paint"
+        }
+      ]
+    },
+    {
+      "id": "deck",
+      "match": ["vlonder", "Vlonder", "Wooden decking"],
+      "items": [
+        {
+          "name": "Houten vlonderplanken (15cm breed, 3.00m)",
+          "nameEn": "Decking planks (15cm wide, 3.00m)",
+          "qty": "20 planken",
+          "qtyEn": "20 planks",
+          "cost_factor": 0.45,
+          "icon": "table_rows"
+        },
+        {
+          "name": "Balken voor onderconstructie (50x70mm)",
+          "nameEn": "Joists for subframe (50x70mm)",
+          "qty": "4 stuks (3.00m)",
+          "qtyEn": "4 pieces (3.00 m)",
+          "cost_factor": 0.18,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Roestvrije schroeven (voor buiten)",
+          "nameEn": "Stainless steel screws (exterior)",
+          "qty": "1 doos (200 stuks)",
+          "qtyEn": "1 box (200 pieces)",
+          "cost_factor": 0.08,
+          "icon": "hardware"
+        },
+        {
+          "name": "Betonpoeren of tegels (fundering)",
+          "nameEn": "Concrete pad feet or paving slabs (foundation)",
+          "qty": "9 stuks",
+          "qtyEn": "9 pieces",
+          "cost_factor": 0.15,
+          "icon": "foundation"
+        },
+        {
+          "name": "Impregneermiddel",
+          "nameEn": "Wood preservative / decking oil",
+          "qty": "5 liter",
+          "qtyEn": "5 litres",
+          "cost_factor": 0.10,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schuurpapier (korrel 120)",
+          "nameEn": "Sandpaper (grit 120)",
+          "qty": "5 vellen",
+          "qtyEn": "5 sheets",
+          "cost_factor": 0.04,
+          "icon": "texture"
+        }
+      ]
+    },
+    {
+      "id": "tv",
+      "match": ["TV", "Televisie", "TV unit installation"],
+      "items": [
+        {
+          "name": "Kant-en-klaar TV meubel",
+          "nameEn": "Ready-to-assemble TV unit",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.70,
+          "icon": "tv"
+        },
+        {
+          "name": "Montagemateriaal (schroeven, pluggen, beugels)",
+          "nameEn": "Mounting hardware (screws, plugs, brackets)",
+          "qty": "1 set (meegeleverd)",
+          "qtyEn": "1 set (included)",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "Kit (acrylaat)",
+          "nameEn": "Acrylic sealant / caulk",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.08,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.05,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "badmeubel",
+      "match": ["Badmeubel", "badmeubel", "Bathroom furniture installation"],
+      "items": [
+        {
+          "name": "Kant-en-klaar badmeubel",
+          "nameEn": "Ready-to-assemble bathroom vanity unit",
+          "qty": "1 stuk",
+          "qtyEn": "1 piece",
+          "cost_factor": 0.72,
+          "icon": "bathtub"
+        },
+        {
+          "name": "Montagemateriaal (schroeven, pluggen, beugels)",
+          "nameEn": "Mounting hardware (screws, plugs, brackets)",
+          "qty": "1 set (meegeleverd)",
+          "qtyEn": "1 set (included)",
+          "cost_factor": 0.10,
+          "icon": "hardware"
+        },
+        {
+          "name": "Kit (siliconen, sanitair)",
+          "nameEn": "Sanitary silicone sealant",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.10,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.05,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "garden_hut",
+      "match": ["Tuinhuisje", "Garden shed", "Balcony renovation"],
+      "items": [
+        {
+          "name": "Tuinhout (geïmpregneerd)",
+          "nameEn": "Pressure-treated garden timber",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.35,
+          "icon": "foundation"
+        },
+        {
+          "name": "Dakplaten & dakbedekking (bitumen/golfplaten)",
+          "nameEn": "Roof panels & roofing felt (bitumen/corrugated sheets)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.20,
+          "icon": "roofing"
+        },
+        {
+          "name": "Palen & balken (constructiehout)",
+          "nameEn": "Posts & beams (structural timber)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.18,
+          "icon": "home"
+        },
+        {
+          "name": "Betonpoeren of snelcement",
+          "nameEn": "Concrete pad feet or quick-set concrete",
+          "qty": "4-6 zakken",
+          "qtyEn": "4-6 bags",
+          "cost_factor": 0.08,
+          "icon": "layers"
+        },
+        {
+          "name": "Roestvrije schroeven & hoekverbinders",
+          "nameEn": "Stainless steel screws & angle brackets",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.07,
+          "icon": "hardware"
+        },
+        {
+          "name": "Impregneermiddel & buitenkit",
+          "nameEn": "Wood preservative & exterior sealant",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.06,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Deur & raam met beslag (optioneel)",
+          "nameEn": "Door & window with fittings (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.06,
+          "icon": "door_front_door"
+        }
+      ]
+    },
+    {
+      "id": "cladding",
+      "match": ["betimmering", "cladding", "Ceiling cladding", "Wall cladding"],
+      "items": [
+        {
+          "name": "Houten planken of MDF platen (12mm)",
+          "nameEn": "Timber planks or MDF sheets (12mm)",
+          "qty": "3-4 platen (120x240cm)",
+          "qtyEn": "3-4 sheets (120x240cm)",
+          "cost_factor": 0.42,
+          "icon": "layers"
+        },
+        {
+          "name": "Houtdraadschroeven (3.5x40mm)",
+          "nameEn": "Chipboard screws (3.5x40mm)",
+          "qty": "1 doos (100 stuks)",
+          "qtyEn": "1 box (100 pieces)",
+          "cost_factor": 0.06,
+          "icon": "hardware"
+        },
+        {
+          "name": "Pluggen",
+          "nameEn": "Wall plugs",
+          "qty": "1 doos (50 stuks)",
+          "qtyEn": "1 box (50 pieces)",
+          "cost_factor": 0.05,
+          "icon": "construction"
+        },
+        {
+          "name": "Afwerkprofielen",
+          "nameEn": "Finishing trims / cover profiles",
+          "qty": "2 stuks (4.00m)",
+          "qtyEn": "2 pieces (4.00 m)",
+          "cost_factor": 0.14,
+          "icon": "border_all"
+        },
+        {
+          "name": "Kit (acrylaat)",
+          "nameEn": "Acrylic sealant / caulk",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.06,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schuurpapier + Verf of beits (optioneel)",
+          "nameEn": "Sandpaper + paint or stain (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.10,
+          "icon": "format_paint"
+        }
+      ]
+    },
+    {
+      "id": "fence",
+      "match": ["Omheining", "Fence installation"],
+      "items": [
+        {
+          "name": "Omheiningpanelen (hout of kunststof)",
+          "nameEn": "Fence panels (wood or plastic)",
+          "qty": "3 stuks (2.00m)",
+          "qtyEn": "3 pieces (2.00 m)",
+          "cost_factor": 0.38,
+          "icon": "fence"
+        },
+        {
+          "name": "Palen (75x75mm, 1.50m)",
+          "nameEn": "Posts (75x75mm, 1.50m)",
+          "qty": "4 stuks",
+          "qtyEn": "4 pieces",
+          "cost_factor": 0.18,
+          "icon": "foundation"
+        },
+        {
+          "name": "Betonpoeren of snelcement",
+          "nameEn": "Concrete pad feet or quick-set concrete",
+          "qty": "4-6 zakken",
+          "qtyEn": "4-6 bags",
+          "cost_factor": 0.15,
+          "icon": "layers"
+        },
+        {
+          "name": "Roestvrije schroeven",
+          "nameEn": "Stainless steel screws",
+          "qty": "1 doos (100 stuks)",
+          "qtyEn": "1 box (100 pieces)",
+          "cost_factor": 0.08,
+          "icon": "hardware"
+        },
+        {
+          "name": "Impregneermiddel",
+          "nameEn": "Wood preservative / impregnation agent",
+          "qty": "3 liter",
+          "qtyEn": "3 litres",
+          "cost_factor": 0.12,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing trims / cover profiles (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.06,
+          "icon": "border_all"
+        }
+      ]
+    },
+    {
+      "id": "plank_ophangen",
+      "match": ["Plank", "plank", "Shelf hanging", "shelf"],
+      "items": [
+        {
+          "name": "Plank ({matName})",
+          "nameEn": "Shelf ({matName})",
+          "dynamic_type": "packs_pieces",
+          "unit_price": 16.50,
+          "icon": "horizontal_rule"
+        },
+        {
+          "name": "Plankdragers of hoekijzers",
+          "nameEn": "Shelf brackets or angle brackets",
+          "dynamic_type": "packs_times_2_pieces",
+          "unit_price": 12.50,
+          "icon": "hardware"
+        },
+        {
+          "name": "Schroeven (passend bij dragers)",
+          "nameEn": "Screws (matching bracket type)",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "price": "€ 6.50",
+          "icon": "construction"
+        },
+        {
+          "name": "Pluggen (afhankelijk van muur)",
+          "nameEn": "Wall plugs (depending on wall type)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 5.50",
+          "icon": "settings"
+        },
+        {
+          "name": "Afwerkprofielen (optioneel)",
+          "nameEn": "Finishing trims / edge strips (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 5.00",
+          "icon": "border_all"
+        },
+        {
+          "name": "Verf of beits (indien onbewerkt)",
+          "nameEn": "Paint or stain (if unfinished)",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "price": "€ 12.50",
+          "icon": "format_paint"
+        }
+      ]
+    },
+    {
+      "id": "keukenblok",
+      "match": ["Keukenblok", "keukenblok", "Kitchen unit installation"],
+      "items": [
+        {
+          "name": "Kant-en-klaar keukenblok",
+          "nameEn": "Ready-to-assemble kitchen cabinet unit",
+          "qty": "1 stuk",
+          "qtyEn": "1 unit",
+          "cost_factor": 0.55,
+          "icon": "kitchen"
+        },
+        {
+          "name": "Verstelbare poten",
+          "nameEn": "Adjustable cabinet legs",
+          "qty": "4 stuks",
+          "qtyEn": "4 pieces",
+          "cost_factor": 0.06,
+          "icon": "settings"
+        },
+        {
+          "name": "Werkblad",
+          "nameEn": "Worktop / countertop",
+          "qty": "1 stuk (1.95 x 0.60 m)",
+          "qtyEn": "1 piece (1.95 x 0.60 m)",
+          "cost_factor": 0.20,
+          "icon": "table_bar"
+        },
+        {
+          "name": "Kit (acrylaat of siliconen)",
+          "nameEn": "Acrylic or silicone sealant",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.03,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Schroeven + pluggen (muurbevestiging)",
+          "nameEn": "Screws + wall plugs (wall fixing)",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.05,
+          "icon": "construction"
+        },
+        {
+          "name": "Plint onderzijde + afwerkprofielen (optioneel)",
+          "nameEn": "Toe kick plinth + finishing trims (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.08,
+          "icon": "border_bottom"
+        }
+      ]
+    },
+    {
+      "id": "koof",
+      "match": ["Koof", "koof", "Coving construction"],
+      "items": [
+        {
+          "name": "Houten balken (vuren 44x44 frame)",
+          "nameEn": "Timber framing studs (44x44 mm)",
+          "dynamic_type": "koof_framing",
+          "icon": "foundation"
+        },
+        {
+          "name": "Bekledingsmateriaal: {sheetName}",
+          "nameEn": "Cladding material: {sheetNameEn}",
+          "dynamic_type": "koof_sheet",
+          "icon": "layers"
+        },
+        {
+          "name": "Bevestigingsmateriaal (hoekverbinders, L-beugels)",
+          "nameEn": "Mounting hardware (corner brackets, L-brackets)",
+          "dynamic_type": "koof_brackets",
+          "price": "€ 9.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Pluggen + schroeven (4.0x40mm)",
+          "nameEn": "Wall plugs + screws (4.0x40mm)",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "price": "€ 7.50",
+          "icon": "construction"
+        },
+        {
+          "name": "Plaatschroeven (gips- of houtschroeven)",
+          "nameEn": "Board screws (drywall or wood screws)",
+          "qty": "1 doos (~200 stuks)",
+          "qtyEn": "1 box (~200 pieces)",
+          "price": "€ 8.50",
+          "icon": "hardware"
+        },
+        {
+          "name": "Voegenvuller / Stucpasta / Plamuur",
+          "nameEn": "Joint filler / Plaster paste / Spackle",
+          "qty": "1 emmer (5 kg)",
+          "qtyEn": "1 bucket (5 kg)",
+          "price": "€ 14.50",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Gaasband / vliesband",
+          "nameEn": "Joint tape / fiberglass mesh tape",
+          "qty": "1 rol (25m)",
+          "qtyEn": "1 roll (25m)",
+          "price": "€ 5.50",
+          "icon": "wrap_text"
+        },
+        {
+          "name": "Afwerkprofielen / hoekprofielen",
+          "nameEn": "Finishing profiles / Corner beads",
+          "dynamic_type": "koof_finishing",
+          "icon": "border_all"
+        },
+        {
+          "name": "Voorstrijk + Verf",
+          "nameEn": "Primer + Paint",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 18.50",
+          "icon": "format_paint"
+        }
+      ]
+    },
+    {
+      "id": "plinten",
+      "match": ["Plint", "plint", "Skirting board"],
+      "items": [
+        {
+          "name": "Plinten (hout, MDF of kunststof)",
+          "nameEn": "Skirting boards (wood, MDF or plastic)",
+          "dynamic_type": "plinten_base",
+          "icon": "border_bottom"
+        },
+        {
+          "name": "Plintenspijkers of schroeven",
+          "nameEn": "Skirting nails or screws",
+          "dynamic_type": "plinten_schroeven",
+          "icon": "hardware"
+        },
+        {
+          "name": "Pluggen (voor schroeven)",
+          "nameEn": "Wall plugs (for screws)",
+          "dynamic_type": "plinten_pluggen",
+          "icon": "construction"
+        },
+        {
+          "name": "Montagekit (high-tack)",
+          "nameEn": "High-tack mounting adhesive",
+          "dynamic_type": "plinten_lijm",
+          "icon": "compress"
+        },
+        {
+          "name": "Acrylaatkit of latexkit",
+          "nameEn": "Acrylic or latex sealant",
+          "dynamic_type": "plinten_acrylaat",
+          "icon": "water_drop"
+        },
+        {
+          "name": "Afwerkprofielen (hoeken & eindstukken)",
+          "nameEn": "Finishing profiles (corners & end caps)",
+          "dynamic_type": "plinten_profielen",
+          "icon": "border_all"
+        },
+        {
+          "name": "Plintenvuller (optioneel)",
+          "nameEn": "Skirting filler (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "price": "€ 5.00",
+          "icon": "format_paint"
+        },
+        {
+          "name": "Verf of beits",
+          "nameEn": "Paint or stain",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "price": "€ 12.50",
+          "icon": "format_paint"
+        }
+      ]
+    },
+    {
+      "id": "balkon",
+      "match": ["Balkon renoveren", "Balcony renovation"],
+      "items": [
+        {
+          "name": "Balkonplanken (hout/composiet/kunststof)",
+          "nameEn": "Decking boards (wood/composite/plastic)",
+          "qty_type": "packs_meter",
+          "cost_factor": 0.40,
+          "icon": "deck"
+        },
+        {
+          "name": "Balkonlatten / balken (onderconstructie)",
+          "nameEn": "Decking joists / subframe timber",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.20,
+          "icon": "foundation"
+        },
+        {
+          "name": "Schroeven (roestvrij/verzinkt)",
+          "nameEn": "Screws (stainless/galvanised)",
+          "qty": "1 doos",
+          "qtyEn": "1 box",
+          "cost_factor": 0.08,
+          "icon": "hardware"
+        },
+        {
+          "name": "Pluggen (afhankelijk van ondergrond)",
+          "nameEn": "Wall plugs (substrate dependent)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.05,
+          "icon": "construction"
+        },
+        {
+          "name": "Impregneermiddel of beits",
+          "nameEn": "Preservative or wood stain / decking oil",
+          "qty": "1 blik",
+          "qtyEn": "1 can",
+          "cost_factor": 0.12,
+          "icon": "water_drop"
+        },
+        {
+          "name": "Buitenkit",
+          "nameEn": "Exterior sealant / caulk",
+          "qty": "1 tube",
+          "qtyEn": "1 tube",
+          "cost_factor": 0.05,
+          "icon": "compress"
+        },
+        {
+          "name": "Beton / egalisatiemateriaal (optioneel)",
+          "nameEn": "Concrete / self-leveling compound (optional)",
+          "qty": "1 set",
+          "qtyEn": "1 set",
+          "cost_factor": 0.07,
+          "icon": "layers"
+        },
+        {
+          "name": "Tegels (indien tegelbalkon)",
+          "nameEn": "Tiles (if tiled balcony)",
+          "qty_type": "packs_m2",
+          "cost_factor": 0.03,
+          "icon": "grid_on"
+        }
+      ]
+    }
+  ],
+  "default_items": [
+    {
+      "name": "Hout / Constructiemateriaal",
+      "nameEn": "Timber / construction material",
+      "qty_type": "packs_pieces",
+      "cost_factor": 0.50,
+      "icon": "layers"
+    },
+    {
+      "name": "Schroeven & pluggen",
+      "nameEn": "Screws & wall plugs",
+      "qty": "1 doos",
+      "qtyEn": "1 box",
+      "cost_factor": 0.20,
+      "icon": "hardware"
+    },
+    {
+      "name": "Lijm / Kit",
+      "nameEn": "Adhesive / sealant",
+      "qty": "1 tube",
+      "qtyEn": "1 tube",
+      "cost_factor": 0.15,
+      "icon": "compress"
+    },
+    {
+      "name": "Afwerkmateriaal",
+      "nameEn": "Finishing materials",
+      "qty": "1 set",
+      "qtyEn": "1 set",
+      "cost_factor": 0.15,
+      "icon": "format_paint"
+    }
+  ]
+}
