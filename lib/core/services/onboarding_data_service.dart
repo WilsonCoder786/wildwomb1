@@ -73,8 +73,13 @@ class OnboardingDataService {
 
   Map<String, dynamic>? checklistConfigForJob(String jobId) {
     final v = _checklistTools[jobId];
-    if (v is Map<String, dynamic>) return v;
-    return null;
+    if (v is! Map<String, dynamic>) return null;
+    final ref = v['_ref'];
+    if (ref is String && ref != jobId) {
+      final target = _checklistTools[ref];
+      if (target is Map<String, dynamic>) return target;
+    }
+    return v;
   }
 
   List<String> get globalDefaultChecklist {

@@ -10,7 +10,6 @@ import 'package:easy_four_diy/modules/onboarding/widget/build_painter_input.dart
 import 'package:easy_four_diy/modules/onboarding/widget/build_plumber_input.dart';
 import 'package:easy_four_diy/modules/onboarding/widget/build_setup_custom_input.dart';
 import 'package:easy_four_diy/modules/onboarding/widget/build_specified_jobs.dart';
-import 'package:easy_four_diy/modules/onboarding/widget/build_step_deur_plaatsen.dart';
 import 'package:easy_four_diy/modules/onboarding/widget/build_tiler_input.dart';
 import 'package:easy_four_diy/modules/onboarding/widget/_build_step_trap_bekleden.dart';
 import 'package:easy_four_diy/modules/onboarding/widget/onboarding_step2.dart';
@@ -192,8 +191,6 @@ class _OnbpardingViewState extends State<OnboardingView> {
         } else if (provider.isTrapBekleden) {
           // Fix: Use dedicated trap widget (was dead code — now properly wired in)
           return BuildStepTrapBekleden(provider: provider, l10n: l10n);
-        } else if (provider.isDeurPlaatsen) {
-          return BuildStepDeurPlaatsen(provider: provider, l10n: l10n);
         } else if (provider.selectedJobId == 'electrician') {
           return BuildElectricianInput(provider: provider, l10n: l10n);
         } else if (provider.selectedJobId == 'carpenter') {

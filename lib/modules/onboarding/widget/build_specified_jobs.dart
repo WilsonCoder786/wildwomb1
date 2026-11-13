@@ -132,7 +132,7 @@ class BuildSpecifiedJobs extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            l10n.onboardingSafetyIntro,
+            _situationForJob(provider.selectedJobId ?? '', l10n),
             style: Utils.getTextStyle(
               baseSize: 13,
               isBold: false,
@@ -190,30 +190,28 @@ class BuildSpecifiedJobs extends StatelessWidget {
     String jobId,
     AppLocalizations l10n,
   ) {
-    final common = <_SafetyStopPoint>[
-      _SafetyStopPoint('unknown_services', l10n.safetyStopUnknownServices),
-      _SafetyStopPoint('asbestos', l10n.safetyStopAsbestos),
-      _SafetyStopPoint('permit', l10n.safetyStopPermit),
-      _SafetyStopPoint('working_at_height', l10n.safetyStopHeight),
-    ];
-
     switch (jobId) {
       case 'carpenter':
         return [
-          ...common,
           _SafetyStopPoint('load_bearing', l10n.safetyStopLoadBearing),
-          _SafetyStopPoint('heavy_equipment', l10n.safetyStopHeavyEquipment),
+          _SafetyStopPoint('asbestos', l10n.safetyStopAsbestos),
+          _SafetyStopPoint('moisture_or_leak', l10n.safetyStopMoistureOrLeak),
+          _SafetyStopPoint('unknown_services', l10n.safetyStopUnknownServices),
+          _SafetyStopPoint('permit', l10n.safetyStopPermit),
+          _SafetyStopPoint(
+            'complex_structure',
+            l10n.safetyStopComplexStructure,
+          ),
         ];
       case 'painter':
         return [
-          ...common,
           _SafetyStopPoint('lead_paint', l10n.safetyStopLeadPaint),
+          _SafetyStopPoint('asbestos', l10n.safetyStopAsbestos),
           _SafetyStopPoint('severe_moisture', l10n.safetyStopMoisture),
           _SafetyStopPoint('uncertain_substrate', l10n.safetyStopSubstrate),
         ];
       case 'plumber':
         return [
-          ...common,
           _SafetyStopPoint('gas', l10n.safetyStopGas),
           _SafetyStopPoint('flue_gas', l10n.safetyStopFlue),
           _SafetyStopPoint('boiler_repair', l10n.safetyStopBoiler),
@@ -224,34 +222,76 @@ class BuildSpecifiedJobs extends StatelessWidget {
           ),
           _SafetyStopPoint('complex_blockage', l10n.safetyStopBlockage),
           _SafetyStopPoint('drinking_water', l10n.safetyStopDrinkingWater),
+          _SafetyStopPoint('unknown_services', l10n.safetyStopUnknownServices),
         ];
       case 'electrician':
         return [
-          ...common,
           _SafetyStopPoint('gas', l10n.safetyStopGas),
+          _SafetyStopPoint('serious_leak', l10n.safetyStopSeriousLeak),
           _SafetyStopPoint('damaged_wiring', l10n.safetyStopWiring),
           _SafetyStopPoint('uncertain_earthing', l10n.safetyStopEarthing),
           _SafetyStopPoint(
             'uncertain_circuit_protection',
             l10n.safetyStopCircuit,
           ),
+          _SafetyStopPoint(
+            'distribution_board',
+            l10n.safetyStopDistributionBoard,
+          ),
+          _SafetyStopPoint(
+            'complex_installation',
+            l10n.safetyStopComplexInstallation,
+          ),
+          _SafetyStopPoint('working_at_height', l10n.safetyStopHeight),
         ];
       case 'gardener':
         return [
-          ...common,
           _SafetyStopPoint('load_bearing', l10n.safetyStopLoadBearing),
+          _SafetyStopPoint('asbestos', l10n.safetyStopAsbestos),
+          _SafetyStopPoint('moisture_or_leak', l10n.safetyStopMoistureOrLeak),
+          _SafetyStopPoint('ground_services', l10n.safetyStopGroundServices),
+          _SafetyStopPoint('permit', l10n.safetyStopPermit),
+          _SafetyStopPoint(
+            'complex_structure',
+            l10n.safetyStopComplexStructure,
+          ),
+          _SafetyStopPoint('working_at_height', l10n.safetyStopHeight),
           _SafetyStopPoint('heavy_equipment', l10n.safetyStopHeavyEquipment),
           _SafetyStopPoint('pesticides', l10n.safetyStopPesticide),
         ];
       case 'tiler':
         return [
-          ...common,
-          _SafetyStopPoint('load_bearing', l10n.safetyStopLoadBearing),
-          _SafetyStopPoint('severe_moisture', l10n.safetyStopMoisture),
           _SafetyStopPoint('uncertain_substrate', l10n.safetyStopSubstrate),
+          _SafetyStopPoint('load_bearing', l10n.safetyStopLoadBearing),
+          _SafetyStopPoint('asbestos', l10n.safetyStopAsbestos),
+          _SafetyStopPoint('severe_moisture', l10n.safetyStopMoisture),
+          _SafetyStopPoint('services_work', l10n.safetyStopServicesWork),
         ];
       default:
-        return common;
+        return [
+          _SafetyStopPoint('unknown_services', l10n.safetyStopUnknownServices),
+          _SafetyStopPoint('asbestos', l10n.safetyStopAsbestos),
+          _SafetyStopPoint('permit', l10n.safetyStopPermit),
+        ];
+    }
+  }
+
+  String _situationForJob(String jobId, AppLocalizations l10n) {
+    switch (jobId) {
+      case 'carpenter':
+        return l10n.onboardingSituationCarpenter;
+      case 'plumber':
+        return l10n.onboardingSituationPlumber;
+      case 'painter':
+        return l10n.onboardingSituationPainter;
+      case 'gardener':
+        return l10n.onboardingSituationGardener;
+      case 'electrician':
+        return l10n.onboardingSituationElectrician;
+      case 'tiler':
+        return l10n.onboardingSituationTiler;
+      default:
+        return l10n.onboardingSafetyIntro;
     }
   }
 }

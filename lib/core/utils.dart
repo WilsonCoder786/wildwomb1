@@ -682,6 +682,22 @@ class Utils {
         return l10n.checklistStofmasker;
       case 'checklistVeiligheidsbril':
         return l10n.checklistVeiligheidsbril;
+      case 'checklistGehoorbescherming':
+        return l10n.localeName.startsWith('en')
+            ? 'Hearing protection'
+            : 'Gehoorbescherming';
+      case 'checklistVeiligheidsschoenen':
+        return l10n.localeName.startsWith('en')
+            ? 'Safety shoes'
+            : 'Veiligheidsschoenen';
+      case 'checklistGeisoleerdeFittingSchroevendraaier':
+        return l10n.localeName.startsWith('en')
+            ? 'Insulated fitting screwdriver'
+            : 'Geïsoleerde fitting-schroevendraaier';
+      case 'checklistDiamantzaagtafel':
+        return l10n.localeName.startsWith('en')
+            ? 'Diamond tile saw (rental)'
+            : 'Diamantzaagtafel (huur)';
       case 'checklistVerlengkabel':
         return l10n.checklistVerlengkabel;
       case 'checklistTrapje':
@@ -710,9 +726,7 @@ class Utils {
       case 'checklistKniebeschermers':
         return l10n.checklistKniebeschermers;
       case 'checklistStanleymes':
-        return l10n.localeName.startsWith('en')
-            ? 'Utility knife / wallpaper knife'
-            : 'Stanleymes / behangmes';
+        return l10n.checklistStanleymes;
       case 'checklistSnapoffMes':
         return l10n.localeName.startsWith('en')
             ? 'Snap-off knife 18 mm + spare blades'
@@ -910,6 +924,10 @@ class Utils {
             : 'Poetsdoek / schone lap';
       case 'checklistStofferEnBlik':
         return l10n.checklistStofferEnBlik;
+      case 'checklistPuinzakken':
+        return l10n.localeName.startsWith('en')
+            ? 'Roll of rubble bags'
+            : 'Rol puinzakken';
       case 'checklistLaarzen':
         return l10n.checklistLaarzen;
       case 'checklistSchepnet':

@@ -125,7 +125,7 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
   String _estimateCostText() {
     if (_isSchutting) {
       final meters = p.customLength > 0 ? p.customLength : 9.0;
-      final cost = meters * 47.0;
+      final cost = meters * 52.0;
       return '± €${cost.toStringAsFixed(2)}';
     }
     if (_isBestrating) {

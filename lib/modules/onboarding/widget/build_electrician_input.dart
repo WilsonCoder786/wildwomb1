@@ -47,6 +47,8 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
 
   /// true -> count input (integer); false -> length input (decimal metres)
   bool get _isCountJob => _isStopcontact || _isVerlichting || _isRookmelder;
+  String _outletType = 'Geaard';
+  String _roomType = 'Droog';
 
   @override
   void initState() {
@@ -98,8 +100,8 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
   String get _headerSubtitle {
     if (_isStopcontact) {
       return _isEn
-          ? 'How many outlets do you want to install? Each includes cable, back box & cover plate.'
-          : 'Hoeveel stopcontacten wil je plaatsen? Per stuk inclusief kabel, inbouwdoos en afdekplaat.';
+          ? 'How many outlets do you want to install? The standard price includes the box, mechanism, cover plate and plugs.'
+          : 'Hoeveel stopcontacten wil je plaatsen? De standaardprijs bevat de doos, het binnenwerk, de afdekplaat en de pluggen.';
     } else if (_isVerlichting) {
       return _isEn
           ? 'How many light fixtures do you want to install?'
@@ -146,10 +148,10 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
   String _estimateCostText() {
     if (_isStopcontact) {
       final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 20.00).toStringAsFixed(2)}';
+      return '± €${(n * 28.00).toStringAsFixed(2)}';
     } else if (_isVerlichting) {
       final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 86.00).toStringAsFixed(2)}';
+      return '± €${(n * 41.00).toStringAsFixed(2)}';
     } else if (_isStroomleiding) {
       final m = p.customLength > 0 ? p.customLength : 5.0;
       return '± €${(m * 3.50).toStringAsFixed(2)}';
@@ -192,7 +194,64 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
                 color: Colors.black54,
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
+            if (_isStopcontact) ...[
+              Text(
+                _isEn
+                    ? 'Is the existing outlet earthed or unearthed?'
+                    : 'Is het bestaande stopcontact geaard of ongeaard?',
+                style: Utils.getTextStyle(
+                  baseSize: 13,
+                  isBold: true,
+                  color: Utils.kDarkBlue,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                children: [
+                  _choice(
+                    _isEn ? 'Earthed' : 'Geaard',
+                    _outletType == 'Geaard',
+                    () => ss(() => _outletType = 'Geaard'),
+                  ),
+                  _choice(
+                    _isEn ? 'Unearthed' : 'Ongeaard',
+                    _outletType == 'Ongeaard',
+                    () => ss(() => _outletType = 'Ongeaard'),
+                  ),
+                ],
+              ),
+            ],
+            if (_isVerlichting) ...[
+              Text(
+                _isEn
+                    ? 'Is the room dry or damp?'
+                    : 'Is de ruimte droog of vochtig?',
+                style: Utils.getTextStyle(
+                  baseSize: 13,
+                  isBold: true,
+                  color: Utils.kDarkBlue,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                children: [
+                  _choice(
+                    _isEn ? 'Dry' : 'Droog',
+                    _roomType == 'Droog',
+                    () => ss(() => _roomType = 'Droog'),
+                  ),
+                  _choice(
+                    _isEn ? 'Damp' : 'Vochtig',
+                    _roomType == 'Vochtig',
+                    () => ss(() => _roomType = 'Vochtig'),
+                  ),
+                ],
+              ),
+            ],
+            const SizedBox(height: 16),
 
             // ── Input card ──────────────────────────────────────────────────
             Container(
@@ -547,6 +606,33 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
           ],
         );
       },
+    );
+  }
+
+  Widget _choice(String label, bool selected, VoidCallback onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        decoration: BoxDecoration(
+          color: selected
+              ? Utils.kOrange.withValues(alpha: 0.12)
+              : Colors.grey.shade100,
+          border: Border.all(
+            color: selected ? Utils.kOrange : Colors.grey.shade300,
+            width: selected ? 1.8 : 1,
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Text(
+          label,
+          style: Utils.getTextStyle(
+            baseSize: 12,
+            isBold: selected,
+            color: selected ? Utils.kOrange : Utils.kDarkBlue,
+          ),
+        ),
+      ),
     );
   }
 }

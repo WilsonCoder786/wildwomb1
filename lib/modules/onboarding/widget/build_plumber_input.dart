@@ -27,6 +27,9 @@ class BuildPlumberInput extends StatefulWidget {
 class _BuildPlumberInputState extends State<BuildPlumberInput> {
   late TextEditingController _countController;
   late TextEditingController _lengthController;
+  late TextEditingController _hotController;
+  late TextEditingController _elbowController;
+  late TextEditingController _teeController;
 
   OnboardingProvider get p => widget.provider;
   AppLocalizations get l10n => widget.l10n;
@@ -64,8 +67,9 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
       _job.contains('Pipe') ||
       _job.contains('leiding');
 
-  /// true → count stepper; false → length input
-  bool get _isCountJob => _isKraan || _isToilet || _isCV || _isOntstoppen;
+  /// true → count stepper; false → length input.
+  /// Unclogging one drain is a single job, so it has no quantity field.
+  bool get _isCountJob => _isKraan || _isToilet || _isCV;
 
   // ── texts ───────────────────────────────────────────────────────────────────
 
@@ -97,20 +101,20 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
           : 'Hoeveel keukenkranen moeten worden vervangen? Slangen en kit worden alleen toegevoegd als dat nodig is.';
     } else if (_isToilet) {
       return _isEn
-          ? 'How many toilets are being installed? Includes pan, cistern & fixings.'
-          : 'Hoeveel toiletten worden geïnstalleerd? Inclusief pot, stortbak en bevestiging.';
+          ? 'How many toilets are being installed? Choose standard or senior, and a floor or wall outlet.'
+          : 'Hoeveel toiletten worden geïnstalleerd? Kies standaard of senior, en een vloer- of muuruitlaat.';
     } else if (_isCV) {
       return _isEn
           ? 'How many central heating units need refilling?'
           : 'Hoeveel CV-installaties moeten worden bijgevuld?';
     } else if (_isOntstoppen) {
       return _isEn
-          ? 'How many blocked pipes / drains need clearing?'
-          : 'Hoeveel verstopte leidingen / afvoeren moeten worden ontstopt?';
+          ? 'Unclogging one drain is a single job.'
+          : 'Een afvoer ontstoppen is één klus.';
     } else if (_isLeiding) {
       return _isEn
-          ? 'Enter the length of a simple, straight copper water-pipe run. Fittings, bends and insulation are not included.'
-          : 'Voer de lengte van een eenvoudige, rechte koperen waterleiding in. Koppelingen, bochten en isolatie zijn niet inbegrepen.';
+          ? 'Enter the cold-water length (15 mm) and the hot-water length (12 mm). Elbows and tees are added from your counts.'
+          : 'Voer de lengte koud water (15 mm) en warm water (12 mm) in. Knieën en T-stukken worden bijgeteld.';
     }
     return _isEn ? 'Enter the details below.' : 'Vul de gegevens hieronder in.';
   }
@@ -121,11 +125,11 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
       if (_isToilet) return _isEn ? 'Number of toilets' : 'Aantal toiletten';
       if (_isCV) return _isEn ? 'Number of systems' : 'Aantal installaties';
       if (_isOntstoppen) {
-        return _isEn ? 'Number of blockages' : 'Aantal verstopping';
+        return _isEn ? 'One job' : 'Eén klus';
       }
       return _isEn ? 'Quantity' : 'Aantal';
     } else {
-      return _isEn ? 'Pipe length (m)' : 'Leidinglengte (m)';
+      return _isEn ? 'Cold water 15 mm (m)' : 'Koud water 15 mm (m)';
     }
   }
 
@@ -134,32 +138,38 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
   String _estimateCostText() {
     if (_isKraan) {
       final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 110.00).toStringAsFixed(2)}';
+      return '± €${(n * 115.00).toStringAsFixed(2)}';
     } else if (_isToilet) {
       final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 334.00).toStringAsFixed(2)}';
+      final each = p.toiletModel == 'Senior' ? 397.00 : 347.00;
+      return '± €${(n * each).toStringAsFixed(2)}';
     } else if (_isCV) {
       final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 13.00).toStringAsFixed(2)}';
+      return '± €${(n * 18.00).toStringAsFixed(2)}';
     } else if (_isOntstoppen) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 10.00).toStringAsFixed(2)}';
+      return '± €15.00';
     } else if (_isLeiding) {
-      final m = p.customLength > 0 ? p.customLength : 5.0;
-      return '± €${(m * 6.50).toStringAsFixed(2)}';
+      final cold = p.customLength > 0 ? p.customLength : 0.0;
+      final hot = p.hotWaterMetres;
+      final total = cold * 8.50 + hot * 7.00 + p.pipeElbows * 3.50 + p.pipeTees * 4.00;
+      return '± €${total.toStringAsFixed(2)}';
     }
     return '';
   }
 
   // ── unit-price hint ─────────────────────────────────────────────────────────
   String get _unitHint {
-    if (_isKraan) return _isEn ? '≈ €110 / tap' : '≈ €110 / kraan';
-    if (_isToilet) return _isEn ? '≈ €334 / toilet' : '≈ €334 / toilet';
-    if (_isCV) return _isEn ? '≈ €13 / system' : '≈ €13 / installatie';
-    if (_isOntstoppen) {
-      return _isEn ? '≈ €10 / blockage' : '≈ €10 / verstopping';
+    if (_isKraan) return _isEn ? '≈ €115 / tap' : '≈ €115 / kraan';
+    if (_isToilet) {
+      return p.toiletModel == 'Senior'
+          ? (_isEn ? '≈ €397 / senior toilet' : '≈ €397 / senior toilet')
+          : (_isEn ? '≈ €347 / toilet' : '≈ €347 / toilet');
     }
-    if (_isLeiding) return _isEn ? '≈ €6.50 / m' : '≈ €6,50 / m';
+    if (_isCV) return _isEn ? '≈ €18 / system' : '≈ €18 / installatie';
+    if (_isOntstoppen) {
+      return _isEn ? '≈ €15' : '≈ €15';
+    }
+    if (_isLeiding) return _isEn ? '≈ €8.50 / m cold' : '≈ €8,50 / m koud';
     return '';
   }
 
@@ -174,7 +184,12 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
     _lengthController = TextEditingController(
       text: p.customLength > 0 ? p.customLength.toStringAsFixed(1) : '5.0',
     );
-    if (p.customCount <= 0) p.setCustomCount(1);
+    _hotController = TextEditingController(
+      text: p.hotWaterMetres > 0 ? p.hotWaterMetres.toStringAsFixed(1) : '0.0',
+    );
+    _elbowController = TextEditingController(text: '${p.pipeElbows}');
+    _teeController = TextEditingController(text: '${p.pipeTees}');
+    if (_isOntstoppen || p.customCount <= 0) p.setCustomCount(1);
     if (p.customLength <= 0) p.setCustomLength(5.0);
   }
 
@@ -182,6 +197,9 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
   void dispose() {
     _countController.dispose();
     _lengthController.dispose();
+    _hotController.dispose();
+    _elbowController.dispose();
+    _teeController.dispose();
     super.dispose();
   }
 
@@ -280,7 +298,18 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
                   ),
                   const SizedBox(height: 16),
 
-                  if (_isCountJob) ...[
+                  if (_isOntstoppen) ...[
+                    Text(
+                      _isEn
+                          ? 'No quantity is needed for this job.'
+                          : 'Voor deze klus is geen aantal nodig.',
+                      style: Utils.getTextStyle(
+                        baseSize: 13,
+                        isBold: false,
+                        color: Colors.black54,
+                      ),
+                    ),
+                  ] else if (_isCountJob) ...[
                     // ── Count stepper ────────────────────────────────────────
                     Row(
                       children: [
@@ -379,6 +408,70 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
                         );
                       }).toList(),
                     ),
+                    if (_isToilet) ...[
+                      const SizedBox(height: 16),
+                      Text(
+                        _isEn ? 'Toilet type' : 'Type toilet',
+                        style: Utils.getTextStyle(
+                          baseSize: 13,
+                          isBold: true,
+                          color: Utils.kDarkBlue,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Wrap(
+                        spacing: 8,
+                        children: [
+                          _optionChip(
+                            label: 'Standaard',
+                            selected: p.toiletModel == 'Standaard',
+                            onTap: () {
+                              p.setToiletModel('Standaard');
+                              ss(() {});
+                            },
+                          ),
+                          _optionChip(
+                            label: 'Senior',
+                            selected: p.toiletModel == 'Senior',
+                            onTap: () {
+                              p.setToiletModel('Senior');
+                              ss(() {});
+                            },
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        _isEn ? 'Outlet' : 'Afvoer',
+                        style: Utils.getTextStyle(
+                          baseSize: 13,
+                          isBold: true,
+                          color: Utils.kDarkBlue,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Wrap(
+                        spacing: 8,
+                        children: [
+                          _optionChip(
+                            label: _isEn ? 'Floor' : 'Vloer',
+                            selected: p.toiletOutlet == 'Vloer',
+                            onTap: () {
+                              p.setToiletOutlet('Vloer');
+                              ss(() {});
+                            },
+                          ),
+                          _optionChip(
+                            label: _isEn ? 'Wall' : 'Muur',
+                            selected: p.toiletOutlet == 'Muur',
+                            onTap: () {
+                              p.setToiletOutlet('Muur');
+                              ss(() {});
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
                   ] else ...[
                     // ── Length input ─────────────────────────────────────────
                     _PlmbField(
@@ -451,6 +544,65 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
                           ),
                         );
                       }).toList(),
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      _isEn ? 'Hot water 12 mm (m)' : 'Warm water 12 mm (m)',
+                      style: Utils.getTextStyle(
+                        baseSize: 13,
+                        isBold: true,
+                        color: Utils.kDarkBlue,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    _PlmbField(
+                      controller: _hotController,
+                      suffix: 'm',
+                      isInteger: false,
+                      onChanged: (v) {
+                        final d =
+                            double.tryParse(v.replaceAll(',', '.')) ?? 0.0;
+                        p.setHotWaterMetres(d);
+                        ss(() {});
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      _isEn ? '90° elbows' : 'Knieën 90°',
+                      style: Utils.getTextStyle(
+                        baseSize: 13,
+                        isBold: true,
+                        color: Utils.kDarkBlue,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    _PlmbField(
+                      controller: _elbowController,
+                      suffix: _isEn ? 'pcs' : 'st',
+                      isInteger: true,
+                      onChanged: (v) {
+                        p.setPipeElbows(int.tryParse(v) ?? 0);
+                        ss(() {});
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      _isEn ? 'Tee fittings' : 'T-stukken',
+                      style: Utils.getTextStyle(
+                        baseSize: 13,
+                        isBold: true,
+                        color: Utils.kDarkBlue,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    _PlmbField(
+                      controller: _teeController,
+                      suffix: _isEn ? 'pcs' : 'st',
+                      isInteger: true,
+                      onChanged: (v) {
+                        p.setPipeTees(int.tryParse(v) ?? 0);
+                        ss(() {});
+                      },
                     ),
                   ],
                 ],
@@ -586,6 +738,38 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
           ],
         );
       },
+    );
+  }
+
+  Widget _optionChip({
+    required String label,
+    required bool selected,
+    required VoidCallback onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 160),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        decoration: BoxDecoration(
+          color: selected
+              ? Utils.kOrange.withValues(alpha: 0.12)
+              : Colors.grey.shade100,
+          border: Border.all(
+            color: selected ? Utils.kOrange : Colors.grey.shade300,
+            width: selected ? 1.8 : 1.0,
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Text(
+          label,
+          style: Utils.getTextStyle(
+            baseSize: 12,
+            isBold: selected,
+            color: selected ? Utils.kOrange : Utils.kDarkBlue,
+          ),
+        ),
+      ),
     );
   }
 }

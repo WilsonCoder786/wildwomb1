@@ -110,12 +110,35 @@ class OnboardingStep7 extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        _buildGuidancePanel(),
+        _buildGuidancePanel(l10n, provider.selectedJobId ?? ''),
       ],
     );
   }
 
-  Widget _buildGuidancePanel() {
+  Widget _buildGuidancePanel(AppLocalizations l10n, String jobId) {
+    final testing = switch (jobId) {
+      'painter' => l10n.onboardingTestingPainter,
+      'plumber' => l10n.onboardingTestingPlumber,
+      'gardener' => l10n.onboardingTestingGardener,
+      'electrician' => l10n.onboardingTestingElectrician,
+      'tiler' => l10n.onboardingTestingTiler,
+      _ => l10n.onboardingTestingCarpenter,
+    };
+    final safety = switch (jobId) {
+      'painter' => l10n.onboardingSafetyRulePainter,
+      'plumber' => l10n.onboardingSafetyRulePlumber,
+      'gardener' => l10n.onboardingSafetyRuleGardener,
+      'electrician' => l10n.onboardingSafetyRuleElectrician,
+      'tiler' => l10n.onboardingSafetyRuleTiler,
+      _ => l10n.onboardingSafetyRuleCarpenter,
+    };
+    final lines = [
+      l10n.onboardingIndicativeCalculation,
+      l10n.onboardingManufacturerFirst,
+      l10n.onboardingTimeExcluded,
+      testing,
+      safety,
+    ];
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(14),
@@ -124,13 +147,21 @@ class OnboardingStep7 extends StatelessWidget {
         border: Border.all(color: const Color(0xFFFFCC80)),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Text(
-        l10n.onboardingIndicativeCalculation,
-        style: Utils.getTextStyle(
-          baseSize: 13,
-          isBold: false,
-          color: Utils.kDarkBlue,
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var i = 0; i < lines.length; i++) ...[
+            if (i > 0) const SizedBox(height: 8),
+            Text(
+              lines[i],
+              style: Utils.getTextStyle(
+                baseSize: 13,
+                isBold: false,
+                color: Utils.kDarkBlue,
+              ),
+            ),
+          ],
+        ],
       ),
     );
   }

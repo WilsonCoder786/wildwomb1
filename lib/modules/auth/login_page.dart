@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState!.validate()) {
       FocusScope.of(context).unfocus();
       final l10n = AppLocalizations.of(context)!;
-      EasyLoading.show(status: 'Logging in...');
+      EasyLoading.show(status: l10n.authLoggingIn);
 
       final email = _emailController.text.trim();
       final password = _passwordController.text;
@@ -417,6 +417,79 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  Widget _buildLanguageChoice(AppLocalizations l10n) {
+    final selected = context.watch<AppService>().locale.languageCode;
+    final appService = context.read<AppService>();
+    const languages = [
+      {'code': 'nl', 'label': 'NL', 'name': 'Nederlands'},
+      {'code': 'en', 'label': 'EN', 'name': 'English'},
+    ];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          l10n.settingsLanguage,
+          style: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF002D62),
+            fontFamily: 'D-FONT-M',
+          ),
+        ),
+        const SizedBox(height: 2),
+        Text(
+          l10n.settingsLanguageSubtitle,
+          style: const TextStyle(
+            fontSize: 12,
+            color: Color(0xFF666666),
+            fontFamily: 'D-FONT-R',
+          ),
+        ),
+        const SizedBox(height: 8),
+        ...languages.map((lang) {
+          final isSelected = selected == lang['code'];
+          return InkWell(
+            onTap: () => appService.setLocale(Locale(lang['code']!)),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6),
+              child: Row(
+                children: [
+                  Icon(
+                    isSelected
+                        ? Icons.radio_button_checked
+                        : Icons.radio_button_off,
+                    color: isSelected ? const Color(0xFF002D62) : Colors.grey,
+                    size: 20,
+                  ),
+                  const SizedBox(width: 12),
+                  Text(
+                    lang['label']!,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF002D62),
+                      fontFamily: 'D-FONT-M',
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Text(
+                    lang['name']!,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: Color(0xFF666666),
+                      fontFamily: 'D-FONT-R',
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }),
+      ],
+    );
+  }
+
   Widget _buildLoginCard(AppLocalizations l10n) {
     return Container(
       padding: const EdgeInsets.all(24),
@@ -435,6 +508,8 @@ class _LoginPageState extends State<LoginPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          _buildLanguageChoice(l10n),
+          const SizedBox(height: 20),
           Text(
             l10n.authLogin,
             style: const TextStyle(
@@ -470,12 +545,12 @@ class _LoginPageState extends State<LoginPage> {
             controller: _emailController,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return l10n.authEmailRequired;
               }
               if (!RegExp(
                 r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
               ).hasMatch(value)) {
-                return 'Please enter a valid email';
+                return l10n.authEmailInvalid;
               }
               return null;
             },
@@ -521,10 +596,10 @@ class _LoginPageState extends State<LoginPage> {
             obscureText: !_isPasswordVisible,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your password';
+                return l10n.authPasswordRequired;
               }
               if (value.length < 6) {
-                return 'Password must be at least 6 characters';
+                return l10n.authPasswordMinLength;
               }
               return null;
             },

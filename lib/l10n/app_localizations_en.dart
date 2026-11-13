@@ -560,6 +560,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get authPasswordChanged => 'Password successfully changed!';
 
   @override
+  String get authLoggingIn => 'Logging in...';
+
+  @override
+  String get authCreatingAccount => 'Creating account...';
+
+  @override
+  String get authAccountCreated => 'Account created!';
+
+  @override
+  String get authEmailAlreadyRegistered =>
+      'Email is already registered. Please log in.';
+
+  @override
+  String get authNameRequired => 'Please enter your name';
+
+  @override
   String get onboardingPlayVideo => 'Play instruction video';
 
   @override
@@ -628,6 +644,62 @@ class AppLocalizationsEn extends AppLocalizations {
       'Note: This is an indicative calculation.';
 
   @override
+  String get onboardingManufacturerFirst =>
+      'Manufacturer instructions always take priority over these calculated values.';
+
+  @override
+  String get onboardingTimeExcluded =>
+      'The hours are a calculated working time. Preparation, waiting time, drying time and curing time are not included.';
+
+  @override
+  String get onboardingTestingCarpenter =>
+      'Afterwards, check that the result is level and stable, the fixing is secure, everything works, and the finish is neat.';
+
+  @override
+  String get onboardingTestingPainter =>
+      'Afterwards, check that the finish is even, with no runs or imperfections, and that it has adhered properly.';
+
+  @override
+  String get onboardingTestingPlumber =>
+      'Afterwards, check for leaks, stability, correct operation, safe drainage and a correct connection.';
+
+  @override
+  String get onboardingTestingGardener =>
+      'Afterwards, check stability, water drainage, secure fixing and a neat finish.';
+
+  @override
+  String get onboardingTestingElectrician =>
+      'Afterwards, check correct operation, a safe connection, proper earthing and stability.';
+
+  @override
+  String get onboardingTestingTiler =>
+      'Afterwards, check that the tiles are firmly fixed, the grout is even, there are no height differences, and the bond is correct.';
+
+  @override
+  String get onboardingSafetyRuleCarpenter =>
+      'Use eye and hearing protection and follow the instructions.';
+
+  @override
+  String get onboardingSafetyRulePainter =>
+      'When sanding, wear an FFP2/FFP3 dust mask and safety glasses. Wear gloves when degreasing.';
+
+  @override
+  String get onboardingSafetyRulePlumber =>
+      'Use suitable personal protection and follow the instructions for the materials, tools and installation.';
+
+  @override
+  String get onboardingSafetyRuleGardener =>
+      'Use suitable personal protection and follow the instructions for the materials, tools and installation.';
+
+  @override
+  String get onboardingSafetyRuleElectrician =>
+      'Switch the power off, use a two-pole voltage tester and never work live. Use insulated tools and a cable detector before drilling.';
+
+  @override
+  String get onboardingSafetyRuleTiler =>
+      'Limit quartz dust by working wet or with extraction. Wear eye, hearing and respiratory protection, and knee pads.';
+
+  @override
   String get subscriptionChoosePlan => 'Choose your package';
 
   @override
@@ -652,7 +724,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get subscriptionBestValue => 'Best Value';
 
   @override
-  String get subscriptionTwoMonthsFree => '5 months free';
+  String get subscriptionTwoMonthsFree => '44%';
 
   @override
   String get subscriptionEverythingIncluded => 'Everything Included';
@@ -5222,6 +5294,54 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get safetyStopPesticide =>
       'Would this involve pesticides that require special training or handling?';
+
+  @override
+  String get safetyStopComplexStructure =>
+      'Is this a complex structure, or are you unsure how it should be built?';
+
+  @override
+  String get safetyStopMoistureOrLeak =>
+      'Is there a moisture problem or a leak?';
+
+  @override
+  String get safetyStopGroundServices =>
+      'Could there be unknown pipes or cables in the ground?';
+
+  @override
+  String get safetyStopDistributionBoard =>
+      'Does this work change the consumer unit or distribution board?';
+
+  @override
+  String get safetyStopComplexInstallation =>
+      'Is this a complex electrical installation?';
+
+  @override
+  String get safetyStopServicesWork =>
+      'Does this work involve gas, water, or electricity?';
+
+  @override
+  String get onboardingSituationCarpenter =>
+      'The app asks for the measurements or the number of steps.';
+
+  @override
+  String get onboardingSituationPlumber =>
+      'The app asks for the quantity or the pipe length. For a toilet: standard or senior, and a floor or wall outlet.';
+
+  @override
+  String get onboardingSituationPainter =>
+      'The app asks for the area or the number of pieces.';
+
+  @override
+  String get onboardingSituationGardener =>
+      'The app asks for the measurements or the quantity.';
+
+  @override
+  String get onboardingSituationElectrician =>
+      'The app asks for the quantity or the length. For an outlet: earthed or unearthed. For lighting: dry or damp.';
+
+  @override
+  String get onboardingSituationTiler =>
+      'The app asks for the area or the quantity.';
 
   @override
   String get checklistContourmal => 'Contour gauge';

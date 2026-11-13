@@ -561,6 +561,22 @@ class AppLocalizationsNl extends AppLocalizations {
   String get authPasswordChanged => 'Wachtwoord succesvol gewijzigd!';
 
   @override
+  String get authLoggingIn => 'Bezig met inloggen...';
+
+  @override
+  String get authCreatingAccount => 'Account aanmaken...';
+
+  @override
+  String get authAccountCreated => 'Account aangemaakt!';
+
+  @override
+  String get authEmailAlreadyRegistered =>
+      'Dit e-mailadres is al geregistreerd. Log in.';
+
+  @override
+  String get authNameRequired => 'Vul je naam in';
+
+  @override
   String get onboardingPlayVideo => 'Instructievideo afspelen';
 
   @override
@@ -629,6 +645,62 @@ class AppLocalizationsNl extends AppLocalizations {
       'Let op: dit is een indicatieve berekening.';
 
   @override
+  String get onboardingManufacturerFirst =>
+      'Fabrikantvoorschriften gaan altijd voor op deze rekenwaarden.';
+
+  @override
+  String get onboardingTimeExcluded =>
+      'De uren zijn een rekenkundige werktijd. Voorbereiding, wachttijd, droogtijd en uithardingstijd zijn niet inbegrepen.';
+
+  @override
+  String get onboardingTestingCarpenter =>
+      'Controleer daarna op een waterpas en stabiel resultaat, veilige bevestiging, correcte werking en een nette afwerking.';
+
+  @override
+  String get onboardingTestingPainter =>
+      'Controleer daarna op een egale afwerking, geen druipers of oneffenheden, en een correcte hechting.';
+
+  @override
+  String get onboardingTestingPlumber =>
+      'Controleer daarna op lekkage, stabiliteit, correcte werking, veilige afvoer en een correcte aansluiting.';
+
+  @override
+  String get onboardingTestingGardener =>
+      'Controleer daarna op stabiliteit, waterafvoer, veilige bevestiging en een nette afwerking.';
+
+  @override
+  String get onboardingTestingElectrician =>
+      'Controleer daarna op correcte werking, veilige aansluiting, juiste aarding en stabiliteit.';
+
+  @override
+  String get onboardingTestingTiler =>
+      'Controleer daarna op vastzittende tegels, egale voegen, geen hoogteverschillen en correcte hechting.';
+
+  @override
+  String get onboardingSafetyRuleCarpenter =>
+      'Gebruik oog- en oorbescherming en werk volgens de voorschriften.';
+
+  @override
+  String get onboardingSafetyRulePainter =>
+      'Draag bij schuren een stofmasker (FFP2/FFP3) en een veiligheidsbril, en bij ontvetten handschoenen.';
+
+  @override
+  String get onboardingSafetyRulePlumber =>
+      'Gebruik passende persoonlijke bescherming en werk volgens de voorschriften van materiaal, gereedschap en installatie.';
+
+  @override
+  String get onboardingSafetyRuleGardener =>
+      'Gebruik passende persoonlijke bescherming en werk volgens de voorschriften van materiaal, gereedschap en installatie.';
+
+  @override
+  String get onboardingSafetyRuleElectrician =>
+      'Schakel de stroom uit, gebruik een tweepolige spanningstester en werk nooit onder spanning. Gebruik geïsoleerd gereedschap en een leidingzoeker bij boren.';
+
+  @override
+  String get onboardingSafetyRuleTiler =>
+      'Beperk kwartsstof met nat werken of afzuiging. Draag oog-, gehoor- en adembescherming en kniebeschermers.';
+
+  @override
   String get subscriptionChoosePlan => 'Kies jouw pakket';
 
   @override
@@ -653,7 +725,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get subscriptionBestValue => 'Beste waarde';
 
   @override
-  String get subscriptionTwoMonthsFree => '5 maanden gratis';
+  String get subscriptionTwoMonthsFree => '44%';
 
   @override
   String get subscriptionEverythingIncluded => 'Alles inbegrepen';
@@ -5223,6 +5295,52 @@ class AppLocalizationsNl extends AppLocalizations {
   @override
   String get safetyStopPesticide =>
       'Moet je werken met bestrijdingsmiddelen waarvoor speciale kennis of voorzorgsmaatregelen nodig zijn?';
+
+  @override
+  String get safetyStopComplexStructure =>
+      'Gaat het om een complexe constructie, of twijfel je hoe die gebouwd moet worden?';
+
+  @override
+  String get safetyStopMoistureOrLeak => 'Is er een vocht- of lekkageprobleem?';
+
+  @override
+  String get safetyStopGroundServices =>
+      'Kunnen er onbekende leidingen of kabels in de grond zitten?';
+
+  @override
+  String get safetyStopDistributionBoard => 'Past dit werk de groepenkast aan?';
+
+  @override
+  String get safetyStopComplexInstallation =>
+      'Gaat het om een complexe elektrische installatie?';
+
+  @override
+  String get safetyStopServicesWork =>
+      'Heeft dit werk te maken met gas, water of elektra?';
+
+  @override
+  String get onboardingSituationCarpenter =>
+      'De app vraagt de maten of het aantal treden.';
+
+  @override
+  String get onboardingSituationPlumber =>
+      'De app vraagt het aantal of de leidinglengte. Bij een toilet: standaard of senior, en een afvoer in de vloer of in de muur.';
+
+  @override
+  String get onboardingSituationPainter =>
+      'De app vraagt het oppervlak of het aantal stuks.';
+
+  @override
+  String get onboardingSituationGardener =>
+      'De app vraagt de maten of het aantal.';
+
+  @override
+  String get onboardingSituationElectrician =>
+      'De app vraagt het aantal of de lengte. Bij een stopcontact: geaard of ongeaard. Bij verlichting: droog of vochtig.';
+
+  @override
+  String get onboardingSituationTiler =>
+      'De app vraagt het oppervlak of het aantal.';
 
   @override
   String get checklistContourmal => 'Contourmal';

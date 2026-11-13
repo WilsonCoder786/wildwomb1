@@ -13,11 +13,11 @@
       "checklistWaterpas",
       "checklistBlokhaak",
       "checklistZwaaihaak",
+      "checklistStanleymes",
       "checklistHamer",
       "checklistContourmal",
       "checklistKniebeschermers",
       "checklistDecoupeerzaag",
-      "checklistStanleymes",
       "checklistVerlengkabel",
       "checklistAfkortzaag"
     ],
@@ -55,19 +55,14 @@
   "Plinten monteren – plakplint": {
     "_default": [
       "checklistRolmaat",
-      "checklistPotlood",
       "checklistWaterpas",
-      "checklistBlokhaak",
       "checklistZwaaihaak",
-      "checklistHamer",
+      "checklistBlokhaak",
       "checklistVerstekbak",
-      "checklistBeitel",
-      "checklistStanleymes",
-      "checklistDecoupeerzaag",
-      "checklistAccuboormachine",
-      "checklistSchroevendraaier",
+      "checklistFijngetandeZaag",
+      "checklistDoek",
       "checklistVerlengkabel",
-      "checklistAfkortzaag"
+      "checklistVerstekzaag"
     ],
     "_rental": [
       "checklistAfkortzaag"
@@ -75,7 +70,7 @@
     "conditions": [
       {
         "match": [
-          "plakplinten"
+          "plakplint"
         ],
         "plakplinten": [
           "checklistRolmaat",
@@ -150,11 +145,10 @@
       "checklistSchroefboormachine",
       "checklistTrapje",
       "checklistVerlengkabel",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
       "checklistSteiger"
     ],
     "_rental": [
-      "checklistBoorhamer",
       "checklistSteiger"
     ]
   },
@@ -229,7 +223,6 @@
   "Behangen": {
     "_default": [
       "checklistWaterpas",
-      "checklistBehangtafel",
       "checklistBehanglijmRoller",
       "checklistStanleymes",
       "checklistSchaarBehangmes",
@@ -250,7 +243,6 @@
     ],
     "_small_tools": [
       "checklistWaterpas",
-      "checklistBehangtafel",
       "checklistBehanglijmRoller",
       "checklistStanleymes",
       "checklistSchaarBehangmes",
@@ -308,12 +300,12 @@
       "checklistKwasten",
       "checklistRadiatorroller",
       "checklistVerfbak",
-      "checklistPlamuurmes",
       "checklistStofdoek",
       "checklistWerkhandschoenen",
       "checklistStofmasker",
       "checklistVeiligheidsbril",
       "checklistVerlengkabel",
+      "checklistTrapje",
       "checklistSchuurmachine"
     ],
     "_rental": [
@@ -323,11 +315,12 @@
       "checklistKwasten",
       "checklistRadiatorroller",
       "checklistVerfbak",
-      "checklistPlamuurmes",
       "checklistStofdoek",
       "checklistWerkhandschoenen",
       "checklistStofmasker",
-      "checklistVerlengkabel"
+      "checklistVeiligheidsbril",
+      "checklistVerlengkabel",
+      "checklistTrapje"
     ],
     "_safety_note": "checklistLeadPaintWarning"
   },
@@ -345,16 +338,19 @@
       "checklistEmmer",
       "checklistKniebeschermers",
       "checklistWerkhandschoenen",
-      "checklistVerfbak",
-      "checklistRoller",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
       "checklistMengspiraal",
       "checklistBoormachine",
       "checklistTroffel",
       "checklistContourmal",
       "checklistZuignap",
       "checklistTegelsnijder",
+      "checklistGatenzaag",
       "checklistSlijptol",
-      "checklistBouwstofzuiger"
+      "checklistBouwstofzuiger",
+      "checklistDiamantzaagtafel"
     ],
     "_small_tools": [
       "checklistWaterpas",
@@ -366,47 +362,28 @@
       "checklistEmmer",
       "checklistKniebeschermers",
       "checklistWerkhandschoenen",
-      "checklistVerfbak",
-      "checklistRoller",
-      "checklistMengspiraal",
-      "checklistBoormachine",
-      "checklistTroffel",
-      "checklistContourmal",
-      "checklistZuignap"
-    ],
-    "_rental": [
-      "checklistTegelsnijder",
-      "checklistSlijptol",
-      "checklistBouwstofzuiger"
-    ]
-  },
-  "Wandtegels plaatsen": {
-    "_default": [
-      "checklistWaterpas",
-      "checklistBlokhaak",
-      "checklistGlijhoek",
-      "checklistTandspaan",
-      "checklistRubbereHamer",
-      "checklistVoegrubber",
-      "checklistSpons",
-      "checklistEmmer",
-      "checklistTrapje",
-      "checklistWerkhandschoenen",
-      "checklistVerfbak",
-      "checklistRoller",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
       "checklistMengspiraal",
       "checklistBoormachine",
       "checklistTroffel",
       "checklistContourmal",
       "checklistZuignap",
       "checklistTegelsnijder",
-      "checklistSlijptol",
-      "checklistBouwstofzuiger"
+      "checklistGatenzaag"
     ],
-    "_small_tools": [
+    "_rental": [
+      "checklistSlijptol",
+      "checklistBouwstofzuiger",
+      "checklistDiamantzaagtafel"
+    ]
+  },
+  "Wandtegels plaatsen": {
+    "_default": [
       "checklistWaterpas",
       "checklistBlokhaak",
-      "checklistGlijhoek",
+      "checklistZwaaihaak",
       "checklistTandspaan",
       "checklistRubbereHamer",
       "checklistVoegrubber",
@@ -414,18 +391,46 @@
       "checklistEmmer",
       "checklistTrapje",
       "checklistWerkhandschoenen",
-      "checklistVerfbak",
-      "checklistRoller",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
       "checklistMengspiraal",
       "checklistBoormachine",
       "checklistTroffel",
       "checklistContourmal",
-      "checklistZuignap"
+      "checklistZuignap",
+      "checklistTegelsnijder",
+      "checklistGatenzaag",
+      "checklistSlijptol",
+      "checklistBouwstofzuiger",
+      "checklistDiamantzaagtafel"
+    ],
+    "_small_tools": [
+      "checklistWaterpas",
+      "checklistBlokhaak",
+      "checklistZwaaihaak",
+      "checklistTandspaan",
+      "checklistRubbereHamer",
+      "checklistVoegrubber",
+      "checklistSpons",
+      "checklistEmmer",
+      "checklistTrapje",
+      "checklistWerkhandschoenen",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistMengspiraal",
+      "checklistBoormachine",
+      "checklistTroffel",
+      "checklistContourmal",
+      "checklistZuignap",
+      "checklistTegelsnijder",
+      "checklistGatenzaag"
     ],
     "_rental": [
-      "checklistTegelsnijder",
       "checklistSlijptol",
-      "checklistBouwstofzuiger"
+      "checklistBouwstofzuiger",
+      "checklistDiamantzaagtafel"
     ]
   },
   "Tegels repareren": {
@@ -440,6 +445,10 @@
       "checklistWerkhandschoenen",
       "checklistContourmal",
       "checklistZuignap",
+      "checklistGatenzaag",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
       "checklistSlijptol",
       "checklistBoorhamer",
       "checklistBouwstofzuiger"
@@ -454,7 +463,11 @@
       "checklistTrapje",
       "checklistWerkhandschoenen",
       "checklistContourmal",
-      "checklistZuignap"
+      "checklistZuignap",
+      "checklistGatenzaag",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker"
     ],
     "_rental": [
       "checklistSlijptol",
@@ -465,18 +478,24 @@
   "Voegen": {
     "_default": [
       "checklistVoegrubber",
-      "checklistVoegkrabber",
+      "checklistVoegspijker",
       "checklistSpons",
       "checklistEmmer",
+      "checklistKniebeschermers",
       "checklistWerkhandschoenen",
+      "checklistVeiligheidsbril",
+      "checklistStofmasker",
       "checklistRoller"
     ],
     "_small_tools": [
       "checklistVoegrubber",
-      "checklistVoegkrabber",
+      "checklistVoegspijker",
       "checklistSpons",
       "checklistEmmer",
+      "checklistKniebeschermers",
       "checklistWerkhandschoenen",
+      "checklistVeiligheidsbril",
+      "checklistStofmasker",
       "checklistRoller"
     ],
     "_rental": []
@@ -490,7 +509,9 @@
       "checklistPlantenspuit",
       "checklistSpons",
       "checklistDoek",
-      "checklistWerkhandschoenen"
+      "checklistWerkhandschoenen",
+      "checklistVeiligheidsbril",
+      "checklistStofmasker"
     ],
     "_small_tools": [
       "checklistKitpistool",
@@ -500,7 +521,9 @@
       "checklistPlantenspuit",
       "checklistSpons",
       "checklistDoek",
-      "checklistWerkhandschoenen"
+      "checklistWerkhandschoenen",
+      "checklistVeiligheidsbril",
+      "checklistStofmasker"
     ],
     "_rental": []
   },
@@ -511,8 +534,6 @@
       "checklistPijpsleutel",
       "checklistKitpistool",
       "checklistAfstrijkmesje",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen",
       "checklistPlantenspuit"
     ],
@@ -523,8 +544,6 @@
       "checklistPijpsleutel",
       "checklistKitpistool",
       "checklistAfstrijkmesje",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen",
       "checklistPlantenspuit"
     ],
@@ -541,8 +560,6 @@
       "checklistOntstoppingsveer",
       "checklistWaterpomptang",
       "checklistVerstelbareMoersleutel",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen",
       "checklistVeiligheidsbril",
       "checklistOntstoppingsmachine"
@@ -555,8 +572,6 @@
       "checklistOntstoppingsveer",
       "checklistWaterpomptang",
       "checklistVerstelbareMoersleutel",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen",
       "checklistVeiligheidsbril"
     ]
@@ -571,23 +586,18 @@
       "checklistKitpistool",
       "checklistWaterpas",
       "checklistRolmaat",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen",
-      "checklistBoorhamer"
+      "checklistKlopboormachine"
     ],
-    "_rental": [
-      "checklistBoorhamer"
-    ],
+    "_rental": [],
     "_small_tools": [
       "checklistWaterpomptang",
       "checklistVerstelbareMoersleutel",
       "checklistKitpistool",
       "checklistWaterpas",
       "checklistRolmaat",
-      "checklistEmmer",
-      "checklistDoek",
-      "checklistHandschoenen"
+      "checklistHandschoenen",
+      "checklistKlopboormachine"
     ],
     "_note": "Gebruik alleen geschikt bevestigingsmateriaal en passende accessoires volgens de fabrikant.",
     "_note_en": "Only use suitable fixing materials and appropriate accessories according to the manufacturer."
@@ -596,16 +606,12 @@
     "_default": [
       "checklistVerstelbareMoersleutel",
       "checklistOntluchtingssleutel",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen"
     ],
     "_rental": [],
     "_small_tools": [
       "checklistVerstelbareMoersleutel",
       "checklistOntluchtingssleutel",
-      "checklistEmmer",
-      "checklistDoek",
       "checklistHandschoenen"
     ],
     "_note": "⚠️ Niet aan gaszijdige onderdelen komen.",
@@ -618,38 +624,29 @@
     "_default": [
       "checklistPijpsnijder",
       "checklistOntbraker",
+      "checklistBuigtang",
       "checklistRolmaat",
-      "checklistPotlood",
       "checklistWaterpas",
       "checklistVerstelbareMoersleutel",
       "checklistWaterpomptang",
       "checklistLeidingdetector",
-      "checklistMetaalzaag",
       "checklistVeiligheidsbril",
       "checklistHandschoenen",
-      "checklistBoorhamer",
-      "checklistWandenfrees",
-      "checklistStofafzuiging",
-      "checklistBuigtang"
+      "checklistKlopboormachine"
     ],
-    "_rental": [
-      "checklistBoorhamer",
-      "checklistWandenfrees",
-      "checklistStofafzuiging",
-      "checklistBuigtang"
-    ],
+    "_rental": [],
     "_small_tools": [
       "checklistPijpsnijder",
       "checklistOntbraker",
+      "checklistBuigtang",
       "checklistRolmaat",
-      "checklistPotlood",
       "checklistWaterpas",
       "checklistVerstelbareMoersleutel",
       "checklistWaterpomptang",
       "checklistLeidingdetector",
-      "checklistMetaalzaag",
       "checklistVeiligheidsbril",
-      "checklistHandschoenen"
+      "checklistHandschoenen",
+      "checklistKlopboormachine"
     ],
     "_note": "Bij werkzaamheden in wanden eerst controleren op bestaande leidingen en kabels.",
     "_note_en": "When working in walls, first check for existing pipes and cables."
@@ -671,10 +668,12 @@
       "checklistTrapje",
       "checklistHandschoenen",
       "checklistKniebeschermers",
+      "checklistBezem",
       "checklistDecoupeerzaag",
-      "checklistVerfbak",
-      "checklistRoller",
-      "checklistKwast",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistLeidingdetector",
       "checklistGrondboor",
       "checklistAccuboormachine",
       "checklistAfkortzaag"
@@ -694,10 +693,12 @@
       "checklistTrapje",
       "checklistHandschoenen",
       "checklistKniebeschermers",
+      "checklistBezem",
       "checklistDecoupeerzaag",
-      "checklistVerfbak",
-      "checklistRoller",
-      "checklistKwast"
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistLeidingdetector"
     ]
   },
   "Bestrating aanleggen": {
@@ -710,6 +711,10 @@
       "checklistKruiwagen",
       "checklistHandschoenen",
       "checklistKniebeschermers",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistLeidingdetector",
       "checklistTrilplaat"
     ],
     "_rental": [
@@ -723,7 +728,11 @@
       "checklistBezem",
       "checklistKruiwagen",
       "checklistHandschoenen",
-      "checklistKniebeschermers"
+      "checklistKniebeschermers",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistLeidingdetector"
     ]
   },
   "Snoeien": {
@@ -731,6 +740,7 @@
       "checklistSnoeischaar",
       "checklistTuinhandschoenen",
       "checklistKniebeschermers",
+      "checklistVeiligheidsbril",
       "checklistTakkenschaar",
       "checklistSnoeizaag"
     ],
@@ -741,7 +751,8 @@
     "_small_tools": [
       "checklistSnoeischaar",
       "checklistTuinhandschoenen",
-      "checklistKniebeschermers"
+      "checklistKniebeschermers",
+      "checklistVeiligheidsbril"
     ]
   },
   "Overkapping bouwen": {
@@ -753,9 +764,14 @@
       "checklistBeitel",
       "checklistVerstekbak",
       "checklistKruiwagen",
+      "checklistBezem",
       "checklistTrapje",
       "checklistHandschoenen",
       "checklistKniebeschermers",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistVeiligheidsschoenen",
       "checklistGrondboor",
       "checklistCirkelzaag",
       "checklistAfkortzaag",
@@ -781,9 +797,14 @@
       "checklistBeitel",
       "checklistVerstekbak",
       "checklistKruiwagen",
+      "checklistBezem",
       "checklistTrapje",
       "checklistHandschoenen",
-      "checklistKniebeschermers"
+      "checklistKniebeschermers",
+      "checklistVeiligheidsbril",
+      "checklistGehoorbescherming",
+      "checklistStofmasker",
+      "checklistVeiligheidsschoenen"
     ]
   },
   "Gazon leggen": {
@@ -793,6 +814,7 @@
       "checklistTuinhandschoenen",
       "checklistKniebeschermers",
       "checklistKruiwagen",
+      "checklistVeiligheidsbril",
       "checklistTrilplaat",
       "checklistKunstgrasborstel"
     ],
@@ -805,36 +827,17 @@
       "checklistSpade",
       "checklistTuinhandschoenen",
       "checklistKniebeschermers",
-      "checklistKruiwagen"
+      "checklistKruiwagen",
+      "checklistVeiligheidsbril"
     ]
   },
   "Stopcontact plaatsen": {
     "_default": [
       "checklistSpanningstester",
       "checklistStriptang",
+      "checklistGeisoleerdeFittingSchroevendraaier",
       "checklistGeisoleerdSchroefboormachineBitset",
-      "checklistBoorhamer",
-      "checklistLeidingdetector",
-      "checklistVeiligheidsbril",
-      "checklistHandschoenen"
-    ],
-    "_rental": [],
-    "_small_tools": [
-      "checklistSpanningstester",
-      "checklistStriptang",
-      "checklistGeisoleerdSchroefboormachineBitset",
-      "checklistBoorhamer",
-      "checklistLeidingdetector",
-      "checklistVeiligheidsbril",
-      "checklistHandschoenen"
-    ]
-  },
-  "Verlichting plaatsen": {
-    "_default": [
-      "checklistSpanningstester",
-      "checklistStriptang",
-      "checklistGeisoleerdSchroefboormachineBitset",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
@@ -844,8 +847,34 @@
     "_small_tools": [
       "checklistSpanningstester",
       "checklistStriptang",
+      "checklistGeisoleerdeFittingSchroevendraaier",
       "checklistGeisoleerdSchroefboormachineBitset",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
+      "checklistLeidingdetector",
+      "checklistTrapje",
+      "checklistVeiligheidsbril",
+      "checklistHandschoenen"
+    ]
+  },
+  "Verlichting plaatsen": {
+    "_default": [
+      "checklistSpanningstester",
+      "checklistStriptang",
+      "checklistGeisoleerdeFittingSchroevendraaier",
+      "checklistGeisoleerdSchroefboormachineBitset",
+      "checklistKlopboormachine",
+      "checklistLeidingdetector",
+      "checklistTrapje",
+      "checklistVeiligheidsbril",
+      "checklistHandschoenen"
+    ],
+    "_rental": [],
+    "_small_tools": [
+      "checklistSpanningstester",
+      "checklistStriptang",
+      "checklistGeisoleerdeFittingSchroevendraaier",
+      "checklistGeisoleerdSchroefboormachineBitset",
+      "checklistKlopboormachine",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
@@ -856,28 +885,32 @@
     "_default": [
       "checklistSpanningstester",
       "checklistStriptang",
+      "checklistGeisoleerdeFittingSchroevendraaier",
       "checklistGeisoleerdSchroefboormachineBitset",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
       "checklistTrekveer",
-      "checklistFijnboogzaag",
+      "checklistIJzerzaag",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
       "checklistHandschoenen",
       "checklistWandenfrees",
-      "checklistBouwstofzuiger"
+      "checklistBouwstofzuiger",
+      "checklistBoorhamer"
     ],
     "_rental": [
       "checklistWandenfrees",
-      "checklistBouwstofzuiger"
+      "checklistBouwstofzuiger",
+      "checklistBoorhamer"
     ],
     "_small_tools": [
       "checklistSpanningstester",
       "checklistStriptang",
+      "checklistGeisoleerdeFittingSchroevendraaier",
       "checklistGeisoleerdSchroefboormachineBitset",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
       "checklistTrekveer",
-      "checklistFijnboogzaag",
+      "checklistIJzerzaag",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
@@ -888,8 +921,8 @@
     "_default": [
       "checklistWaterpas",
       "checklistSchroefboormachineBitset",
-      "checklistBoorhamer",
-      "checklistFijnboogzaag",
+      "checklistKlopboormachine",
+      "checklistIJzerzaag",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
@@ -899,8 +932,8 @@
     "_small_tools": [
       "checklistWaterpas",
       "checklistSchroefboormachineBitset",
-      "checklistBoorhamer",
-      "checklistFijnboogzaag",
+      "checklistKlopboormachine",
+      "checklistIJzerzaag",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
@@ -910,7 +943,7 @@
   "Rookmelder plaatsen": {
     "_default": [
       "checklistSchroefboormachineBitset",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",
@@ -919,7 +952,7 @@
     "_rental": [],
     "_small_tools": [
       "checklistSchroefboormachineBitset",
-      "checklistBoorhamer",
+      "checklistKlopboormachine",
       "checklistLeidingdetector",
       "checklistTrapje",
       "checklistVeiligheidsbril",

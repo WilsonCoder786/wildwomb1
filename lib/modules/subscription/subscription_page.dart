@@ -16,6 +16,14 @@ class SubscriptionPage extends StatefulWidget {
 class _SubscriptionPageState extends State<SubscriptionPage> {
   String? _lastVerificationStatus;
 
+  /// Price printed on the selected plan card. The button uses this so it
+  /// matches the card instead of the store price.
+  String? _displayedPlanPrice(SubscriptionProvider provider) {
+    final id = provider.planName.toLowerCase();
+    if (id.isEmpty) return null;
+    return id.contains('monthly') ? '€2.99' : '€19.99';
+  }
+
   void _showMessage(
     String message, {
     bool isSuccess = false,
@@ -155,7 +163,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                                         ? l10n.subscriptionPerMonth
                                         : l10n.subscriptionPerYear,
                                     badgeText: isMonthly
-                                        ? l10n.subscriptionMostPopular
+                                        ? null
                                         : l10n.subscriptionBestValue,
                                     discountText: isMonthly
                                         ? null
@@ -261,8 +269,9 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                                     )
                                   : Text(
                                       () {
-                                        final price = provider
-                                            .getProductPrice();
+                                        final price = _displayedPlanPrice(
+                                          provider,
+                                        );
                                         return price != null
                                             ? l10n.subscriptionSubscribeWithPrice(price)
                                             : l10n.subscriptionSubscribe;

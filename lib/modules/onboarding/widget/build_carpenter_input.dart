@@ -41,7 +41,15 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
 
   // ── header texts ────────────────────────────────────────────────────────────
 
+  bool get _isDoor =>
+      _job.contains('Deur') ||
+      _job.contains('Door installation') ||
+      _job.contains('Install Door');
+
   String get _headerTitle {
+    if (_isDoor) {
+      return _isEn ? 'Door installation — Details' : 'Deur plaatsen — Details';
+    }
     if (_isPlint) {
       return _isEn
           ? 'Skirting board installation — Details'
@@ -51,14 +59,19 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
   }
 
   String get _headerSubtitle {
+    if (_isDoor) {
+      return _isEn
+          ? 'Enter the number of interior doors.'
+          : 'Vul het aantal binnendeuren in.';
+    }
     if (_isPlint) {
       return _isEn
-          ? 'Enter the total perimeter (running metres) and select the skirting type.'
-          : 'Voer de totale omtrek (loopmeters) in en kies het type plint.';
+          ? 'Enter the total length in metres.'
+          : 'Voer de totale lengte in meters in.';
     }
     return _isEn
-        ? 'Fill in the dimensions below for an accurate calculation.'
-        : 'Vul de afmetingen hieronder in voor een nauwkeurige berekening.';
+        ? 'Fill in the measurements below.'
+        : 'Vul de maten hieronder in.';
   }
 
   // ── lifecycle ───────────────────────────────────────────────────────────────
@@ -98,28 +111,13 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
   // ── estimated cost ──────────────────────────────────────────────────────────
 
   String _estimateCostText() {
+    if (_isDoor) {
+      final count = p.customCount > 0 ? p.customCount : 1;
+      return '± €${(count * 193.0).toStringAsFixed(2)}';
+    }
     if (_isPlint) {
-      final meters = p.customLength > 0 ? p.customLength : 12.0;
-      if (p.isPlakplinten) {
-        // Document 2 – Klus 3: Standaard app-rekenmateriaal per meter: €10 C / €7 P
-        final cost = meters * 10.0;
-        return '± €${cost.toStringAsFixed(2)}';
-      }
-      final int mInt = meters.ceil();
-      final tubesKit = (mInt / 10).ceil();
-      final dozenSchroeven = (mInt / 25).ceil();
-      final setsPluggen = (mInt / 25).ceil();
-      final tubesAcrylaat = (mInt / 15).ceil();
-      final stuksProfiel = (mInt / 5).ceil();
-      final cost = (mInt * 8.00) +
-          (tubesKit * 8.50) +
-          (dozenSchroeven * 5.50) +
-          (setsPluggen * 3.50) +
-          (tubesAcrylaat * 3.50) +
-          (stuksProfiel * 3.50) +
-          5.00 +
-          12.50;
-      return '± €${cost.toStringAsFixed(2)}';
+      final meters = p.customLength > 0 ? p.customLength : 1.0;
+      return '± €${(meters * 15.0).toStringAsFixed(2)}';
     }
     return '';
   }
@@ -222,64 +220,6 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
                 }).toList(),
               ),
             ),
-
-            // ── Plinten type selector (Plakplint / Voorzetplint / Hoge plinten) ──
-            if (_isPlint) ...[
-              const SizedBox(height: 20),
-              Text(
-                _isEn ? '🪵 Skirting type' : '🪵 Type plint',
-                style: Utils.getTextStyle(
-                  baseSize: 14,
-                  isBold: true,
-                  color: Utils.kDarkBlue,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                _isEn
-                    ? 'Affects tools, fixing method and material cost.'
-                    : 'Bepaalt gereedschap, bevestigingsmethode en materiaalkosten.',
-                style: Utils.getTextStyle(
-                  baseSize: 11,
-                  isBold: false,
-                  color: Colors.black45,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  _plintTypeChip(
-                    nlLabel: 'Plakplint',
-                    enLabel: 'Self-adhesive (Plakplint)',
-                    hint: _isEn
-                        ? 'Glued directly — no drilling needed'
-                        : 'Gelijmd direct — geen boren nodig',
-                    value: 'plakplinten',
-                    ss: ss,
-                  ),
-                  _plintTypeChip(
-                    nlLabel: 'Voorzetplint',
-                    enLabel: 'Clip-on / Glue (Voorzetplint)',
-                    hint: _isEn
-                        ? 'Glued or clipped over existing skirting'
-                        : 'Gelijmd of geklipt over bestaande plint',
-                    value: 'hoge_plinten_lijm',
-                    ss: ss,
-                  ),
-                  _plintTypeChip(
-                    nlLabel: 'Hoge plint (schroeven)',
-                    enLabel: 'High skirting (screwed)',
-                    hint: _isEn
-                        ? 'Fixed with screws — for high or heavy boards'
-                        : 'Vastgeschroefd — voor hoge of zware plinten',
-                    value: 'hoge_plinten_schroeven',
-                    ss: ss,
-                  ),
-                ],
-              ),
-            ],
 
             if (_isPlint) ...[
               const SizedBox(height: 16),
@@ -730,71 +670,6 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
     );
   }
 
-  // ── Plint type chip helper ───────────────────────────────────────────────
-
-  Widget _plintTypeChip({
-    required String nlLabel,
-    required String enLabel,
-    required String hint,
-    required String value,
-    required StateSetter ss,
-  }) {
-    final isSel = p.plintenType == value;
-    final label = _isEn ? enLabel : nlLabel;
-    return GestureDetector(
-      onTap: () {
-        p.setPlintenType(value);
-        ss(() {});
-      },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 160),
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        decoration: BoxDecoration(
-          color: isSel
-              ? Utils.kOrange.withValues(alpha: 0.12)
-              : Colors.grey.shade50,
-          border: Border.all(
-            color: isSel ? Utils.kOrange : Colors.grey.shade300,
-            width: isSel ? 2.0 : 1.0,
-          ),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                if (isSel)
-                  Padding(
-                    padding: const EdgeInsets.only(right: 6),
-                    child: Icon(Icons.check_circle, color: Utils.kOrange, size: 15),
-                  ),
-                Text(
-                  label,
-                  style: Utils.getTextStyle(
-                    baseSize: 13,
-                    isBold: isSel,
-                    color: isSel ? Utils.kOrange : Utils.kDarkBlue,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 3),
-            Text(
-              hint,
-              style: Utils.getTextStyle(
-                baseSize: 10,
-                isBold: false,
-                color: Colors.black45,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
 
 // ── Private helpers ─────────────────────────────────────────────────────────

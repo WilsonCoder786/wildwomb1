@@ -32,7 +32,8 @@ class _SignupPageState extends State<SignupPage> {
   void _signup() async {
     if (_formKey.currentState!.validate()) {
       FocusScope.of(context).unfocus();
-      EasyLoading.show(status: 'Creating account...');
+      final l10n = AppLocalizations.of(context)!;
+      EasyLoading.show(status: l10n.authCreatingAccount);
 
       final email = _emailController.text.trim();
 
@@ -43,7 +44,7 @@ class _SignupPageState extends State<SignupPage> {
       if (existingUser != null) {
         EasyLoading.dismiss();
         if (mounted) {
-          EasyLoading.showError('Email is already registered. Please log in.');
+          EasyLoading.showError(l10n.authEmailAlreadyRegistered);
         }
         return;
       }
@@ -60,7 +61,7 @@ class _SignupPageState extends State<SignupPage> {
       await HiveService.savePassword(email, _passwordController.text);
 
       EasyLoading.dismiss();
-      EasyLoading.showSuccess('Account created!');
+      EasyLoading.showSuccess(l10n.authAccountCreated);
 
       // Log in
       if (mounted) {
@@ -135,7 +136,7 @@ class _SignupPageState extends State<SignupPage> {
           ),
         ],
       ),
-      child: Column(
+          child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -166,7 +167,7 @@ class _SignupPageState extends State<SignupPage> {
             icon: Icons.person_outline,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your name';
+                return l10n.authNameRequired;
               }
               return null;
             },
@@ -182,12 +183,12 @@ class _SignupPageState extends State<SignupPage> {
             icon: Icons.mail_outline,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return l10n.authEmailRequired;
               }
               if (!RegExp(
                 r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
               ).hasMatch(value)) {
-                return 'Please enter a valid email';
+                return l10n.authEmailInvalid;
               }
               return null;
             },
@@ -205,10 +206,10 @@ class _SignupPageState extends State<SignupPage> {
                 setState(() => _isPasswordVisible = !_isPasswordVisible),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter a password';
+                return l10n.authPasswordRequired;
               }
               if (value.length < 6) {
-                return 'Password must be at least 6 characters';
+                return l10n.authPasswordMinLength;
               }
               return null;
             },
@@ -227,7 +228,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
             validator: (value) {
               if (value != _passwordController.text) {
-                return 'Passwords do not match';
+                return l10n.authPasswordMismatch;
               }
               return null;
             },

@@ -45,17 +45,27 @@ class OnboardingProvider extends ChangeNotifier {
   double _customHeight = 2.10;
   int _customCount = 1;
   String _customMaterial = 'Hout';
+  String _toiletModel = 'Standaard';
+  String _toiletOutlet = 'Vloer';
+  double _hotWaterMetres = 0;
+  int _pipeElbows = 0;
+  int _pipeTees = 0;
 
   double get customLength => _customLength;
   double get customDepth => _customDepth;
   double get customHeight => _customHeight;
   int get customCount => _customCount;
   String get customMaterial => _customMaterial;
+  String get toiletModel => _toiletModel;
+  String get toiletOutlet => _toiletOutlet;
+  double get hotWaterMetres => _hotWaterMetres;
+  int get pipeElbows => _pipeElbows;
+  int get pipeTees => _pipeTees;
 
   double _length = 5.0;
   double _width = 4.0;
   double _height = 2.4;
-  bool _includeExtra = true;
+  bool _includeExtra = false;
   CalculationResultModel? _calcResult;
 
   String _deurKozijn = 'Bestaand';
@@ -441,22 +451,6 @@ class OnboardingProvider extends ChangeNotifier {
           'labelEn': 'Total length (m)',
           'type': 'decimal',
           'value': _customLength,
-        },
-        {
-          'key': 'count',
-          'label': 'Aantal kamers',
-          'labelEn': 'Number of rooms',
-          'type': 'integer',
-          'value': _customCount,
-        },
-        {
-          'key': 'material',
-          'label': 'Materiaal',
-          'labelEn': 'Material',
-          'type': 'dropdown',
-          'value': _customMaterial,
-          'options': ['Hout', 'MDF', 'Kunststof'],
-          'optionsEn': ['Wood', 'MDF', 'Plastic / PVC'],
         },
       ];
     } else if (job.contains('Keukenblok') ||
@@ -859,27 +853,12 @@ class OnboardingProvider extends ChangeNotifier {
         job.contains('Door installation') ||
         job.contains('Install Door')) {
       packs = _customCount;
-      materialCost = deurTotalPrijs;
-      customProMaterialCost = deurTotalPrijsPro;
-      final bool isOut = _deurLocatie == 'Buiten' || _deurLocatie == 'Outside';
-      final bool isNewF =
-          _deurKozijn == 'Nieuw' ||
-          _deurKozijn == 'New' ||
-          _deurKozijn == 'New frame';
-      laborHours = _customCount * (isOut ? 3 : 2);
-      if (isNewF) laborHours += _customCount;
-
-      // Document 5 – Klus 2: Pro-tijd 2,5 u/deur, Klusser-tijd 7,0 u/deur (binnendeur)
+      // Document 5 – Klus 2: binnendeur stomp, €193 C / €130,50 P per deur
+      materialCost = _customCount * 193.0;
+      customProMaterialCost = _customCount * 130.50;
+      laborHours = _customCount * 2;
       proHours = _customCount * 2.5;
       klusserHours = _customCount * 7.0;
-      if (isOut) {
-        proHours += _customCount * 1.0;
-        klusserHours += _customCount * 2.0;
-      }
-      if (isNewF) {
-        proHours += _customCount * 0.5;
-        klusserHours += _customCount * 1.0;
-      }
     } else if (job.contains('Kozijn') ||
         job.contains('Raamkozijn') ||
         job.contains('Window frame')) {
@@ -916,29 +895,8 @@ class OnboardingProvider extends ChangeNotifier {
       final meters = _customLength > 0 ? _customLength : 2.0;
       final metersCount = meters.ceil();
       packs = metersCount;
-      if (isPlakplinten) {
-        // Document 5 – Klus 3: standaard rekenmateriaal per meter €15 C / €9,50 P
-        materialCost = double.parse((meters * 15.00).toStringAsFixed(2));
-        customProMaterialCost = double.parse(
-          (meters * 9.50).toStringAsFixed(2),
-        );
-      } else {
-        final tubesKit = (metersCount / 10).ceil();
-        final dozenSchroeven = (metersCount / 25).ceil();
-        final setsPluggen = (metersCount / 25).ceil();
-        final tubesAcrylaat = (metersCount / 15).ceil();
-        final stuksProfiel = (metersCount / 5).ceil();
-        materialCost =
-            (metersCount * 8.00) +
-            (tubesKit * 8.50) +
-            (dozenSchroeven * 5.50) +
-            (setsPluggen * 3.50) +
-            (tubesAcrylaat * 3.50) +
-            (stuksProfiel * 3.50) +
-            5.00 +
-            12.50;
-        customProMaterialCost = materialCost * 0.75;
-      }
+      materialCost = double.parse((meters * 15.00).toStringAsFixed(2));
+      customProMaterialCost = double.parse((meters * 9.50).toStringAsFixed(2));
       laborHours = (metersCount / 5).ceil();
       // Document 5 – Klus 3: Pro-tijd 0,10 u/m, Klusser-tijd 0,30 u/m
       proHours = meters * 0.10;
@@ -1030,8 +988,9 @@ class OnboardingProvider extends ChangeNotifier {
           job.contains('WC') ||
           job.contains('toilet') ||
           job.contains('wc')) {
-        materialCost = _customCount * 347.00;
-        customProMaterialCost = _customCount * 254.00;
+        final senior = _toiletModel == 'Senior';
+        materialCost = _customCount * (senior ? 397.00 : 347.00);
+        customProMaterialCost = _customCount * (senior ? 289.00 : 254.00);
         proHours = _customCount * 2.5;
         klusserHours = _customCount * 5.0;
         laborHours = max(1, klusserHours.ceil());
@@ -1052,11 +1011,12 @@ class OnboardingProvider extends ChangeNotifier {
           job.contains('Blockage') ||
           job.contains('unblock') ||
           job.contains('ontstoppen')) {
-        materialCost = _customCount * 15.00;
-        customProMaterialCost = _customCount * 10.00;
-        proHours = _customCount * 0.75;
-        klusserHours = _customCount * 1.5;
+        materialCost = 15.00;
+        customProMaterialCost = 10.00;
+        proHours = 0.75;
+        klusserHours = 1.5;
         laborHours = max(1, klusserHours.ceil());
+        packs = 1;
       } else if (job.contains('Leiding aanleggen') ||
           job.contains('Waterleiding') ||
           job.contains('Water pipe') ||
@@ -1065,12 +1025,17 @@ class OnboardingProvider extends ChangeNotifier {
           job.contains('Leiding leggen') ||
           job.contains('pipe') ||
           job.contains('leiding')) {
-        materialCost = _customLength * 8.50;
-        customProMaterialCost = _customLength * 5.50;
-        proHours = _customLength * 0.15;
-        klusserHours = _customLength * 0.30;
+        final cold = _customLength;
+        final hot = _hotWaterMetres;
+        materialCost =
+            cold * 8.50 + hot * 7.00 + _pipeElbows * 3.50 + _pipeTees * 4.00;
+        customProMaterialCost =
+            cold * 5.50 + hot * 5.00 + _pipeElbows * 2.50 + _pipeTees * 2.50;
+        final metres = cold + hot;
+        proHours = metres * 0.15;
+        klusserHours = metres * 0.30;
         laborHours = max(1, klusserHours.ceil());
-        packs = _customLength.ceil();
+        packs = metres.ceil();
       } else {
         materialCost = _customCount * 45.00;
         proHours = _customCount * 1.0;
@@ -1107,8 +1072,8 @@ class OnboardingProvider extends ChangeNotifier {
       packs = _customCount;
       if (job.contains('Schutting') || job.contains('Fence')) {
         final meters = _customLength > 0 ? _customLength : _customCount * 1.8;
-        materialCost = meters * 47.0;
-        customProMaterialCost = meters * 34.0;
+        materialCost = meters * 52.0;
+        customProMaterialCost = meters * 37.0;
         proHours = meters * 0.50;
         klusserHours = meters;
         laborHours = max(1, klusserHours.ceil());
@@ -1780,8 +1745,287 @@ class OnboardingProvider extends ChangeNotifier {
   }
 
   // Step 4: Materials
+  List<Map<String, dynamic>>? _pdfStandardMaterials() {
+    final result = _calcResult;
+    if (result == null) return null;
+    final cost = result.materialCost;
+    final job = (_selectedSpecificJobs.isNotEmpty
+            ? _selectedSpecificJobs.first
+            : '')
+        .toLowerCase();
+    final trade = _selectedJobId;
+    if (trade == 'plumber' || trade == null) return null;
+
+    bool has(List<String> terms) => terms.any(job.contains);
+
+    List<Map<String, dynamic>> lines(
+      double rate,
+      String qty,
+      String qtyEn,
+      List<(String, String, double)> parts,
+    ) {
+      if (rate == 0) return [];
+      final units = cost / rate;
+      final unitLabel = (units - units.round()).abs() < 0.001
+          ? units.round().toString()
+          : units.toStringAsFixed(2);
+      var running = 0.0;
+      final rows = <Map<String, dynamic>>[];
+      for (var i = 0; i < parts.length; i++) {
+        final part = parts[i];
+        final price = i == parts.length - 1
+            ? double.parse((cost - running).toStringAsFixed(2))
+            : double.parse((part.$3 * units).toStringAsFixed(2));
+        running += price;
+        rows.add({
+          'name': part.$1,
+          'nameEn': part.$2,
+          'qty': qty.replaceAll('{n}', unitLabel),
+          'qtyEn': qtyEn.replaceAll('{n}', unitLabel),
+          'price': '€ ${price.toStringAsFixed(2)}',
+          'icon': Icons.inventory_2_outlined,
+        });
+      }
+      return rows;
+    }
+
+    if (trade == 'carpenter') {
+      if (has(['trap', 'stair'])) {
+        return lines(41.60, '{n} treden', '{n} steps', [
+          ('Trapbekleding laminaat', 'Laminate stair cladding', 35),
+          ('Traplijm', 'Stair adhesive', 1.60),
+          ('Potlood', 'Pencil', 1),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+      if (has(['laminaat', 'laminate', 'floor installation', 'vloer leggen', 'floor laying'])) {
+        return lines(31, '{n} m²', '{n} m²', [
+          ('Laminaat', 'Laminate', 22),
+          ('Ondervloer', 'Underlay', 4),
+          ('Potlood', 'Pencil', 1),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+      if (has(['plint', 'skirting'])) {
+        return lines(15, '{n} m', '{n} m', [
+          ('Plakplint', 'Stick-on skirting', 10),
+          ('Potlood', 'Pencil', 1),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+      if (has(['deur', 'door'])) {
+        return lines(193, '{n} st', '{n} pcs', [
+          ('Binnendeur stomp', 'Flush interior door', 130),
+          ('Scharnierset, 3 stuks', 'Hinge set, 3 pieces', 24),
+          ('Slot', 'Lock', 15),
+          ('Kruk', 'Handle set', 12),
+          ('Kit', 'Sealant', 7),
+          ('Potlood', 'Pencil', 1),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+      if (has(['gips', 'partition', 'wand plaatsen', 'stud', 'plasterboard'])) {
+        return lines(30, '{n} m²', '{n} m²', [
+          (
+            'Standaard wand: gipsplaat, profielen, pluggen, schroeven, gaasband, voegmateriaal, schuurpapier, potlood en puinzakken',
+            'Standard wall: plasterboard, profiles, plugs, screws, mesh tape, joint compound, sandpaper, pencil and rubble bags',
+            30,
+          ),
+        ]);
+      }
+    }
+
+    if (trade == 'painter') {
+      if (has(['plafond', 'ceiling'])) {
+        return lines(4.50, '{n} m²', '{n} m²', [
+          (
+            'Standaard plafond: latex, voorstrijk, tape, folie, starterspakket, potlood en puinzakken',
+            'Standard ceiling: latex, primer, tape, film, starter kit, pencil and rubble bags',
+            4.50,
+          ),
+        ]);
+      }
+      if (has(['behang', 'wallpaper'])) {
+        return lines(7, '{n} m²', '{n} m²', [
+          (
+            'Standaard behang: vlies 53 cm, lijm, voorstrijk, folie, potlood en puinzakken',
+            'Standard wallpaper: 53 cm non-woven, adhesive, primer, film, pencil and rubble bags',
+            7,
+          ),
+        ]);
+      }
+      if (has(['radiator'])) {
+        return lines(12.50, '{n} st', '{n} pcs', [
+          (
+            'Standaard radiator: lak, grondverf, tape, schuurpapier, folie, ontvetter, starterspakket, potlood en puinzakken',
+            'Standard radiator: paint, primer, tape, sandpaper, film, degreaser, starter kit, pencil and rubble bags',
+            12.50,
+          ),
+        ]);
+      }
+      if (has(['kozijn', 'frame', 'door'])) {
+        return lines(18.50, '{n} st', '{n} pcs', [
+          (
+            'Standaard kozijn: verf, grondverf, tape, schuurpapier, folie, ontvetter, starterspakket, potlood en puinzakken',
+            'Standard frame: paint, primer, tape, sandpaper, film, degreaser, starter kit, pencil and rubble bags',
+            18.50,
+          ),
+        ]);
+      }
+      if (has(['muur', 'wall', 'sauzen', 'paint'])) {
+        return lines(4.50, '{n} m²', '{n} m²', [
+          (
+            'Standaard muur: latex, voorstrijk, tape, folie, schuurpapier, ontvetter, starterspakket, potlood en puinzakken',
+            'Standard wall: latex, primer, tape, film, sandpaper, degreaser, starter kit, pencil and rubble bags',
+            4.50,
+          ),
+        ]);
+      }
+    }
+
+    if (trade == 'gardener') {
+      if (has(['schutting', 'fence'])) {
+        return lines(52, '{n} m', '{n} m', [
+          (
+            'Standaard schutting: paneel, paal, snelbeton, schroeven, potlood en puinzakken',
+            'Standard fence: panel, post, post concrete, screws, pencil and rubble bags',
+            52,
+          ),
+        ]);
+      }
+      if (has(['bestrating', 'paving', 'terras'])) {
+        return lines(48, '{n} m²', '{n} m²', [
+          (
+            'Standaard bestrating: grindtegel, ophoogzand, voegzand, betonband, potlood en puinzakken',
+            'Standard paving: gravel tile, fill sand, jointing sand, concrete edging, pencil and rubble bags',
+            48,
+          ),
+        ]);
+      }
+      if (has(['snoeien', 'pruning', 'hortensia'])) {
+        return lines(4, '1 rol', '1 roll', [
+          ('Puinzakken (voor groenafval)', 'Rubble bags (for green waste)', 4),
+        ]);
+      }
+      if (has(['overkapping', 'canopy', 'carport'])) {
+        return lines(123, '{n} m²', '{n} m²', [
+          (
+            'Standaard overkapping: staanders, balken, dakplaat, dakbedekking, betonpoeren, hoekverbinders, daktrim, schroeven, potlood en puinzakken',
+            'Standard canopy: posts, beams, roof sheet, roofing, concrete bases, brackets, roof trim, screws, pencil and rubble bags',
+            123,
+          ),
+        ]);
+      }
+      if (has(['gazon', 'kunstgras', 'lawn', 'grass'])) {
+        return lines(41.60, '{n} m²', '{n} m²', [
+          ('Kunstgras', 'Artificial grass', 35),
+          ('Worteldoek', 'Weed membrane', 1.60),
+          ('Potlood', 'Pencil', 1),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+    }
+
+    if (trade == 'electrician') {
+      if (has(['kabelgoot', 'trunking'])) {
+        return lines(4, '{n} m', '{n} m', [
+          (
+            'Standaard kabelgoot: goot, beugels, pluggen, potlood en puinzakken',
+            'Standard trunking: trunking, clips, plugs, pencil and rubble bags',
+            4,
+          ),
+        ]);
+      }
+      if (has(['stroomleiding', 'cable'])) {
+        return lines(3.50, '{n} m', '{n} m', [
+          (
+            'Standaard stroomleiding',
+            'Standard electrical cable',
+            3.50,
+          ),
+        ]);
+      }
+      if (has(['rookmelder', 'smoke'])) {
+        return lines(25.50, '{n} st', '{n} pcs', [
+          ('Rookmelder', 'Smoke detector', 25),
+          ('Pluggen', 'Wall plugs', 0.50),
+        ]);
+      }
+      if (has(['verlichting', 'lighting', 'lamp'])) {
+        return lines(41, '{n} st', '{n} pcs', [
+          ('LED armatuur (droge ruimte)', 'LED fitting (dry room)', 35),
+          ('Kroonsteen', 'Terminal block', 0.50),
+          ('Pluggen', 'Wall plugs', 0.50),
+          ('Potlood', 'Pencil', 1),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+      if (has(['stopcontact', 'outlet'])) {
+        return lines(28, '{n} st', '{n} pcs', [
+          ('Inbouwdoos', 'Flush-mounted box', 12),
+          ('Inbouw stopcontact (binnenwerk)', 'Flush-mounted socket mechanism', 8),
+          ('Afdekplaat', 'Cover plate', 6),
+          ('Lasklemmen', 'Connector terminals', 0.50),
+          ('Pluggen', 'Wall plugs', 0.50),
+          ('Potlood', 'Pencil', 1),
+        ]);
+      }
+    }
+
+    if (trade == 'tiler') {
+      if (has(['repar', 'repair'])) {
+        return lines(14.50, '{n} st', '{n} pcs', [
+          ('Tegel', 'Tile', 5),
+          ('Tegellijm', 'Tile adhesive', 2),
+          ('Voegmiddel', 'Grout', 1),
+          ('Vitstif / tegelpotlood', 'Tile marker', 2.50),
+          ('Puinzakken', 'Rubble bags', 4),
+        ]);
+      }
+      if (has(['voeg', 'grout'])) {
+        return lines(5.20, '{n} m²', '{n} m²', [
+          (
+            'Standaard voegwerk: binnenvoegmiddel en puinzakken',
+            'Standard grouting: indoor grout and rubble bags',
+            5.20,
+          ),
+        ]);
+      }
+      if (has(['kit', 'sealant'])) {
+        return lines(4.70, '{n} m', '{n} m', [
+          (
+            'Standaard kit: sanitairkit, puinzakken, ontvetter, afwasmiddel en keukenpapier',
+            'Standard sealant: sanitary sealant, rubble bags, degreaser, washing-up liquid and kitchen roll',
+            4.70,
+          ),
+        ]);
+      }
+      if (has(['wandtegel', 'wall tile'])) {
+        return lines(57.50, '{n} m²', '{n} m²', [
+          (
+            'Standaard wandtegel: tegel, lijm, voeg, leveling, vitstif en puinzakken',
+            'Standard wall tile: tile, adhesive, grout, levelling, marker and rubble bags',
+            57.50,
+          ),
+        ]);
+      }
+      if (has(['vloertegel', 'floor tile', 'laying floor'])) {
+        return lines(39.90, '{n} m²', '{n} m²', [
+          (
+            'Standaard vloertegel: tegel, lijm, voeg, leveling, vitstif en puinzakken',
+            'Standard floor tile: tile, adhesive, grout, levelling, marker and rubble bags',
+            39.90,
+          ),
+        ]);
+      }
+    }
+    return null;
+  }
+
   List<Map<String, dynamic>> get materials {
     if (_calcResult == null) return [];
+    final standardRows = _pdfStandardMaterials();
+    if (standardRows != null) return standardRows;
 
     if (_selectedJobId == 'painter') {
       final packs = _calcResult!.packs;
@@ -1917,18 +2161,8 @@ class OnboardingProvider extends ChangeNotifier {
     );
     _checklist.addAll(resolved);
 
-    // Always include dustpan and brush on indoor non-lawn jobs
-    final isLawn = _selectedSpecificJobs.any(
-      (j) =>
-          j.contains('Gazon') ||
-          j.contains('Lawn') ||
-          j.contains('Kunstgras') ||
-          j.contains('Artificial grass') ||
-          j.contains('Gras'),
-    );
-    if (!isLawn && _selectedJobId != 'gardener') {
-      _checklist[OnboardingDataService.instance.alwaysIndoorExtra] = false;
-    }
+    // Document 3: dustpan and brush applies to every job.
+    _checklist[OnboardingDataService.instance.alwaysIndoorExtra] = false;
   }
 
   void _calculate() {
@@ -2042,8 +2276,32 @@ class OnboardingProvider extends ChangeNotifier {
                   : 6;
               final int gluePacks = (packsCount / 3).ceil();
               final int verfLiters = radiatorVerfLiters;
+              final visibleItems = items.where((raw) {
+                final item = raw as Map<String, dynamic>;
+                final name =
+                    '${item['name'] ?? ''} ${item['nameEn'] ?? ''}'
+                        .toLowerCase();
+                if (name.contains('optioneel') || name.contains('optional')) {
+                  return false;
+                }
+                if (name.contains('vochtbestendig') ||
+                    name.contains('moisture-resistant')) {
+                  return false;
+                }
+                if (name.contains('70 cm')) return false;
+                if (name.contains('plamuur') ||
+                    name.contains('muurvuller') ||
+                    name.contains('houtvuller') ||
+                    name.contains('acrylaatkit') ||
+                    name.contains('filler') ||
+                    name.contains('putty') ||
+                    name.contains('acrylic sealant')) {
+                  return false;
+                }
+                return true;
+              }).toList();
 
-              return items.map((raw) {
+              return visibleItems.map((raw) {
                 final item = raw as Map<String, dynamic>;
                 final costFactor = (item['cost_factor'] as num?)?.toDouble();
 
@@ -2168,8 +2426,194 @@ class OnboardingProvider extends ChangeNotifier {
     ];
   }
 
+  List<Map<String, dynamic>>? _pdfPlumberMaterials(
+    List<String> jobs,
+    int packs,
+  ) {
+    Map<String, dynamic> row(
+      String name,
+      String nameEn,
+      String qty,
+      String qtyEn,
+      double price,
+    ) {
+      return {
+        'name': name,
+        'nameEn': nameEn,
+        'qty': qty,
+        'qtyEn': qtyEn,
+        'price': '€ ${price.toStringAsFixed(2)}',
+        'icon': Icons.plumbing,
+      };
+    }
+
+    bool has(List<String> terms) {
+      return jobs.any(
+        (job) => terms.any((term) => job.toLowerCase().contains(term)),
+      );
+    }
+
+    final count = packs > 0 ? packs : (_customCount > 0 ? _customCount : 1);
+    final pieces = '$count st';
+    final piecesEn = '$count pcs';
+
+    if (has(['kraan', 'tap', 'faucet'])) {
+      return [
+        row(
+          'Keukenkraan standaard bladmontage',
+          'Standard deck-mounted kitchen tap',
+          pieces,
+          piecesEn,
+          count * 110,
+        ),
+        row(
+          'Emmer en oude doeken',
+          'Bucket and old cloths',
+          '$count set',
+          '$count sets',
+          count * 5,
+        ),
+      ];
+    }
+    if (has(['ontstoppen', 'afvoer', 'unclog', 'drain', 'blockage'])) {
+      return [
+        row('Plopper/ontstopper', 'Plunger', '1 stuk', '1 piece', 10),
+        row(
+          'Emmer en oude doeken',
+          'Bucket and old cloths',
+          '1 set',
+          '1 set',
+          5,
+        ),
+      ];
+    }
+    if (has(['toilet', 'wc'])) {
+      final senior = _toiletModel == 'Senior';
+      return [
+        row(
+          senior ? 'Staand senior/verhoogd toilet' : 'Staand standaard toilet',
+          senior ? 'Raised senior toilet' : 'Standard floor-standing toilet',
+          pieces,
+          piecesEn,
+          count * (senior ? 350 : 300),
+        ),
+        row('Afvoermanchet', 'Flexible waste connector', pieces, piecesEn, count * 8),
+        row(
+          'Afvoer-/aansluitset',
+          'Waste connection set',
+          '$count set',
+          '$count sets',
+          count * 12,
+        ),
+        row('Sanitairkit', 'Sanitary sealant', pieces, piecesEn, count * 7),
+        row(
+          'Schroeven en pluggen',
+          'Screws and wall plugs',
+          '$count set',
+          '$count sets',
+          count * 10,
+        ),
+        row('Potlood', 'Pencil', pieces, piecesEn, count * 1),
+        row('Puinzakken', 'Rubble bags', '$count rol', '$count rolls', count * 4),
+        row(
+          'Emmer en oude doeken',
+          'Bucket and old cloths',
+          '$count set',
+          '$count sets',
+          count * 5,
+        ),
+      ];
+    }
+    if (has(['cv'])) {
+      return [
+        row(
+          'Vulslang voor CV-installatie',
+          'Central-heating filling hose',
+          pieces,
+          piecesEn,
+          count * 13,
+        ),
+        row(
+          'Emmer en oude doeken',
+          'Bucket and old cloths',
+          '$count set',
+          '$count sets',
+          count * 5,
+        ),
+      ];
+    }
+    if (has([
+      'waterleiding',
+      'leiding aanleggen',
+      'water pipe',
+      'pipe laying',
+      'copper',
+    ])) {
+      final cold = _customLength;
+      final hot = _hotWaterMetres;
+      final rows = <Map<String, dynamic>>[];
+      if (cold > 0) {
+        rows.add(
+          row(
+            'Koperen waterleiding koudwater 15 mm, inclusief beugels',
+            'Cold-water copper pipe 15 mm, including clips',
+            '${cold.toStringAsFixed(1)} m',
+            '${cold.toStringAsFixed(1)} m',
+            cold * 8.50,
+          ),
+        );
+      }
+      if (hot > 0) {
+        rows.add(
+          row(
+            'Koperen waterleiding warmwater 12 mm',
+            'Hot-water copper pipe 12 mm',
+            '${hot.toStringAsFixed(1)} m',
+            '${hot.toStringAsFixed(1)} m',
+            hot * 5.50,
+          ),
+        );
+        rows.add(
+          row(
+            'Leidingisolatie warmwater',
+            'Hot-water pipe insulation',
+            '${hot.toStringAsFixed(1)} m',
+            '${hot.toStringAsFixed(1)} m',
+            hot * 1.50,
+          ),
+        );
+      }
+      if (_pipeElbows > 0) {
+        rows.add(
+          row(
+            'Knelkoppeling knie 90°',
+            '90° compression elbow',
+            '$_pipeElbows st',
+            '$_pipeElbows pcs',
+            _pipeElbows * 3.50,
+          ),
+        );
+      }
+      if (_pipeTees > 0) {
+        rows.add(
+          row(
+            'Knelkoppeling T-stuk',
+            'Compression tee',
+            '$_pipeTees st',
+            '$_pipeTees pcs',
+            _pipeTees * 4.00,
+          ),
+        );
+      }
+      return rows;
+    }
+    return null;
+  }
+
   List<Map<String, dynamic>> _materialsForPlumber(int packs, double cost) {
     final jobs = _selectedSpecificJobs;
+    final standard = _pdfPlumberMaterials(jobs, packs);
+    if (standard != null) return standard;
 
     if (OnboardingDataService.instance.isInitialized) {
       final config = OnboardingDataService.instance.plumberMaterials;
@@ -4267,6 +4711,31 @@ class OnboardingProvider extends ChangeNotifier {
 
   void setCustomMaterial(String v) {
     _customMaterial = v;
+    notifyListeners();
+  }
+
+  void setToiletModel(String v) {
+    _toiletModel = v;
+    notifyListeners();
+  }
+
+  void setToiletOutlet(String v) {
+    _toiletOutlet = v;
+    notifyListeners();
+  }
+
+  void setHotWaterMetres(double v) {
+    _hotWaterMetres = v < 0 ? 0 : v;
+    notifyListeners();
+  }
+
+  void setPipeElbows(int v) {
+    _pipeElbows = v < 0 ? 0 : v;
+    notifyListeners();
+  }
+
+  void setPipeTees(int v) {
+    _pipeTees = v < 0 ? 0 : v;
     notifyListeners();
   }
 

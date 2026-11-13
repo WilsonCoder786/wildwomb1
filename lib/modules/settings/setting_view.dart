@@ -18,14 +18,6 @@ class SettingView extends StatefulWidget {
 class _SettingViewState extends State<SettingView> {
   bool _isMeters = true;
 
-  /// Returns the BCP-47 language code ('en' or 'nl') of the currently active
-  /// locale so the radio buttons stay in sync with [AppService.locale].
-  String _selectedLanguageCode(BuildContext context) {
-    final code = context.watch<AppService>().locale.languageCode;
-    // Default to 'nl' if somehow a different locale is set
-    return (code == 'en' || code == 'nl') ? code : 'nl';
-  }
-
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -43,8 +35,6 @@ class _SettingViewState extends State<SettingView> {
             ],
             _buildAccountSection(l10n),
             const SizedBox(height: 24),
-            _buildLanguageSection(l10n),
-            const SizedBox(height: 16),
             _buildUnitsSection(l10n),
             const SizedBox(height: 16),
             _buildOtherSection(l10n),
@@ -150,69 +140,6 @@ class _SettingViewState extends State<SettingView> {
           const SizedBox(height: 20),
           child,
         ],
-      ),
-    );
-  }
-
-  Widget _buildLanguageSection(AppLocalizations l10n) {
-    final languages = [
-      {'code': 'nl', 'label': 'NL', 'name': 'Nederlands'},
-      {'code': 'en', 'label': 'EN', 'name': 'English'},
-    ];
-
-    final selectedCode = _selectedLanguageCode(context);
-    final appService = context.read<AppService>();
-
-    return _buildSectionCard(
-      profile: false,
-      icon: Icons.language,
-      iconColor: Colors.blue,
-      iconBgColor: Colors.blue.withValues(alpha: 0.1),
-      title: l10n.settingsLanguage,
-      subtitle: l10n.settingsLanguageSubtitle,
-      child: Column(
-        children: languages.map((lang) {
-          final isSelected = selectedCode == lang['code'];
-          return InkWell(
-            onTap: () {
-              appService.setLocale(Locale(lang['code']!));
-            },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Row(
-                children: [
-                  Icon(
-                    isSelected
-                        ? Icons.radio_button_checked
-                        : Icons.radio_button_off,
-                    color: isSelected ? Utils.kDarkBlue : Colors.grey,
-                    size: 20,
-                  ),
-                  const SizedBox(width: 12),
-                  Text(
-                    lang['label']!,
-                    style: Utils.getTextStyle(
-                      baseSize: 11,
-                      isBold: true,
-                      color: Utils.kDarkBlue,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      lang['name']!,
-                      style: Utils.getTextStyle(
-                        baseSize: 11,
-                        isBold: false,
-                        color: Colors.grey[600]!,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        }).toList(),
       ),
     );
   }

@@ -149,11 +149,4 @@ class SubscriptionProvider extends ChangeNotifier {
 
   /// Latest verification or purchase status message for display in UI.
   String? get verificationStatus => _iapService.verificationStatus;
-
-  /// Returns the price string of the currently selected product, or null.
-  String? getProductPrice() {
-    if (_selectedProduct != null) return _selectedProduct!.price;
-    if (_iapService.products.isNotEmpty) return _iapService.products.first.price;
-    return null;
-  }
 }

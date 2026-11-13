@@ -1160,6 +1160,36 @@ abstract class AppLocalizations {
   /// **'Password successfully changed!'**
   String get authPasswordChanged;
 
+  /// No description provided for @authLoggingIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Logging in...'**
+  String get authLoggingIn;
+
+  /// No description provided for @authCreatingAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Creating account...'**
+  String get authCreatingAccount;
+
+  /// No description provided for @authAccountCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Account created!'**
+  String get authAccountCreated;
+
+  /// No description provided for @authEmailAlreadyRegistered.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is already registered. Please log in.'**
+  String get authEmailAlreadyRegistered;
+
+  /// No description provided for @authNameRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your name'**
+  String get authNameRequired;
+
   /// No description provided for @onboardingPlayVideo.
   ///
   /// In en, this message translates to:
@@ -1292,6 +1322,90 @@ abstract class AppLocalizations {
   /// **'Note: This is an indicative calculation.'**
   String get onboardingIndicativeCalculation;
 
+  /// No description provided for @onboardingManufacturerFirst.
+  ///
+  /// In en, this message translates to:
+  /// **'Manufacturer instructions always take priority over these calculated values.'**
+  String get onboardingManufacturerFirst;
+
+  /// No description provided for @onboardingTimeExcluded.
+  ///
+  /// In en, this message translates to:
+  /// **'The hours are a calculated working time. Preparation, waiting time, drying time and curing time are not included.'**
+  String get onboardingTimeExcluded;
+
+  /// No description provided for @onboardingTestingCarpenter.
+  ///
+  /// In en, this message translates to:
+  /// **'Afterwards, check that the result is level and stable, the fixing is secure, everything works, and the finish is neat.'**
+  String get onboardingTestingCarpenter;
+
+  /// No description provided for @onboardingTestingPainter.
+  ///
+  /// In en, this message translates to:
+  /// **'Afterwards, check that the finish is even, with no runs or imperfections, and that it has adhered properly.'**
+  String get onboardingTestingPainter;
+
+  /// No description provided for @onboardingTestingPlumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Afterwards, check for leaks, stability, correct operation, safe drainage and a correct connection.'**
+  String get onboardingTestingPlumber;
+
+  /// No description provided for @onboardingTestingGardener.
+  ///
+  /// In en, this message translates to:
+  /// **'Afterwards, check stability, water drainage, secure fixing and a neat finish.'**
+  String get onboardingTestingGardener;
+
+  /// No description provided for @onboardingTestingElectrician.
+  ///
+  /// In en, this message translates to:
+  /// **'Afterwards, check correct operation, a safe connection, proper earthing and stability.'**
+  String get onboardingTestingElectrician;
+
+  /// No description provided for @onboardingTestingTiler.
+  ///
+  /// In en, this message translates to:
+  /// **'Afterwards, check that the tiles are firmly fixed, the grout is even, there are no height differences, and the bond is correct.'**
+  String get onboardingTestingTiler;
+
+  /// No description provided for @onboardingSafetyRuleCarpenter.
+  ///
+  /// In en, this message translates to:
+  /// **'Use eye and hearing protection and follow the instructions.'**
+  String get onboardingSafetyRuleCarpenter;
+
+  /// No description provided for @onboardingSafetyRulePainter.
+  ///
+  /// In en, this message translates to:
+  /// **'When sanding, wear an FFP2/FFP3 dust mask and safety glasses. Wear gloves when degreasing.'**
+  String get onboardingSafetyRulePainter;
+
+  /// No description provided for @onboardingSafetyRulePlumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Use suitable personal protection and follow the instructions for the materials, tools and installation.'**
+  String get onboardingSafetyRulePlumber;
+
+  /// No description provided for @onboardingSafetyRuleGardener.
+  ///
+  /// In en, this message translates to:
+  /// **'Use suitable personal protection and follow the instructions for the materials, tools and installation.'**
+  String get onboardingSafetyRuleGardener;
+
+  /// No description provided for @onboardingSafetyRuleElectrician.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch the power off, use a two-pole voltage tester and never work live. Use insulated tools and a cable detector before drilling.'**
+  String get onboardingSafetyRuleElectrician;
+
+  /// No description provided for @onboardingSafetyRuleTiler.
+  ///
+  /// In en, this message translates to:
+  /// **'Limit quartz dust by working wet or with extraction. Wear eye, hearing and respiratory protection, and knee pads.'**
+  String get onboardingSafetyRuleTiler;
+
   /// No description provided for @subscriptionChoosePlan.
   ///
   /// In en, this message translates to:
@@ -1343,7 +1457,7 @@ abstract class AppLocalizations {
   /// No description provided for @subscriptionTwoMonthsFree.
   ///
   /// In en, this message translates to:
-  /// **'5 months free'**
+  /// **'44%'**
   String get subscriptionTwoMonthsFree;
 
   /// No description provided for @subscriptionEverythingIncluded.
@@ -9241,6 +9355,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Would this involve pesticides that require special training or handling?'**
   String get safetyStopPesticide;
+
+  /// No description provided for @safetyStopComplexStructure.
+  ///
+  /// In en, this message translates to:
+  /// **'Is this a complex structure, or are you unsure how it should be built?'**
+  String get safetyStopComplexStructure;
+
+  /// No description provided for @safetyStopMoistureOrLeak.
+  ///
+  /// In en, this message translates to:
+  /// **'Is there a moisture problem or a leak?'**
+  String get safetyStopMoistureOrLeak;
+
+  /// No description provided for @safetyStopGroundServices.
+  ///
+  /// In en, this message translates to:
+  /// **'Could there be unknown pipes or cables in the ground?'**
+  String get safetyStopGroundServices;
+
+  /// No description provided for @safetyStopDistributionBoard.
+  ///
+  /// In en, this message translates to:
+  /// **'Does this work change the consumer unit or distribution board?'**
+  String get safetyStopDistributionBoard;
+
+  /// No description provided for @safetyStopComplexInstallation.
+  ///
+  /// In en, this message translates to:
+  /// **'Is this a complex electrical installation?'**
+  String get safetyStopComplexInstallation;
+
+  /// No description provided for @safetyStopServicesWork.
+  ///
+  /// In en, this message translates to:
+  /// **'Does this work involve gas, water, or electricity?'**
+  String get safetyStopServicesWork;
+
+  /// No description provided for @onboardingSituationCarpenter.
+  ///
+  /// In en, this message translates to:
+  /// **'The app asks for the measurements or the number of steps.'**
+  String get onboardingSituationCarpenter;
+
+  /// No description provided for @onboardingSituationPlumber.
+  ///
+  /// In en, this message translates to:
+  /// **'The app asks for the quantity or the pipe length. For a toilet: standard or senior, and a floor or wall outlet.'**
+  String get onboardingSituationPlumber;
+
+  /// No description provided for @onboardingSituationPainter.
+  ///
+  /// In en, this message translates to:
+  /// **'The app asks for the area or the number of pieces.'**
+  String get onboardingSituationPainter;
+
+  /// No description provided for @onboardingSituationGardener.
+  ///
+  /// In en, this message translates to:
+  /// **'The app asks for the measurements or the quantity.'**
+  String get onboardingSituationGardener;
+
+  /// No description provided for @onboardingSituationElectrician.
+  ///
+  /// In en, this message translates to:
+  /// **'The app asks for the quantity or the length. For an outlet: earthed or unearthed. For lighting: dry or damp.'**
+  String get onboardingSituationElectrician;
+
+  /// No description provided for @onboardingSituationTiler.
+  ///
+  /// In en, this message translates to:
+  /// **'The app asks for the area or the quantity.'**
+  String get onboardingSituationTiler;
 
   /// No description provided for @checklistContourmal.
   ///
