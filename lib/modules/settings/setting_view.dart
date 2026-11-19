@@ -4,6 +4,7 @@ import 'package:easy_four_diy/core/services/iap_service.dart';
 import 'package:easy_four_diy/core/utils.dart';
 import 'package:easy_four_diy/l10n/app_localizations.dart';
 import 'package:easy_four_diy/modules/auth/login_page.dart';
+import 'package:easy_four_diy/modules/settings/info_page.dart';
 import 'package:easy_four_diy/modules/subscription/subscription_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -251,27 +252,48 @@ class _SettingViewState extends State<SettingView> {
         children: [
           _buildListTile(
             () {
-              Utils.openPrivacyPolicy();
+              AppNavigator.toName(
+                context: context,
+                page: const InfoPage(
+                  title: InfoPage.privacyTitle,
+                  body: InfoPage.privacyBody,
+                  emailLabel: 'Info@Easy4Diy.com',
+                ),
+              );
             },
             l10n.settingsPrivacyPolicy,
             "",
           ),
-          // const Divider(height: 24),
-          // _buildListTile(() {}, l10n.settingsTermsConditions, ""),
           const Divider(height: 24),
           _buildListTile(
             () {
-              Utils.sendMail();
+              AppNavigator.toName(
+                context: context,
+                page: const InfoPage(
+                  title: InfoPage.helpTitle,
+                  body: InfoPage.helpBody,
+                  emailLabel: 'E-mail ons',
+                ),
+              );
             },
             l10n.settingsHelpSupport,
             "",
           ),
           const Divider(height: 24),
           _buildListTile(
-            () {},
+            () {
+              AppNavigator.toName(
+                context: context,
+                page: const InfoPage(
+                  title: InfoPage.aboutTitle,
+                  body: InfoPage.aboutBody,
+                  emailLabel: 'Info@Easy4Diy.com',
+                ),
+              );
+            },
             l10n.settingsAbout,
             "",
-            trailing: "Version 1.0.0",
+            trailing: "Version 10.0",
           ),
         ],
       ),

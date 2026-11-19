@@ -20,7 +20,7 @@ class Utils {
   }
 
   static Future<void> sendMail() async {
-    Uri mail = Uri.parse("mailto:info@easy4diy.com");
+    Uri mail = Uri.parse("mailto:Info@Easy4Diy.com");
     await launchUrl(mail);
   }
 

@@ -92,27 +92,44 @@ class BuildSpecifiedJobs extends StatelessWidget {
           itemBuilder: (context, index) {
             final job = specificJobs[index];
             final isSelected = provider.selectedSpecificJobs.contains(job);
-            return RadioListTile<String>(
-              value: job,
-              // ignore: deprecated_member_use
-              groupValue: provider.selectedSpecificJobs.isNotEmpty
-                  ? provider.selectedSpecificJobs.first
-                  : null,
-              // ignore: deprecated_member_use
-              onChanged: (v) {
-                if (v != null) provider.selectSpecificJob(v);
-              },
-              title: Text(
-                job,
-                style: Utils.getTextStyle(
-                  baseSize: 14,
-                  isBold: isSelected,
-                  color: isSelected ? Utils.kDarkBlue : Colors.black87,
+            return InkWell(
+              onTap: () => provider.selectSpecificJob(job),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 2),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Radio<String>(
+                      value: job,
+                      // ignore: deprecated_member_use
+                      groupValue: provider.selectedSpecificJobs.isNotEmpty
+                          ? provider.selectedSpecificJobs.first
+                          : null,
+                      // ignore: deprecated_member_use
+                      onChanged: (v) {
+                        if (v != null) provider.selectSpecificJob(v);
+                      },
+                      activeColor: Utils.kDarkBlue,
+                      visualDensity: VisualDensity.compact,
+                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          job,
+                          softWrap: true,
+                          style: Utils.getTextStyle(
+                            baseSize: 14,
+                            isBold: isSelected,
+                            color: isSelected ? Utils.kDarkBlue : Colors.black87,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              activeColor: Utils.kDarkBlue,
-              contentPadding: EdgeInsets.zero,
-              controlAffinity: ListTileControlAffinity.leading,
             );
           },
         ),
@@ -142,19 +159,47 @@ class BuildSpecifiedJobs extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         ...safetyStopPoints.map(
-          (point) => CheckboxListTile(
-            value: provider.isSafetyStopPointSelected(point.id),
-            onChanged: (applies) {
-              if (applies != null) {
-                provider.setSafetyStopPointSelected(point.id, applies);
-              }
-            },
-            title: Text(point.label),
-            controlAffinity: ListTileControlAffinity.leading,
-            contentPadding: EdgeInsets.zero,
-            dense: true,
+          (point) => InkWell(
+            onTap: () => provider.setSafetyStopPointSelected(
+              point.id,
+              !provider.isSafetyStopPointSelected(point.id),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Checkbox(
+                    value: provider.isSafetyStopPointSelected(point.id),
+                    onChanged: (applies) {
+                      if (applies != null) {
+                        provider.setSafetyStopPointSelected(point.id, applies);
+                      }
+                    },
+                    visualDensity: VisualDensity.compact,
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  const SizedBox(width: 4),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8),
+                      child: Text(
+                        point.label,
+                        softWrap: true,
+                        style: Utils.getTextStyle(
+                          baseSize: 14,
+                          isBold: false,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
+        const SizedBox(height: 12),
         if (provider.hasReportedSafetyStopPoint)
           Container(
             margin: const EdgeInsets.only(top: 8, bottom: 16),

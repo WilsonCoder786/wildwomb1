@@ -30,6 +30,7 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
   late TextEditingController _hotController;
   late TextEditingController _elbowController;
   late TextEditingController _teeController;
+  String _drainPlace = 'Wasbak';
 
   OnboardingProvider get p => widget.provider;
   AppLocalizations get l10n => widget.l10n;
@@ -42,9 +43,12 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
   bool get _isKraan =>
       _job.contains('Kraan') ||
       _job.contains('Keukenkraan') ||
+      _job.contains('kraan') ||
       _job.contains('Tap') ||
+      _job.contains('tap') ||
       _job.contains('Faucet') ||
-      _job.contains('Kitchen tap');
+      _job.contains('Kitchen tap') ||
+      _job.contains('kitchen tap');
   bool get _isToilet =>
       _job.contains('Toilet') || _job.contains('WC') || _job.contains('toilet');
   bool get _isCV =>
@@ -54,10 +58,16 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
       _job.contains('Refill');
   bool get _isOntstoppen =>
       _job.contains('Ontstoppen') ||
+      _job.contains('ontstoppen') ||
       _job.contains('Afvoer') ||
+      _job.contains('Sifon') ||
+      _job.contains('sifon') ||
       _job.contains('Unclog') ||
       _job.contains('Drain') ||
       _job.contains('unblock') ||
+      _job.contains('Unblocking') ||
+      _job.contains('Siphon') ||
+      _job.contains('siphon') ||
       _job.contains('Blockage');
   bool get _isLeiding =>
       _job.contains('Leiding aanleggen') ||
@@ -109,8 +119,8 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
           : 'Hoeveel CV-installaties moeten worden bijgevuld?';
     } else if (_isOntstoppen) {
       return _isEn
-          ? 'Unclogging one drain is a single job.'
-          : 'Een afvoer ontstoppen is één klus.';
+          ? 'This is one job. Choose a washbasin or a kitchen sink.'
+          : 'Dit is één klus. Kies een wasbak of een gootsteen.';
     } else if (_isLeiding) {
       return _isEn
           ? 'Enter the cold-water length (15 mm) and the hot-water length (12 mm). Elbows and tees are added from your counts.'
@@ -135,43 +145,7 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
 
   // ── cost estimate ───────────────────────────────────────────────────────────
 
-  String _estimateCostText() {
-    if (_isKraan) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 115.00).toStringAsFixed(2)}';
-    } else if (_isToilet) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      final each = p.toiletModel == 'Senior' ? 397.00 : 347.00;
-      return '± €${(n * each).toStringAsFixed(2)}';
-    } else if (_isCV) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 18.00).toStringAsFixed(2)}';
-    } else if (_isOntstoppen) {
-      return '± €15.00';
-    } else if (_isLeiding) {
-      final cold = p.customLength > 0 ? p.customLength : 0.0;
-      final hot = p.hotWaterMetres;
-      final total = cold * 8.50 + hot * 7.00 + p.pipeElbows * 3.50 + p.pipeTees * 4.00;
-      return '± €${total.toStringAsFixed(2)}';
-    }
-    return '';
-  }
-
-  // ── unit-price hint ─────────────────────────────────────────────────────────
-  String get _unitHint {
-    if (_isKraan) return _isEn ? '≈ €115 / tap' : '≈ €115 / kraan';
-    if (_isToilet) {
-      return p.toiletModel == 'Senior'
-          ? (_isEn ? '≈ €397 / senior toilet' : '≈ €397 / senior toilet')
-          : (_isEn ? '≈ €347 / toilet' : '≈ €347 / toilet');
-    }
-    if (_isCV) return _isEn ? '≈ €18 / system' : '≈ €18 / installatie';
-    if (_isOntstoppen) {
-      return _isEn ? '≈ €15' : '≈ €15';
-    }
-    if (_isLeiding) return _isEn ? '≈ €8.50 / m cold' : '≈ €8,50 / m koud';
-    return '';
-  }
+  String get _unitHint => '';
 
   // ── lifecycle ───────────────────────────────────────────────────────────────
 
@@ -300,14 +274,29 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
 
                   if (_isOntstoppen) ...[
                     Text(
-                      _isEn
-                          ? 'No quantity is needed for this job.'
-                          : 'Voor deze klus is geen aantal nodig.',
+                      _isEn ? 'Where is the siphon?' : 'Waar zit de sifon?',
                       style: Utils.getTextStyle(
                         baseSize: 13,
-                        isBold: false,
-                        color: Colors.black54,
+                        isBold: true,
+                        color: Utils.kDarkBlue,
                       ),
+                    ),
+                    const SizedBox(height: 10),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: [
+                        _optionChip(
+                          label: _isEn ? 'Washbasin' : 'Wasbak',
+                          selected: _drainPlace == 'Wasbak',
+                          onTap: () => ss(() => _drainPlace = 'Wasbak'),
+                        ),
+                        _optionChip(
+                          label: _isEn ? 'Kitchen sink' : 'Gootsteen',
+                          selected: _drainPlace == 'Gootsteen',
+                          onTap: () => ss(() => _drainPlace = 'Gootsteen'),
+                        ),
+                      ],
                     ),
                   ] else if (_isCountJob) ...[
                     // ── Count stepper ────────────────────────────────────────
@@ -612,70 +601,6 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
             const SizedBox(height: 20),
 
             // ── Live cost-estimate badge ─────────────────────────────────────
-            if (_estimateCostText().isNotEmpty) ...[
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Utils.kDarkBlue.withValues(alpha: 0.06),
-                      Utils.kDarkBlue.withValues(alpha: 0.02),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: Utils.kDarkBlue.withValues(alpha: 0.18),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Utils.kOrange.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Icon(
-                        Icons.euro_outlined,
-                        color: Utils.kOrange,
-                        size: 20,
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _isEn
-                                ? 'Estimated material cost'
-                                : 'Geschatte materiaalkosten',
-                            style: Utils.getTextStyle(
-                              baseSize: 11,
-                              isBold: false,
-                              color: Colors.black54,
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            _estimateCostText(),
-                            style: Utils.getTextStyle(
-                              baseSize: 18,
-                              isBold: true,
-                              color: Utils.kDarkBlue,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-            ],
 
             // ── Info note ────────────────────────────────────────────────────
             Container(
@@ -705,35 +630,7 @@ class _BuildPlumberInputState extends State<BuildPlumberInput> {
                 ],
               ),
             ),
-            const SizedBox(height: 24),
-
-            // ── CALCULATE button ─────────────────────────────────────────────
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Utils.kOrange,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-                icon: const Icon(Icons.calculate_outlined),
-                label: Text(
-                  _isEn ? 'CALCULATE \u2192' : 'BEREKEN \u2192',
-                  style: Utils.getTextStyle(
-                    baseSize: 15,
-                    isBold: true,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  p.calculateFromCustomInputs();
-                  p.nextStep(ctx);
-                },
-              ),
-            ),
+            const SizedBox(height: 8),
             const SizedBox(height: 20),
           ],
         );

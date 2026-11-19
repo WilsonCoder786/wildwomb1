@@ -33,17 +33,27 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
       p.selectedSpecificJobs.isNotEmpty ? p.selectedSpecificJobs.first : '';
 
   bool get _isStopcontact =>
-      _job.contains('Stopcontact') || _job.contains('Outlet');
+      _job.contains('Stopcontact') ||
+      _job.contains('Outlet') ||
+      _job.contains('outlet') ||
+      _job.contains('socket');
   bool get _isVerlichting =>
       _job.contains('Verlichting') ||
       _job.contains('Lamp') ||
-      _job.contains('Lighting');
+      _job.contains('Lighting') ||
+      _job.contains('lighting');
   bool get _isStroomleiding =>
-      _job.contains('Stroomleiding') || _job.contains('Cable laying');
+      _job.contains('Stroomleiding') ||
+      _job.contains('Cable laying') ||
+      _job.contains('wiring');
   bool get _isKabelgoot =>
-      _job.contains('Kabelgoot') || _job.contains('Cable trunking');
+      _job.contains('Kabelgoot') ||
+      _job.contains('Cable trunking') ||
+      _job.contains('trunking');
   bool get _isRookmelder =>
-      _job.contains('Rookmelder') || _job.contains('Smoke');
+      _job.contains('Rookmelder') ||
+      _job.contains('Smoke') ||
+      _job.contains('smoke');
 
   /// true -> count input (integer); false -> length input (decimal metres)
   bool get _isCountJob => _isStopcontact || _isVerlichting || _isRookmelder;
@@ -143,26 +153,6 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
       }
       return _isEn ? 'Length (m)' : 'Lengte (m)';
     }
-  }
-
-  String _estimateCostText() {
-    if (_isStopcontact) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 28.00).toStringAsFixed(2)}';
-    } else if (_isVerlichting) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 41.00).toStringAsFixed(2)}';
-    } else if (_isStroomleiding) {
-      final m = p.customLength > 0 ? p.customLength : 5.0;
-      return '± €${(m * 3.50).toStringAsFixed(2)}';
-    } else if (_isKabelgoot) {
-      final m = p.customLength > 0 ? p.customLength : 3.0;
-      return '± €${(m * 4.00).toStringAsFixed(2)}';
-    } else if (_isRookmelder) {
-      final n = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(n * 25.50).toStringAsFixed(2)}';
-    }
-    return '';
   }
 
   // ── build ──────────────────────────────────────────────────────────────────
@@ -480,70 +470,6 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
             const SizedBox(height: 20),
 
             // ── Live cost-estimate badge ────────────────────────────────────
-            if (_estimateCostText().isNotEmpty) ...[
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Utils.kDarkBlue.withValues(alpha: 0.06),
-                      Utils.kDarkBlue.withValues(alpha: 0.02),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: Utils.kDarkBlue.withValues(alpha: 0.18),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Utils.kOrange.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Icon(
-                        Icons.euro_outlined,
-                        color: Utils.kOrange,
-                        size: 20,
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _isEn
-                                ? 'Estimated material cost'
-                                : 'Geschatte materiaalkosten',
-                            style: Utils.getTextStyle(
-                              baseSize: 11,
-                              isBold: false,
-                              color: Colors.black54,
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            _estimateCostText(),
-                            style: Utils.getTextStyle(
-                              baseSize: 18,
-                              isBold: true,
-                              color: Utils.kDarkBlue,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-            ],
 
             // ── Info note ──────────────────────────────────────────────────
             Container(
@@ -573,35 +499,7 @@ class _BuildElectricianInputState extends State<BuildElectricianInput> {
                 ],
               ),
             ),
-            const SizedBox(height: 24),
-
-            // ── CALCULATE button ───────────────────────────────────────────
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Utils.kOrange,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-                icon: const Icon(Icons.calculate_outlined),
-                label: Text(
-                  _isEn ? 'CALCULATE \u2192' : 'BEREKEN \u2192',
-                  style: Utils.getTextStyle(
-                    baseSize: 15,
-                    isBold: true,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  p.calculateFromCustomInputs();
-                  p.nextStep(ctx);
-                },
-              ),
-            ),
+            const SizedBox(height: 8),
             const SizedBox(height: 20),
           ],
         );

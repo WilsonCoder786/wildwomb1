@@ -7997,181 +7997,181 @@ abstract class AppLocalizations {
   /// No description provided for @jobCarpenter01.
   ///
   /// In en, this message translates to:
-  /// **'Floor laying – laminate'**
+  /// **'Installing flooring – laminate'**
   String get jobCarpenter01;
 
   /// No description provided for @jobCarpenter02.
   ///
   /// In en, this message translates to:
-  /// **'Door installation – interior door (solid)'**
+  /// **'Installing a door – interior door (flush door)'**
   String get jobCarpenter02;
 
   /// No description provided for @jobCarpenter03.
   ///
   /// In en, this message translates to:
-  /// **'Skirting board installation – adhesive skirting'**
+  /// **'Installing skirting boards – stick-on skirting'**
   String get jobCarpenter03;
 
   /// No description provided for @jobCarpenter04.
   ///
   /// In en, this message translates to:
-  /// **'Stair renovation – laminate'**
+  /// **'Renovating stairs – laminate'**
   String get jobCarpenter04;
 
   /// No description provided for @jobCarpenter05.
   ///
   /// In en, this message translates to:
-  /// **'Wall installation – plasterboard with metal studs'**
+  /// **'Building a wall – plasterboard with metal studs'**
   String get jobCarpenter05;
 
   /// No description provided for @jobPlumber01.
   ///
   /// In en, this message translates to:
-  /// **'Kitchen tap replacement'**
+  /// **'Replacing a kitchen tap – deck-mounted'**
   String get jobPlumber01;
 
   /// No description provided for @jobPlumber02.
   ///
   /// In en, this message translates to:
-  /// **'Drain unblocking'**
+  /// **'Unblocking a siphon/trap – washbasin or kitchen sink'**
   String get jobPlumber02;
 
   /// No description provided for @jobPlumber03.
   ///
   /// In en, this message translates to:
-  /// **'Toilet installation'**
+  /// **'Installing a toilet – floor-standing'**
   String get jobPlumber03;
 
   /// No description provided for @jobPlumber04.
   ///
   /// In en, this message translates to:
-  /// **'Central heating refill'**
+  /// **'Refilling the central heating (CV) system'**
   String get jobPlumber04;
 
   /// No description provided for @jobPlumber05.
   ///
   /// In en, this message translates to:
-  /// **'Water pipe installation (copper)'**
+  /// **'Installing a water pipe – surface-mounted'**
   String get jobPlumber05;
 
   /// No description provided for @jobPainter01.
   ///
   /// In en, this message translates to:
-  /// **'Paint walls'**
+  /// **'Painting walls – interior, latex paint (moisture-resistant in bathrooms/kitchens)'**
   String get jobPainter01;
 
   /// No description provided for @jobPainter02.
   ///
   /// In en, this message translates to:
-  /// **'Paint ceilings'**
+  /// **'Painting ceilings – interior, latex paint (moisture-resistant in bathrooms/kitchens)'**
   String get jobPainter02;
 
   /// No description provided for @jobPainter03.
   ///
   /// In en, this message translates to:
-  /// **'Wallpapering'**
+  /// **'Wallpapering – non-woven wallpaper (53 cm or 70 cm wide)'**
   String get jobPainter03;
 
   /// No description provided for @jobPainter04.
   ///
   /// In en, this message translates to:
-  /// **'Window frame/door painting'**
+  /// **'Painting a door/frame – interior'**
   String get jobPainter04;
 
   /// No description provided for @jobPainter05.
   ///
   /// In en, this message translates to:
-  /// **'Radiator painting'**
+  /// **'Painting a radiator – per radiator'**
   String get jobPainter05;
 
   /// No description provided for @jobGardener01.
   ///
   /// In en, this message translates to:
-  /// **'Fence installation'**
+  /// **'Installing a fence – 180 × 180 cm'**
   String get jobGardener01;
 
   /// No description provided for @jobGardener02.
   ///
   /// In en, this message translates to:
-  /// **'Paving installation'**
+  /// **'Laying paving – 60 × 60 cm'**
   String get jobGardener02;
 
   /// No description provided for @jobGardener03.
   ///
   /// In en, this message translates to:
-  /// **'Pruning'**
+  /// **'Pruning – hydrangea'**
   String get jobGardener03;
 
   /// No description provided for @jobGardener04.
   ///
   /// In en, this message translates to:
-  /// **'Canopy construction'**
+  /// **'Building a wooden canopy'**
   String get jobGardener04;
 
   /// No description provided for @jobGardener05.
   ///
   /// In en, this message translates to:
-  /// **'Lawn laying'**
+  /// **'Installing a lawn – artificial grass'**
   String get jobGardener05;
 
   /// No description provided for @jobElectrician01.
   ///
   /// In en, this message translates to:
-  /// **'Outlet installation'**
+  /// **'Installing a socket outlet – flush-mounted, indoors; earthed or unearthed; earthing is mandatory in damp areas'**
   String get jobElectrician01;
 
   /// No description provided for @jobElectrician02.
   ///
   /// In en, this message translates to:
-  /// **'Lighting installation'**
+  /// **'Installing lighting – indoors; standard LED light fitting; damp areas require a moisture-resistant, earthed light fitting'**
   String get jobElectrician02;
 
   /// No description provided for @jobElectrician03.
   ///
   /// In en, this message translates to:
-  /// **'Cable laying'**
+  /// **'Installing electrical wiring – on/in the wall; 1.5/2.5 mm² depending on the application'**
   String get jobElectrician03;
 
   /// No description provided for @jobElectrician04.
   ///
   /// In en, this message translates to:
-  /// **'Cable trunking installation'**
+  /// **'Installing a cable trunking – self-adhesive or screw-mounted; sizes from 20 × 12 mm to 25 × 16 mm'**
   String get jobElectrician04;
 
   /// No description provided for @jobElectrician05.
   ///
   /// In en, this message translates to:
-  /// **'Smoke detector installation'**
+  /// **'Installing a smoke detector – quantity and position according to current regulations'**
   String get jobElectrician05;
 
   /// No description provided for @jobTiler01.
   ///
   /// In en, this message translates to:
-  /// **'Laying floor tiles'**
+  /// **'Laying floor tiles – 60 × 60 cm'**
   String get jobTiler01;
 
   /// No description provided for @jobTiler02.
   ///
   /// In en, this message translates to:
-  /// **'Installing wall tiles'**
+  /// **'Installing wall tiles – 30 × 60 cm'**
   String get jobTiler02;
 
   /// No description provided for @jobTiler03.
   ///
   /// In en, this message translates to:
-  /// **'Repairing tiles'**
+  /// **'Repairing tiles – one tile'**
   String get jobTiler03;
 
   /// No description provided for @jobTiler04.
   ///
   /// In en, this message translates to:
-  /// **'Grouting'**
+  /// **'Grouting – indoors'**
   String get jobTiler04;
 
   /// No description provided for @jobTiler05.
   ///
   /// In en, this message translates to:
-  /// **'Applying sealant'**
+  /// **'Applying sealant – sanitary sealant'**
   String get jobTiler05;
 
   /// No description provided for @checklistBehangtafel.

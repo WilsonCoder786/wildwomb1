@@ -136,6 +136,43 @@ class OnboardingDataService {
     'Pipe unblocking': 'Leiding ontstoppen',
     'Pipe clearing': 'Leiding ontstoppen',
     'Drain unblocking': 'Afvoer ontstoppen',
+    'Unblocking a siphon/trap – washbasin or kitchen sink': 'Afvoer ontstoppen',
+    'Replacing a kitchen tap – deck-mounted': 'Keukenkraan vervangen',
+    'Installing a toilet – floor-standing': 'Toilet installeren',
+    'Refilling the central heating (CV) system': 'CV-installatie bijvullen',
+    'Installing a water pipe – surface-mounted': 'Waterleiding aanleggen',
+    'Installing a fence – 180 × 180 cm': 'Schutting plaatsen',
+    'Laying paving – 60 × 60 cm': 'Bestrating aanleggen',
+    'Pruning – hydrangea': 'Snoeien',
+    'Building a wooden canopy': 'Overkapping bouwen',
+    'Installing a lawn – artificial grass': 'Gazon leggen',
+    'Installing flooring – laminate': 'Vloer leggen',
+    'Installing a door – interior door (flush door)': 'Deur plaatsen',
+    'Installing skirting boards – stick-on skirting': 'Plinten monteren',
+    'Renovating stairs – laminate': 'Trap renoveren',
+    'Building a wall – plasterboard with metal studs': 'Wand plaatsen',
+    'Painting walls – interior, latex paint (moisture-resistant in bathrooms/kitchens)':
+        'Muur sauzen',
+    'Painting ceilings – interior, latex paint (moisture-resistant in bathrooms/kitchens)':
+        'Plafond sauzen',
+    'Wallpapering – non-woven wallpaper (53 cm or 70 cm wide)': 'Behangen',
+    'Painting a door/frame – interior': 'Kozijn/deur schilderen',
+    'Painting a radiator – per radiator': 'Radiator schilderen',
+    'Installing a socket outlet – flush-mounted, indoors; earthed or unearthed; earthing is mandatory in damp areas':
+        'Stopcontact plaatsen',
+    'Installing lighting – indoors; standard LED light fitting; damp areas require a moisture-resistant, earthed light fitting':
+        'Verlichting plaatsen',
+    'Installing electrical wiring – on/in the wall; 1.5/2.5 mm² depending on the application':
+        'Stroomleiding leggen',
+    'Installing a cable trunking – self-adhesive or screw-mounted; sizes from 20 × 12 mm to 25 × 16 mm':
+        'Kabelgoot monteren',
+    'Installing a smoke detector – quantity and position according to current regulations':
+        'Rookmelder plaatsen',
+    'Laying floor tiles – 60 × 60 cm': 'Vloertegels leggen',
+    'Installing wall tiles – 30 × 60 cm': 'Wandtegels plaatsen',
+    'Repairing tiles – one tile': 'Tegels repareren',
+    'Grouting – indoors': 'Voegen',
+    'Applying sealant – sanitary sealant': 'Kit aanbrengen',
     'Toilet installation': 'Toilet installeren',
     'Central heating refill': 'CV-installatie bijvullen',
     'Pipe laying': 'Leiding aanleggen',

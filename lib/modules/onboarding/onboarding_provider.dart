@@ -679,15 +679,11 @@ class OnboardingProvider extends ChangeNotifier {
         ];
       }
     } else if (_selectedJobId == 'gardener') {
-      if (job.contains('Schutting') || job.contains('Fence')) {
+      if (job.contains('Schutting') ||
+          job.contains('schutting') ||
+          job.contains('Fence') ||
+          job.contains('fence')) {
         return [
-          {
-            'key': 'count',
-            'label': 'Aantal panelen (180x180 cm)',
-            'labelEn': 'Number of panels (180x180 cm)',
-            'type': 'integer',
-            'value': _customCount,
-          },
           {
             'key': 'length',
             'label': 'Totale lengte schutting (m)',
@@ -921,7 +917,10 @@ class OnboardingProvider extends ChangeNotifier {
         job.contains('Lighting') ||
         _selectedJobId == 'electrician') {
       packs = _customCount;
-      if (job.contains('Stopcontact') || job.contains('Outlet')) {
+      if (job.contains('Stopcontact') ||
+          job.contains('Outlet') ||
+          job.contains('outlet') ||
+          job.contains('socket')) {
         materialCost = _customCount * 28.00;
         customProMaterialCost = _customCount * 17.50;
         proHours = _customCount * 0.75;
@@ -932,23 +931,17 @@ class OnboardingProvider extends ChangeNotifier {
         proHours = _customCount * 0.50;
         klusserHours = _customCount * 1.25;
         laborHours = max(1, klusserHours.ceil());
-      } else if (job.contains('Rookmelder') || job.contains('Smoke')) {
+      } else if (job.contains('Rookmelder') ||
+          job.contains('Smoke') ||
+          job.contains('smoke')) {
         materialCost = _customCount * 25.50;
         customProMaterialCost = _customCount * 18.35;
         proHours = _customCount * 0.25;
         klusserHours = _customCount * 0.60;
         laborHours = max(1, klusserHours.ceil());
-      } else if (job.contains('Stroomleiding') ||
-          job.contains('Power cable') ||
-          job.contains('Cable laying')) {
-        final meters = _customLength > 0 ? _customLength : 5.0;
-        materialCost = meters * 3.50;
-        customProMaterialCost = meters * 2.50;
-        proHours = meters * 0.10;
-        klusserHours = meters * 0.25;
-        laborHours = max(1, klusserHours.ceil());
-        packs = meters.ceil();
-      } else if (job.contains('Kabelgoot') || job.contains('Cable trunking')) {
+      } else if (job.contains('Kabelgoot') ||
+          job.contains('Cable trunking') ||
+          job.contains('trunking')) {
         final meters = _customLength > 0 ? _customLength : 3.0;
         materialCost = meters * 4.00;
         customProMaterialCost = meters * 2.75;
@@ -956,9 +949,21 @@ class OnboardingProvider extends ChangeNotifier {
         klusserHours = meters * 0.17;
         laborHours = max(1, klusserHours.ceil());
         packs = meters.ceil();
+      } else if (job.contains('Stroomleiding') ||
+          job.contains('Power cable') ||
+          job.contains('Cable laying') ||
+          job.contains('wiring')) {
+        final meters = _customLength > 0 ? _customLength : 5.0;
+        materialCost = meters * 3.50;
+        customProMaterialCost = meters * 2.50;
+        proHours = meters * 0.10;
+        klusserHours = meters * 0.25;
+        laborHours = max(1, klusserHours.ceil());
+        packs = meters.ceil();
       } else if (job.contains('Verlichting') ||
           job.contains('Lamp') ||
-          job.contains('Lighting')) {
+          job.contains('Lighting') ||
+          job.contains('lighting')) {
         materialCost = _customCount * 41.00;
         customProMaterialCost = _customCount * 28.65;
         proHours = _customCount * 0.50;
@@ -977,6 +982,7 @@ class OnboardingProvider extends ChangeNotifier {
           job.contains('Tap') ||
           job.contains('Faucet') ||
           job.contains('Kitchen tap') ||
+          job.contains('kitchen tap') ||
           job.contains('kraan') ||
           job.contains('tap')) {
         materialCost = _customCount * 115.00;
@@ -1010,7 +1016,12 @@ class OnboardingProvider extends ChangeNotifier {
           job.contains('Drain') ||
           job.contains('Blockage') ||
           job.contains('unblock') ||
-          job.contains('ontstoppen')) {
+          job.contains('Unblocking') ||
+          job.contains('ontstoppen') ||
+          job.contains('Sifon') ||
+          job.contains('sifon') ||
+          job.contains('Siphon') ||
+          job.contains('siphon')) {
         materialCost = 15.00;
         customProMaterialCost = 10.00;
         proHours = 0.75;
@@ -1070,8 +1081,11 @@ class OnboardingProvider extends ChangeNotifier {
       }
     } else if (_selectedJobId == 'gardener') {
       packs = _customCount;
-      if (job.contains('Schutting') || job.contains('Fence')) {
-        final meters = _customLength > 0 ? _customLength : _customCount * 1.8;
+      if (job.contains('Schutting') ||
+          job.contains('schutting') ||
+          job.contains('Fence') ||
+          job.contains('fence')) {
+        final meters = _customLength > 0 ? _customLength : 9.0;
         materialCost = meters * 52.0;
         customProMaterialCost = meters * 37.0;
         proHours = meters * 0.50;
@@ -1080,6 +1094,7 @@ class OnboardingProvider extends ChangeNotifier {
         packs = meters.ceil();
       } else if (job.contains('Bestrating') ||
           job.contains('Paving') ||
+          job.contains('paving') ||
           job.contains('Terras') ||
           job.contains('Patio')) {
         final areaM2 = (_customLength > 0 && _customDepth > 0)
@@ -1102,6 +1117,9 @@ class OnboardingProvider extends ChangeNotifier {
         laborHours = max(1, klusserHours.ceil());
         packs = _customCount;
       } else if (job.contains('Overkapping') ||
+          job.contains('overkapping') ||
+          job.contains('Canopy') ||
+          job.contains('canopy') ||
           job.contains('Carport') ||
           job.contains('Pergola') ||
           job.contains('Afdak')) {
@@ -1116,8 +1134,10 @@ class OnboardingProvider extends ChangeNotifier {
         packs = areaM2.ceil();
       } else if (job.contains('Gazon') ||
           job.contains('Lawn') ||
+          job.contains('lawn') ||
           job.contains('Gras') ||
-          job.contains('Grass')) {
+          job.contains('Grass') ||
+          job.contains('grass')) {
         final areaM2 = (_customLength > 0 && _customDepth > 0)
             ? _customLength * _customDepth
             : (_customCount > 0 ? _customCount.toDouble() : 20.0);
@@ -1363,7 +1383,8 @@ class OnboardingProvider extends ChangeNotifier {
       _selectedSpecificJobs.any(
         (j) =>
             j.toLowerCase().contains('kozijn/deur schilderen') ||
-            j.toLowerCase().contains('window frame/door painting'),
+            j.toLowerCase().contains('window frame/door painting') ||
+            j.toLowerCase().contains('door/frame'),
       );
 
   double get radiatorSingleOppervlakte => totalArea;
@@ -1769,19 +1790,169 @@ class OnboardingProvider extends ChangeNotifier {
       final unitLabel = (units - units.round()).abs() < 0.001
           ? units.round().toString()
           : units.toStringAsFixed(2);
+      final weightSum = parts.fold<double>(0, (sum, part) => sum + part.$3);
+      if (weightSum == 0) return [];
+      final area = units <= 0 ? 1.0 : units;
+      final whole = max(1, area.ceil());
+      final pieceJob =
+          qty.contains('st') || qty.contains('pcs') || qty.contains('treden');
+
+      (String, String) pack(int count, String one, String many, String oneEn, String manyEn) {
+        final nl = count == 1 ? one : many;
+        final en = count == 1 ? oneEn : manyEn;
+        return ('$count $nl', '$count $en');
+      }
+
+      (String, String) shown(String name) {
+        final n = name.toLowerCase();
+        final measured = (
+          qty.replaceAll('{n}', unitLabel),
+          qtyEn.replaceAll('{n}', unitLabel),
+        );
+        if (n.contains('puinzak')) return ('1 rol', '1 roll');
+        if (n.contains('vitstif') || n.contains('tegelpotlood')) {
+          return ('1 stuk', '1 piece');
+        }
+        if (n.contains('tegellijm')) {
+          if (pieceJob) return pack(whole, 'kg', 'kg', 'kg', 'kg');
+          final perM2 =
+              job.contains('wandtegel') || job.contains('wall tile') ? 3.0 : 4.0;
+          return pack(
+            max(1, (area * perM2 / 25).ceil()),
+            'zak (25 kg)',
+            'zakken (25 kg)',
+            'bag (25 kg)',
+            'bags (25 kg)',
+          );
+        }
+        if (n.contains('voegmiddel') || n.contains('binnenvoeg')) {
+          if (pieceJob) {
+            final kg = (area * 0.3).toStringAsFixed(1);
+            return ('$kg kg', '$kg kg');
+          }
+          final perM2 =
+              job.contains('wandtegel') || job.contains('wall tile') ? 0.4 : 0.5;
+          return pack(
+            max(1, (area * perM2 / 5).ceil()),
+            'zak (5 kg)',
+            'zakken (5 kg)',
+            'bag (5 kg)',
+            'bags (5 kg)',
+          );
+        }
+        if (n.contains('leveling')) {
+          return pack(max(1, (area / 5).ceil()), 'set', 'sets', 'set', 'sets');
+        }
+        if (n.contains('schuttingpaneel')) {
+          return pack(max(1, (area / 1.8).ceil()), 'st', 'st', 'pc', 'pcs');
+        }
+        if (n.contains('schuttingpaal')) {
+          return pack(max(1, (area / 1.8).ceil()) + 1, 'st', 'st', 'pc', 'pcs');
+        }
+        if (n.contains('snelbeton')) {
+          final posts = max(1, (area / 1.8).ceil()) + 1;
+          return pack(posts, 'zak', 'zakken', 'bag', 'bags');
+        }
+        if (n.contains('sanitairkit') && qty.contains('m')) {
+          return pack(max(1, (area / 10).ceil()), 'tube', 'tubes', 'tube', 'tubes');
+        }
+        if (n.contains('scharnier')) {
+          return ('$unitLabel set', '$unitLabel set');
+        }
+        if (n.contains('latex') || n.contains('radiatorlak') || n == 'verf') {
+          final liters = pieceJob
+              ? max(1, radiatorVerfLiters)
+              : max(1, (area * 0.1).ceil());
+          return ('$liters L', '$liters L');
+        }
+        if (n.contains('voorstrijk') || n.contains('grondverf')) {
+          final paintJob = job.contains('saus') ||
+              job.contains('paint') ||
+              job.contains('plafond') ||
+              job.contains('ceiling') ||
+              job.contains('radiator') ||
+              job.contains('kozijn') ||
+              job.contains('frame');
+          if (paintJob) {
+            final base = pieceJob
+                ? radiatorVerfLiters
+                : max(1, (area * 0.1).ceil());
+            final primer = max(1, (base / 2).ceil());
+            return ('$primer L', '$primer L');
+          }
+          return ('1 fles', '1 bottle');
+        }
+        if (n.contains('ondervloer')) {
+          return pack(
+            max(1, (area / 10).ceil()),
+            'rol',
+            'rollen',
+            'roll',
+            'rolls',
+          );
+        }
+        if (n.contains('behang') && !n.contains('lijm')) {
+          return pack(
+            max(1, (area / 5.3).ceil()),
+            'rol',
+            'rollen',
+            'roll',
+            'rolls',
+          );
+        }
+        if (n.contains('behanglijm')) {
+          final rolls = max(1, (area / 5.3).ceil());
+          return pack(
+            max(1, (rolls / 3).ceil()),
+            'pak',
+            'pakken',
+            'pack',
+            'packs',
+          );
+        }
+        if (n.contains('afplaktape')) return ('2 rollen', '2 rolls');
+        if (n.contains('gaasband') ||
+            n.contains('folie') ||
+            n.contains('stucloper') ||
+            n.contains('naadband') ||
+            n.contains('keukenpapier')) {
+          return ('1 rol', '1 roll');
+        }
+        if (n.contains('schuurpapier')) return ('1 vel', '1 sheet');
+        if (n.contains('starterspakket')) return ('1 set', '1 set');
+        if (n.contains('ontvetter') ||
+            n.contains('allesreiniger') ||
+            n.contains('afwasmiddel')) {
+          return ('1 fles', '1 bottle');
+        }
+        if (n.contains('plug') ||
+            n.contains('beugel') ||
+            n.contains('klem') ||
+            n.contains('kroonsteen')) {
+          return ('1 set', '1 set');
+        }
+        if (n.contains('schroef') || n.contains('slagplug')) {
+          return ('1 doos', '1 box');
+        }
+        if (n == 'kit') return ('1 tube', '1 tube');
+        if (n.contains('kunstgrashaken')) return ('1 zak', '1 bag');
+        return measured;
+      }
+
       var running = 0.0;
       final rows = <Map<String, dynamic>>[];
       for (var i = 0; i < parts.length; i++) {
         final part = parts[i];
         final price = i == parts.length - 1
             ? double.parse((cost - running).toStringAsFixed(2))
-            : double.parse((part.$3 * units).toStringAsFixed(2));
+            : double.parse((part.$3 / weightSum * cost).toStringAsFixed(2));
         running += price;
+        final display = shown(part.$1);
         rows.add({
           'name': part.$1,
           'nameEn': part.$2,
-          'qty': qty.replaceAll('{n}', unitLabel),
-          'qtyEn': qtyEn.replaceAll('{n}', unitLabel),
+          'qty': display.$1,
+          'qtyEn': display.$2,
           'price': '€ ${price.toStringAsFixed(2)}',
           'icon': Icons.inventory_2_outlined,
         });
@@ -1794,22 +1965,19 @@ class OnboardingProvider extends ChangeNotifier {
         return lines(41.60, '{n} treden', '{n} steps', [
           ('Trapbekleding laminaat', 'Laminate stair cladding', 35),
           ('Traplijm', 'Stair adhesive', 1.60),
-          ('Potlood', 'Pencil', 1),
           ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
-      if (has(['laminaat', 'laminate', 'floor installation', 'vloer leggen', 'floor laying'])) {
+      if (has(['laminaat', 'laminate', 'floor installation', 'vloer leggen', 'floor laying', 'flooring'])) {
         return lines(31, '{n} m²', '{n} m²', [
           ('Laminaat', 'Laminate', 22),
           ('Ondervloer', 'Underlay', 4),
-          ('Potlood', 'Pencil', 1),
           ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['plint', 'skirting'])) {
         return lines(15, '{n} m', '{n} m', [
           ('Plakplint', 'Stick-on skirting', 10),
-          ('Potlood', 'Pencil', 1),
           ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
@@ -1820,17 +1988,20 @@ class OnboardingProvider extends ChangeNotifier {
           ('Slot', 'Lock', 15),
           ('Kruk', 'Handle set', 12),
           ('Kit', 'Sealant', 7),
-          ('Potlood', 'Pencil', 1),
           ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['gips', 'partition', 'wand plaatsen', 'stud', 'plasterboard'])) {
         return lines(30, '{n} m²', '{n} m²', [
-          (
-            'Standaard wand: gipsplaat, profielen, pluggen, schroeven, gaasband, voegmateriaal, schuurpapier, potlood en puinzakken',
-            'Standard wall: plasterboard, profiles, plugs, screws, mesh tape, joint compound, sandpaper, pencil and rubble bags',
-            30,
-          ),
+          ('Gipsplaat', 'Plasterboard', 12),
+          ('C-profiel', 'C-profile', 4),
+          ('U-profiel', 'U-profile', 4),
+          ('Slagpluggen', 'Hammer-in plugs', 0.30),
+          ('Gipsplaatschroeven', 'Plasterboard screws', 8),
+          ('Gaasband', 'Mesh tape', 6),
+          ('Voegen-/stucmateriaal', 'Joint compound', 15),
+          ('Schuurpapier', 'Sandpaper', 5),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
     }
@@ -1838,47 +2009,57 @@ class OnboardingProvider extends ChangeNotifier {
     if (trade == 'painter') {
       if (has(['plafond', 'ceiling'])) {
         return lines(4.50, '{n} m²', '{n} m²', [
-          (
-            'Standaard plafond: latex, voorstrijk, tape, folie, starterspakket, potlood en puinzakken',
-            'Standard ceiling: latex, primer, tape, film, starter kit, pencil and rubble bags',
-            4.50,
-          ),
+          ('Latex (wit)', 'White latex', 15),
+          ('Voorstrijk', 'Primer', 8),
+          ('Afplaktape', 'Masking tape', 4),
+          ('Afdekfolie / stucloper', 'Cover film', 6),
+          ('Starterspakket (verfbak, roller, kwasten)', 'Starter kit', 12),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['behang', 'wallpaper'])) {
         return lines(7, '{n} m²', '{n} m²', [
-          (
-            'Standaard behang: vlies 53 cm, lijm, voorstrijk, folie, potlood en puinzakken',
-            'Standard wallpaper: 53 cm non-woven, adhesive, primer, film, pencil and rubble bags',
-            7,
-          ),
+          ('Behang (vlies, 53 cm breed)', 'Non-woven wallpaper, 53 cm', 27.50),
+          ('Behanglijm', 'Wallpaper adhesive', 12),
+          ('Voorstrijk', 'Primer', 8),
+          ('Afdekfolie / stucloper', 'Cover film', 6),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['radiator'])) {
         return lines(12.50, '{n} st', '{n} pcs', [
-          (
-            'Standaard radiator: lak, grondverf, tape, schuurpapier, folie, ontvetter, starterspakket, potlood en puinzakken',
-            'Standard radiator: paint, primer, tape, sandpaper, film, degreaser, starter kit, pencil and rubble bags',
-            12.50,
-          ),
+          ('Radiatorlak', 'Radiator paint', 18),
+          ('Grondverf (primer) voor metaal', 'Metal primer', 12),
+          ('Afplaktape', 'Masking tape', 4),
+          ('Schuurpapier', 'Sandpaper', 1),
+          ('Afdekfolie / stucloper', 'Cover film', 6),
+          ('Allesreiniger/ontvetter', 'Degreaser', 6),
+          ('Starterspakket (verfbak, roller, kwasten)', 'Starter kit', 12),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['kozijn', 'frame', 'door'])) {
         return lines(18.50, '{n} st', '{n} pcs', [
-          (
-            'Standaard kozijn: verf, grondverf, tape, schuurpapier, folie, ontvetter, starterspakket, potlood en puinzakken',
-            'Standard frame: paint, primer, tape, sandpaper, film, degreaser, starter kit, pencil and rubble bags',
-            18.50,
-          ),
+          ('Verf', 'Paint', 12),
+          ('Grondverf', 'Primer', 10),
+          ('Afplaktape', 'Masking tape', 4),
+          ('Schuurpapier', 'Sandpaper', 1),
+          ('Afdekfolie / stucloper', 'Cover film', 6),
+          ('Allesreiniger/ontvetter', 'Degreaser', 6),
+          ('Starterspakket (verfbak, roller, kwasten)', 'Starter kit', 12),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['muur', 'wall', 'sauzen', 'paint'])) {
         return lines(4.50, '{n} m²', '{n} m²', [
-          (
-            'Standaard muur: latex, voorstrijk, tape, folie, schuurpapier, ontvetter, starterspakket, potlood en puinzakken',
-            'Standard wall: latex, primer, tape, film, sandpaper, degreaser, starter kit, pencil and rubble bags',
-            4.50,
-          ),
+          ('Latex (wit)', 'White latex', 15),
+          ('Voorstrijk', 'Primer', 8),
+          ('Afplaktape', 'Masking tape', 4),
+          ('Afdekfolie / stucloper', 'Cover film', 6),
+          ('Schuurpapier', 'Sandpaper', 1),
+          ('Allesreiniger/ontvetter', 'Degreaser', 6),
+          ('Starterspakket (verfbak, roller, kwasten)', 'Starter kit', 12),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
     }
@@ -1886,20 +2067,20 @@ class OnboardingProvider extends ChangeNotifier {
     if (trade == 'gardener') {
       if (has(['schutting', 'fence'])) {
         return lines(52, '{n} m', '{n} m', [
-          (
-            'Standaard schutting: paneel, paal, snelbeton, schroeven, potlood en puinzakken',
-            'Standard fence: panel, post, post concrete, screws, pencil and rubble bags',
-            52,
-          ),
+          ('Schuttingpaneel 180 x 180 cm', 'Fence panel 180 x 180 cm', 55),
+          ('Schuttingpaal', 'Fence post', 20),
+          ('Snelbeton', 'Post concrete', 8),
+          ('RVS schroeven', 'Stainless screws', 15),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['bestrating', 'paving', 'terras'])) {
         return lines(48, '{n} m²', '{n} m²', [
-          (
-            'Standaard bestrating: grindtegel, ophoogzand, voegzand, betonband, potlood en puinzakken',
-            'Standard paving: gravel tile, fill sand, jointing sand, concrete edging, pencil and rubble bags',
-            48,
-          ),
+          ('Grindtegel 60 x 60 cm', 'Gravel tile 60 x 60 cm', 35),
+          ('Ophoogzand', 'Filling sand', 25),
+          ('Voegzand', 'Jointing sand', 30),
+          ('Betonband/opsluitband', 'Concrete edging', 6),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['snoeien', 'pruning', 'hortensia'])) {
@@ -1909,18 +2090,23 @@ class OnboardingProvider extends ChangeNotifier {
       }
       if (has(['overkapping', 'canopy', 'carport'])) {
         return lines(123, '{n} m²', '{n} m²', [
-          (
-            'Standaard overkapping: staanders, balken, dakplaat, dakbedekking, betonpoeren, hoekverbinders, daktrim, schroeven, potlood en puinzakken',
-            'Standard canopy: posts, beams, roof sheet, roofing, concrete bases, brackets, roof trim, screws, pencil and rubble bags',
-            123,
-          ),
+          ('Houten staander', 'Wooden post', 26.50),
+          ('Houten balk', 'Wooden beam', 22.50),
+          ('Houten dakplaat', 'Wooden roof panel', 32.50),
+          ('Dakbedekking', 'Roofing', 7.50),
+          ('Betonpoer', 'Concrete base', 8),
+          ('Hoekverbinder', 'Angle bracket', 4),
+          ('Daktrim/goot', 'Roof trim', 12),
+          ('Schroeven', 'Screws', 15),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['gazon', 'kunstgras', 'lawn', 'grass'])) {
         return lines(41.60, '{n} m²', '{n} m²', [
           ('Kunstgras', 'Artificial grass', 35),
           ('Worteldoek', 'Weed membrane', 1.60),
-          ('Potlood', 'Pencil', 1),
+          ('Kunstgrashaken', 'Artificial grass staples', 0.50),
+          ('Naadband', 'Seam tape', 0.50),
           ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
@@ -1929,20 +2115,22 @@ class OnboardingProvider extends ChangeNotifier {
     if (trade == 'electrician') {
       if (has(['kabelgoot', 'trunking'])) {
         return lines(4, '{n} m', '{n} m', [
-          (
-            'Standaard kabelgoot: goot, beugels, pluggen, potlood en puinzakken',
-            'Standard trunking: trunking, clips, plugs, pencil and rubble bags',
-            4,
-          ),
+          ('Kabelgoot', 'Cable trunking', 3),
+          ('Beugels', 'Clips', 0.60),
+          ('Pluggen', 'Wall plugs', 0.50),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
-      if (has(['stroomleiding', 'cable'])) {
+      if (has(['stroomleiding', 'wiring', 'cable'])) {
         return lines(3.50, '{n} m', '{n} m', [
-          (
-            'Standaard stroomleiding',
-            'Standard electrical cable',
-            3.50,
-          ),
+          ('Draad 2,5 mm²', '2.5 mm² wire', 1.80),
+          ('Draad 1,5 mm²', '1.5 mm² wire', 1.30),
+          ('Goot', 'Mini trunking', 0.80),
+          ('Buis', 'Conduit', 4),
+          ('Klemmen', 'Connectors', 0.50),
+          ('Beugels', 'Clips', 0.60),
+          ('Pluggen', 'Wall plugs', 0.50),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['rookmelder', 'smoke'])) {
@@ -1956,18 +2144,16 @@ class OnboardingProvider extends ChangeNotifier {
           ('LED armatuur (droge ruimte)', 'LED fitting (dry room)', 35),
           ('Kroonsteen', 'Terminal block', 0.50),
           ('Pluggen', 'Wall plugs', 0.50),
-          ('Potlood', 'Pencil', 1),
           ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
-      if (has(['stopcontact', 'outlet'])) {
+      if (has(['stopcontact', 'outlet', 'socket'])) {
         return lines(28, '{n} st', '{n} pcs', [
           ('Inbouwdoos', 'Flush-mounted box', 12),
           ('Inbouw stopcontact (binnenwerk)', 'Flush-mounted socket mechanism', 8),
           ('Afdekplaat', 'Cover plate', 6),
           ('Lasklemmen', 'Connector terminals', 0.50),
           ('Pluggen', 'Wall plugs', 0.50),
-          ('Potlood', 'Pencil', 1),
         ]);
       }
     }
@@ -1984,38 +2170,37 @@ class OnboardingProvider extends ChangeNotifier {
       }
       if (has(['voeg', 'grout'])) {
         return lines(5.20, '{n} m²', '{n} m²', [
-          (
-            'Standaard voegwerk: binnenvoegmiddel en puinzakken',
-            'Standard grouting: indoor grout and rubble bags',
-            5.20,
-          ),
+          ('Binnenvoegmiddel', 'Indoor grout', 12),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['kit', 'sealant'])) {
         return lines(4.70, '{n} m', '{n} m', [
-          (
-            'Standaard kit: sanitairkit, puinzakken, ontvetter, afwasmiddel en keukenpapier',
-            'Standard sealant: sanitary sealant, rubble bags, degreaser, washing-up liquid and kitchen roll',
-            4.70,
-          ),
+          ('Sanitairkit', 'Sanitary sealant', 7),
+          ('Puinzakken', 'Rubble bags', 4),
+          ('Ontvetter/cleaner', 'Degreaser', 7),
+          ('Afwasmiddel', 'Washing-up liquid', 2),
+          ('Keukenpapier', 'Kitchen paper', 1),
         ]);
       }
       if (has(['wandtegel', 'wall tile'])) {
         return lines(57.50, '{n} m²', '{n} m²', [
-          (
-            'Standaard wandtegel: tegel, lijm, voeg, leveling, vitstif en puinzakken',
-            'Standard wall tile: tile, adhesive, grout, levelling, marker and rubble bags',
-            57.50,
-          ),
+          ('Tegels 30 × 60 cm', 'Tiles 30 × 60 cm', 27.50),
+          ('Tegellijm', 'Tile adhesive', 12),
+          ('Voegmiddel', 'Grout', 10),
+          ('Levelingsysteem', 'Levelling system', 1),
+          ('Vitstif / tegelpotlood', 'Tile marker', 2.50),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
       if (has(['vloertegel', 'floor tile', 'laying floor'])) {
         return lines(39.90, '{n} m²', '{n} m²', [
-          (
-            'Standaard vloertegel: tegel, lijm, voeg, leveling, vitstif en puinzakken',
-            'Standard floor tile: tile, adhesive, grout, levelling, marker and rubble bags',
-            39.90,
-          ),
+          ('Tegels 60 × 60 cm', 'Tiles 60 × 60 cm', 27.50),
+          ('Tegellijm', 'Tile adhesive', 15),
+          ('Voegmiddel', 'Grout', 12),
+          ('Levelingsysteem', 'Levelling system', 1),
+          ('Vitstif / tegelpotlood', 'Tile marker', 2.50),
+          ('Puinzakken', 'Rubble bags', 4),
         ]);
       }
     }
@@ -2146,6 +2331,7 @@ class OnboardingProvider extends ChangeNotifier {
       if (tools is List) {
         _checklist.addAll({for (final t in tools.cast<String>()) t: false});
       }
+      _addSharedTools();
       return;
     }
 
@@ -2161,7 +2347,12 @@ class OnboardingProvider extends ChangeNotifier {
     );
     _checklist.addAll(resolved);
 
-    // Document 3: dustpan and brush applies to every job.
+    _addSharedTools();
+  }
+
+  /// Pencil is a tool. Dustpan and brush is under Other for every job.
+  void _addSharedTools() {
+    _checklist['checklistPotlood'] = false;
     _checklist[OnboardingDataService.instance.alwaysIndoorExtra] = false;
   }
 
@@ -2475,7 +2666,7 @@ class OnboardingProvider extends ChangeNotifier {
         ),
       ];
     }
-    if (has(['ontstoppen', 'afvoer', 'unclog', 'drain', 'blockage'])) {
+    if (has(['ontstoppen', 'afvoer', 'unclog', 'drain', 'blockage', 'sifon', 'siphon'])) {
       return [
         row('Plopper/ontstopper', 'Plunger', '1 stuk', '1 piece', 10),
         row(
@@ -2513,14 +2704,13 @@ class OnboardingProvider extends ChangeNotifier {
           '$count sets',
           count * 10,
         ),
-        row('Potlood', 'Pencil', pieces, piecesEn, count * 1),
         row('Puinzakken', 'Rubble bags', '$count rol', '$count rolls', count * 4),
         row(
           'Emmer en oude doeken',
           'Bucket and old cloths',
           '$count set',
           '$count sets',
-          count * 5,
+          count * 6,
         ),
       ];
     }

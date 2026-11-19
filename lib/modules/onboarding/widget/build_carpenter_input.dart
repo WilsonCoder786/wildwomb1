@@ -108,20 +108,6 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
     super.dispose();
   }
 
-  // ── estimated cost ──────────────────────────────────────────────────────────
-
-  String _estimateCostText() {
-    if (_isDoor) {
-      final count = p.customCount > 0 ? p.customCount : 1;
-      return '± €${(count * 193.0).toStringAsFixed(2)}';
-    }
-    if (_isPlint) {
-      final meters = p.customLength > 0 ? p.customLength : 1.0;
-      return '± €${(meters * 15.0).toStringAsFixed(2)}';
-    }
-    return '';
-  }
-
   // ── build ────────────────────────────────────────────────────────────────────
 
   @override
@@ -289,73 +275,7 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
               ),
             ],
 
-            const SizedBox(height: 20),
-
-            // ── Live cost estimate ────────────────────────────────────────────
-            if (_estimateCostText().isNotEmpty) ...[
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Utils.kDarkBlue.withValues(alpha: 0.06),
-                      Utils.kDarkBlue.withValues(alpha: 0.02),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: Utils.kDarkBlue.withValues(alpha: 0.18),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Utils.kOrange.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Icon(
-                        Icons.euro_outlined,
-                        color: Utils.kOrange,
-                        size: 20,
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _isEn
-                                ? 'Estimated material cost'
-                                : 'Geschatte materiaalkosten',
-                            style: Utils.getTextStyle(
-                              baseSize: 11,
-                              isBold: false,
-                              color: Colors.black54,
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            _estimateCostText(),
-                            style: Utils.getTextStyle(
-                              baseSize: 18,
-                              isBold: true,
-                              color: Utils.kDarkBlue,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-            ],
+            const SizedBox(height: 8),
 
             // ── Info note ─────────────────────────────────────────────────────
             Container(
@@ -386,36 +306,7 @@ class _BuildCarpenterInputState extends State<BuildCarpenterInput> {
                 ],
               ),
             ),
-            const SizedBox(height: 24),
-
-            // ── CALCULATE button ──────────────────────────────────────────────
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Utils.kOrange,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-                icon: const Icon(Icons.calculate_outlined),
-                label: Text(
-                  _isEn ? 'CALCULATE \u2192' : 'BEREKEN \u2192',
-                  style: Utils.getTextStyle(
-                    baseSize: 15,
-                    isBold: true,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  p.calculateFromCustomInputs();
-                  p.nextStep(ctx);
-                },
-              ),
-            ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 8),
           ],
         );
       },

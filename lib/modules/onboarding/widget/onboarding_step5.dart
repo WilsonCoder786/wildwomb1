@@ -143,11 +143,15 @@ class OnboardingStep5 extends StatelessWidget {
       assigned.addAll(matched);
     }
 
-    // Remaining tools (global defaults / extras) go into a fallback bucket.
+    // Shared tools (pencil, dustpan) sit in the same list as the job tools.
     final remaining = allKeys.where((k) => !assigned.contains(k)).toList();
     if (remaining.isNotEmpty) {
-      final label = provider.selectedSpecificJobs.isEmpty ? l10n.onboardingToolsCheck : 'Overig';
-      result[label] = remaining;
+      if (result.isEmpty) {
+        result[l10n.onboardingToolsCheck] = remaining;
+      } else {
+        final first = result.keys.first;
+        result[first] = [...result[first]!, ...remaining];
+      }
     }
 
     // If nothing was grouped, show everything under one header.

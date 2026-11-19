@@ -40,10 +40,15 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
       p.selectedSpecificJobs.isNotEmpty ? p.selectedSpecificJobs.first : '';
 
   // ── sub-job detectors ───────────────────────────────────────────────────────
-  bool get _isSchutting => _job.contains('Schutting') || _job.contains('Fence');
+  bool get _isSchutting =>
+      _job.contains('Schutting') ||
+      _job.contains('schutting') ||
+      _job.contains('Fence') ||
+      _job.contains('fence');
   bool get _isBestrating =>
       _job.contains('Bestrating') ||
       _job.contains('Paving') ||
+      _job.contains('paving') ||
       _job.contains('Terras') ||
       _job.contains('Patio');
   bool get _isSnoeien =>
@@ -53,14 +58,18 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
       _job.contains('Hedge');
   bool get _isOverkapping =>
       _job.contains('Overkapping') ||
+      _job.contains('overkapping') ||
       _job.contains('Canopy') ||
+      _job.contains('canopy') ||
       _job.contains('Carport') ||
       _job.contains('Pergola');
   bool get _isGazon =>
       _job.contains('Gazon') ||
       _job.contains('Lawn') ||
+      _job.contains('lawn') ||
       _job.contains('Gras') ||
-      _job.contains('Grass');
+      _job.contains('Grass') ||
+      _job.contains('grass');
 
   // ── texts ───────────────────────────────────────────────────────────────────
 
@@ -92,8 +101,8 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
   String get _headerSubtitle {
     if (_isSchutting) {
       return _isEn
-          ? 'Enter the number of fence panels (180×180 cm) and total fence length.'
-          : 'Voer het aantal schuttpanelen (180×180 cm) en de totale schuttinglengte in.';
+          ? 'Enter the total fence length in metres. The app calculates the panels and posts.'
+          : 'Voer de totale schuttinglengte in meters in. De app rekent het aantal panelen en palen uit.';
     }
     if (_isBestrating) {
       return _isEn
@@ -118,38 +127,6 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
     return _isEn
         ? 'Fill in the details below.'
         : 'Vul de gegevens hieronder in.';
-  }
-
-  // ── cost estimate ───────────────────────────────────────────────────────────
-
-  String _estimateCostText() {
-    if (_isSchutting) {
-      final meters = p.customLength > 0 ? p.customLength : 9.0;
-      final cost = meters * 52.0;
-      return '± €${cost.toStringAsFixed(2)}';
-    }
-    if (_isBestrating) {
-      final areaM2 = (p.customLength > 0 && p.customDepth > 0)
-          ? p.customLength * p.customDepth
-          : 10.0;
-      return '± €${(areaM2 * 43.0).toStringAsFixed(2)}';
-    }
-    if (_isSnoeien) {
-      return '± €0.00';
-    }
-    if (_isOverkapping) {
-      final l = p.customLength > 0 ? p.customLength : 4.0;
-      final d = p.customDepth > 0 ? p.customDepth : 3.0;
-      final areaM2 = l * d;
-      return '± €${(areaM2 * 122.0).toStringAsFixed(2)}';
-    }
-    if (_isGazon) {
-      final areaM2 = (p.customLength > 0 && p.customDepth > 0)
-          ? p.customLength * p.customDepth
-          : 20.0;
-      return '± €${(areaM2 * 38.0).toStringAsFixed(2)}';
-    }
-    return '';
   }
 
   // ── lifecycle ───────────────────────────────────────────────────────────────
@@ -483,25 +460,6 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
 
                   // ── Schutting: panels + length ────────────────────────────
                   if (_isSchutting) ...[
-                    _countStepper(
-                      label: _isEn
-                          ? 'Number of fence panels (180×180 cm)'
-                          : 'Aantal schuttpanelen (180×180 cm)',
-                      unitSingular: _isEn ? 'panel' : 'paneel',
-                      unitPlural: _isEn ? 'panels' : 'panelen',
-                    ),
-                    const SizedBox(height: 12),
-                    _quickChips(
-                      values: const [3, 5, 7, 10, 12, 15],
-                      current: p.customCount.toDouble(),
-                      suffix: _isEn ? 'pnl' : 'pnl',
-                      onSelect: (v) {
-                        p.setCustomCount(v.toInt());
-                        _countCtrl.text = '${v.toInt()}';
-                        ss(() {});
-                      },
-                    ),
-                    const SizedBox(height: 18),
                     _decimalField(
                       controller: _lengthCtrl,
                       label: _isEn
@@ -617,16 +575,16 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
                   if (_isSnoeien) ...[
                     _countStepper(
                       label: _isEn
-                          ? 'Planting area units (10 m² each)'
-                          : 'Eenheden beplant oppervlak (10 m² per stuk)',
-                      unitSingular: _isEn ? 'unit' : 'eenheid',
-                      unitPlural: _isEn ? 'units' : 'eenheden',
+                          ? 'Number of hydrangeas'
+                          : 'Aantal hortensia\'s',
+                      unitSingular: _isEn ? 'plant' : 'plant',
+                      unitPlural: _isEn ? 'plants' : 'planten',
                     ),
                     const SizedBox(height: 12),
                     _quickChips(
                       values: const [1, 2, 3, 5, 7, 10],
                       current: p.customCount.toDouble(),
-                      suffix: _isEn ? ' × 10 m²' : ' × 10 m²',
+                      suffix: _isEn ? ' plants' : ' planten',
                       onSelect: (v) {
                         p.setCustomCount(v.toInt());
                         _countCtrl.text = '${v.toInt()}';
@@ -724,70 +682,6 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
             const SizedBox(height: 20),
 
             // ── Live cost estimate ────────────────────────────────────────────
-            if (_estimateCostText().isNotEmpty) ...[
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Utils.kDarkBlue.withValues(alpha: 0.06),
-                      Utils.kDarkBlue.withValues(alpha: 0.02),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: Utils.kDarkBlue.withValues(alpha: 0.18),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Utils.kOrange.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Icon(
-                        Icons.euro_outlined,
-                        color: Utils.kOrange,
-                        size: 20,
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _isEn
-                                ? 'Estimated material cost'
-                                : 'Geschatte materiaalkosten',
-                            style: Utils.getTextStyle(
-                              baseSize: 11,
-                              isBold: false,
-                              color: Colors.black54,
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            _estimateCostText(),
-                            style: Utils.getTextStyle(
-                              baseSize: 18,
-                              isBold: true,
-                              color: Utils.kDarkBlue,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-            ],
 
             // ── Info note ─────────────────────────────────────────────────────
             Container(
@@ -817,36 +711,7 @@ class _BuildGardenerInputState extends State<BuildGardenerInput> {
                 ],
               ),
             ),
-            const SizedBox(height: 24),
-
-            // ── CALCULATE button ──────────────────────────────────────────────
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Utils.kOrange,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-                icon: const Icon(Icons.calculate_outlined),
-                label: Text(
-                  _isEn ? 'CALCULATE \u2192' : 'BEREKEN \u2192',
-                  style: Utils.getTextStyle(
-                    baseSize: 15,
-                    isBold: true,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  p.calculateFromCustomInputs();
-                  p.nextStep(ctx);
-                },
-              ),
-            ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 8),
           ],
         );
       },

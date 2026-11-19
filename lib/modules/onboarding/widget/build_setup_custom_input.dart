@@ -715,35 +715,7 @@ class BuildSetupCustomInput extends StatelessWidget {
               ),
             ),
 
-            // ── BEREKEN button ───────────────────────────────────────────────
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Utils.kOrange,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-                icon: const Icon(Icons.calculate_outlined),
-                label: Text(
-                  isEn ? 'CALCULATE →' : 'BEREKEN →',
-                  style: Utils.getTextStyle(
-                    baseSize: 15,
-                    isBold: true,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  provider.calculateFromCustomInputs();
-                  provider.nextStep(ctx);
-                },
-              ),
-            ),
-
-            const SizedBox(height: 20),
+            const SizedBox(height: 8),
           ],
         );
       },

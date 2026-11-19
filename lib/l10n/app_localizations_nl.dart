@@ -4605,79 +4605,86 @@ class AppLocalizationsNl extends AppLocalizations {
   String get jobCarpenter05 => 'Wand plaatsen – gipsplaat met metaalstud';
 
   @override
-  String get jobPlumber01 => 'Keukenkraan vervangen';
+  String get jobPlumber01 => 'Keukenkraan vervangen – bladmontage';
 
   @override
-  String get jobPlumber02 => 'Afvoer ontstoppen';
+  String get jobPlumber02 => 'Sifon ontstoppen – wasbak of gootsteen';
 
   @override
-  String get jobPlumber03 => 'Toilet installeren';
+  String get jobPlumber03 => 'Toilet installeren – staand';
 
   @override
   String get jobPlumber04 => 'CV-installatie bijvullen';
 
   @override
-  String get jobPlumber05 => 'Waterleiding aanleggen (koper)';
+  String get jobPlumber05 => 'Waterleiding aanleggen – opbouw';
 
   @override
-  String get jobPainter01 => 'Muur sauzen';
+  String get jobPainter01 =>
+      'Muur sauzen – binnen, latex (vochtwerend in badkamer/keuken)';
 
   @override
-  String get jobPainter02 => 'Plafond sauzen';
+  String get jobPainter02 =>
+      'Plafond sauzen – binnen, latex (vochtwerend in badkamer/keuken)';
 
   @override
-  String get jobPainter03 => 'Behangen';
+  String get jobPainter03 => 'Behangen – vliesbehang (53 cm of 70 cm breed)';
 
   @override
-  String get jobPainter04 => 'Kozijn/deur schilderen';
+  String get jobPainter04 => 'Kozijn/deur schilderen – binnen';
 
   @override
-  String get jobPainter05 => 'Radiator schilderen';
+  String get jobPainter05 => 'Radiator schilderen – per radiator';
 
   @override
-  String get jobGardener01 => 'Schutting plaatsen';
+  String get jobGardener01 => 'Schutting plaatsen – 180x180 cm';
 
   @override
-  String get jobGardener02 => 'Bestrating aanleggen';
+  String get jobGardener02 => 'Bestrating aanleggen – 60x60 cm';
 
   @override
-  String get jobGardener03 => 'Snoeien';
+  String get jobGardener03 => 'Snoeien – hortensia';
 
   @override
-  String get jobGardener04 => 'Overkapping bouwen';
+  String get jobGardener04 => 'Overkapping bouwen – hout';
 
   @override
-  String get jobGardener05 => 'Gazon leggen';
+  String get jobGardener05 => 'Gazon leggen – kunstgras';
 
   @override
-  String get jobElectrician01 => 'Stopcontact plaatsen';
+  String get jobElectrician01 =>
+      'Stopcontact plaatsen – inbouw, binnen; geaard of ongeaard; vochtige ruimtes verplicht geaard';
 
   @override
-  String get jobElectrician02 => 'Verlichting plaatsen';
+  String get jobElectrician02 =>
+      'Verlichting plaatsen – binnen; standaard LED armatuur; vochtige ruimtes vragen een vochtbestendige, geaarde armatuur';
 
   @override
-  String get jobElectrician03 => 'Stroomleiding leggen';
+  String get jobElectrician03 =>
+      'Stroomleiding leggen – op/in de muur; 1,5/2,5 mm² afhankelijk van toepassing';
 
   @override
-  String get jobElectrician04 => 'Kabelgoot monteren';
+  String get jobElectrician04 =>
+      'Kabelgoot monteren – zelfklevend of schroeven; maat 20 × 12 mm tot 25 × 16 mm';
 
   @override
-  String get jobElectrician05 => 'Rookmelder plaatsen';
+  String get jobElectrician05 =>
+      'Rookmelder plaatsen – aantal en positie volgens actuele regelgeving';
 
   @override
-  String get jobTiler01 => 'Vloertegels leggen';
+  String get jobTiler01 => 'Vloertegels leggen – 60x60 cm';
 
   @override
-  String get jobTiler02 => 'Wandtegels plaatsen';
+  String get jobTiler02 => 'Wandtegels plaatsen – 30x60 cm';
 
   @override
-  String get jobTiler03 => 'Tegels repareren';
+  String get jobTiler03 => 'Tegels repareren – één tegel';
 
   @override
-  String get jobTiler04 => 'Voegen';
+  String get jobTiler04 => 'Voegen – binnen';
 
   @override
-  String get jobTiler05 => 'Kit aanbrengen';
+  String get jobTiler05 => 'Kit aanbrengen – sanitairkit';
 
   @override
   String get checklistBehangtafel => 'Behangtafel';

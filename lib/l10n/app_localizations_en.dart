@@ -4590,96 +4590,104 @@ class AppLocalizationsEn extends AppLocalizations {
       'Use the test button regularly and replace the battery or complete detector according to the manufacturer\'s instructions. Take the legal positioning requirements into account. Consult a professional if in doubt. Always check current Dutch regulations, applicable installation requirements, and the technical product data sheet.';
 
   @override
-  String get jobCarpenter01 => 'Floor laying – laminate';
+  String get jobCarpenter01 => 'Installing flooring – laminate';
 
   @override
-  String get jobCarpenter02 => 'Door installation – interior door (solid)';
+  String get jobCarpenter02 => 'Installing a door – interior door (flush door)';
 
   @override
-  String get jobCarpenter03 =>
-      'Skirting board installation – adhesive skirting';
+  String get jobCarpenter03 => 'Installing skirting boards – stick-on skirting';
 
   @override
-  String get jobCarpenter04 => 'Stair renovation – laminate';
+  String get jobCarpenter04 => 'Renovating stairs – laminate';
 
   @override
   String get jobCarpenter05 =>
-      'Wall installation – plasterboard with metal studs';
+      'Building a wall – plasterboard with metal studs';
 
   @override
-  String get jobPlumber01 => 'Kitchen tap replacement';
+  String get jobPlumber01 => 'Replacing a kitchen tap – deck-mounted';
 
   @override
-  String get jobPlumber02 => 'Drain unblocking';
+  String get jobPlumber02 =>
+      'Unblocking a siphon/trap – washbasin or kitchen sink';
 
   @override
-  String get jobPlumber03 => 'Toilet installation';
+  String get jobPlumber03 => 'Installing a toilet – floor-standing';
 
   @override
-  String get jobPlumber04 => 'Central heating refill';
+  String get jobPlumber04 => 'Refilling the central heating (CV) system';
 
   @override
-  String get jobPlumber05 => 'Water pipe installation (copper)';
+  String get jobPlumber05 => 'Installing a water pipe – surface-mounted';
 
   @override
-  String get jobPainter01 => 'Paint walls';
+  String get jobPainter01 =>
+      'Painting walls – interior, latex paint (moisture-resistant in bathrooms/kitchens)';
 
   @override
-  String get jobPainter02 => 'Paint ceilings';
+  String get jobPainter02 =>
+      'Painting ceilings – interior, latex paint (moisture-resistant in bathrooms/kitchens)';
 
   @override
-  String get jobPainter03 => 'Wallpapering';
+  String get jobPainter03 =>
+      'Wallpapering – non-woven wallpaper (53 cm or 70 cm wide)';
 
   @override
-  String get jobPainter04 => 'Window frame/door painting';
+  String get jobPainter04 => 'Painting a door/frame – interior';
 
   @override
-  String get jobPainter05 => 'Radiator painting';
+  String get jobPainter05 => 'Painting a radiator – per radiator';
 
   @override
-  String get jobGardener01 => 'Fence installation';
+  String get jobGardener01 => 'Installing a fence – 180 × 180 cm';
 
   @override
-  String get jobGardener02 => 'Paving installation';
+  String get jobGardener02 => 'Laying paving – 60 × 60 cm';
 
   @override
-  String get jobGardener03 => 'Pruning';
+  String get jobGardener03 => 'Pruning – hydrangea';
 
   @override
-  String get jobGardener04 => 'Canopy construction';
+  String get jobGardener04 => 'Building a wooden canopy';
 
   @override
-  String get jobGardener05 => 'Lawn laying';
+  String get jobGardener05 => 'Installing a lawn – artificial grass';
 
   @override
-  String get jobElectrician01 => 'Outlet installation';
+  String get jobElectrician01 =>
+      'Installing a socket outlet – flush-mounted, indoors; earthed or unearthed; earthing is mandatory in damp areas';
 
   @override
-  String get jobElectrician02 => 'Lighting installation';
+  String get jobElectrician02 =>
+      'Installing lighting – indoors; standard LED light fitting; damp areas require a moisture-resistant, earthed light fitting';
 
   @override
-  String get jobElectrician03 => 'Cable laying';
+  String get jobElectrician03 =>
+      'Installing electrical wiring – on/in the wall; 1.5/2.5 mm² depending on the application';
 
   @override
-  String get jobElectrician04 => 'Cable trunking installation';
+  String get jobElectrician04 =>
+      'Installing a cable trunking – self-adhesive or screw-mounted; sizes from 20 × 12 mm to 25 × 16 mm';
 
   @override
-  String get jobElectrician05 => 'Smoke detector installation';
+  String get jobElectrician05 =>
+      'Installing a smoke detector – quantity and position according to current regulations';
 
   @override
-  String get jobTiler01 => 'Laying floor tiles';
+  String get jobTiler01 => 'Laying floor tiles – 60 × 60 cm';
 
   @override
-  String get jobTiler02 => 'Installing wall tiles';
+  String get jobTiler02 => 'Installing wall tiles – 30 × 60 cm';
 
   @override
-  String get jobTiler03 => 'Repairing tiles';
+  String get jobTiler03 => 'Repairing tiles – one tile';
 
   @override
-  String get jobTiler04 => 'Grouting';
+  String get jobTiler04 => 'Grouting – indoors';
 
   @override
-  String get jobTiler05 => 'Applying sealant';
+  String get jobTiler05 => 'Applying sealant – sanitary sealant';
 
   @override
   String get checklistBehangtafel => 'Wallpaper table';
